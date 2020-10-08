@@ -21,7 +21,7 @@ secret: ""
 external-ui: dashboard
 
 proxies:
-  - name: "free-01"
+  - name: "free_01"
     type: vmess
     server: 154.84.1.164
     port: 443
@@ -43,7 +43,7 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - VirMach
+      - free_01
 
 rules:
 
