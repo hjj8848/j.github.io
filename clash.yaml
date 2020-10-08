@@ -29,14 +29,14 @@ proxies:
     alterId: 64
     cipher: aes-128-gcm
 
-  - name: "xx"
-    type: ss
-    server: xx
-    port: xx
-    cipher: chacha20-ietf-poly1305
-    # cipher: chacha20
-    password: "xx"
-    # udp: true
+#   - name: "xx"
+#     type: ss
+#     server: xx
+#     port: xx
+#     cipher: chacha20-ietf-poly1305
+#     # cipher: chacha20
+#     password: "xx"
+#     # udp: true
 
 
 proxy-groups:
