@@ -29,6 +29,14 @@ proxies:
     alterId: 64
     cipher: aes-128-gcm
 
+  - name: "free_02"
+    type: vmess
+    server: 154.84.1.70
+    port: 443
+    uuid: e1b90914-fe82-47e5-b4fc-1454776d8014
+    alterId: 64
+    cipher: aes-128-gcm
+
 #   - name: "xx"
 #     type: ss
 #     server: xx
@@ -43,7 +51,8 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - free_01
+      - free_02
+#       - free_01
 
 rules:
 
