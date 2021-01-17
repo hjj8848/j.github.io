@@ -18,41 +18,52 @@ external-controller: 127.0.0.1:9090
 redir-port: 7892
 external-controller: 0.0.0.0:9090
 secret: ""
-external-ui: dashboard
+# external-ui: dashboard
 
 proxies:
-  - name: "free_01"
-    type: vmess
-    server: 154.84.1.164
-    port: 443
-    uuid: ff658ff4-eb4c-4c42-9511-350d26d955e7
-    alterId: 64
-    cipher: aes-128-gcm
 
-  - name: "free_02"
-    type: vmess
-    server: 154.84.1.70
-    port: 443
-    uuid: e1b90914-fe82-47e5-b4fc-1454776d8014
-    alterId: 64
-    cipher: aes-128-gcm
+  - name: "Free107_148_215_140"
+    type: ss
+    server: 107.148.215.140
+    port: 8240
+    cipher: rc4-md5
+    password: "passinfo123"
+    udp: true
 
-#   - name: "xx"
-#     type: ss
-#     server: xx
-#     port: xx
-#     cipher: chacha20-ietf-poly1305
-#     # cipher: chacha20
-#     password: "xx"
-#     # udp: true
+  - name: "Free198_52_125_212"
+    type: ss
+    server: 198.52.125.212
+    port: 8887
+    cipher: aes-256-cfb
+    password: "http://t.cn/EGJIyrl"
+    udp: true
 
+
+  - name: "Free176_119_158_161"
+    type: ss
+    server: 176.119.158.161
+    port: 147
+    cipher: aes-256-cfb
+    password: "t.me/SSRSUB"
+    udp: true
+
+
+  - name: "Free45_82_255_152"
+    type: ss
+    server: 45.82.255.152
+    port: 8887
+    cipher: aes-256-cfb
+    password: "http://t.cn/EGJIyrl"
+    udp: true
 
 proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - free_02
-#       - free_01
+      - Free107_148_215_140
+      - Free198_52_125_212
+      - Free176_119_158_161
+      - Free45_82_255_152
 
 rules:
 
