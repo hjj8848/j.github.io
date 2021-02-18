@@ -10,8 +10,8 @@
 
 port: 7890
 socks-port: 7891
-allow-lan: false
-mode: Rule
+allow-lan: true
+mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 # Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
@@ -38,7 +38,6 @@ proxies:
     password: "http://t.cn/EGJIyrl"
     udp: true
 
-
   - name: "Free176_119_158_161"
     type: ss
     server: 176.119.158.161
@@ -46,7 +45,6 @@ proxies:
     cipher: aes-256-cfb
     password: "t.me/SSRSUB"
     udp: true
-
 
   - name: "Free45_82_255_152"
     type: ss
@@ -56,14 +54,1110 @@ proxies:
     password: "http://t.cn/EGJIyrl"
     udp: true
 
+
+
+
+
+  - name: "S_89_163_224_93_12345"
+    type: ss
+    server: 89.163.224.93
+    port: 12345
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_89_163_224_142_12345"
+    type: ss
+    server: 89.163.224.142
+    port: 12345
+    cipher: rc4-md5
+    password: "dongtaiwang.com 666nice"
+    udp: true
+
+  - name: "S_45_147_200_161_12345"
+    type: ss
+    server: 45.147.200.161
+    port: 12345
+    cipher: rc4-md5
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_45_129_2_169_888"
+    type: ss
+    server: 45.129.2.169
+    port: 888
+    cipher: rc4-md5
+    password: "bannedbook.org 123abc"
+    udp: true
+
+  - name: "S_195_123_240_241_9999"
+    type: ss
+    server: 195.123.240.241
+    port: 9999
+    cipher: rc4-md5
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_67_21_68_252_12345"
+    type: ss
+    server: 67.21.68.252
+    port: 12345
+    cipher: rc4-md5
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_64_32_6_195_888"
+    type: ss
+    server: 64.32.6.195
+    port: 888
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_104_233_224_63_12345"
+    type: ss
+    server: 104.233.224.63
+    port: 12345
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_104_233_224_155_9999"
+    type: ss
+    server: 104.233.224.155
+    port: 9999
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_104_192_80_86_9999"
+    type: ss
+    server: 104.192.80.86
+    port: 9999
+    cipher: rc4-md5
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_104_233_224_193_9999"
+    type: ss
+    server: 104.233.224.193
+    port: 9999
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_109_166_37_200_666"
+    type: ss
+    server: 109.166.37.200
+    port: 666
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_45_88_43_37_12345"
+    type: ss
+    server: 45.88.43.37
+    port: 12345
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_104_233_163_123_666"
+    type: ss
+    server: 104.233.163.123
+    port: 666
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_104_233_163_215_666"
+    type: ss
+    server: 104.233.163.215
+    port: 666
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_45_90_57_171_12345"
+    type: ss
+    server: 45.90.57.171
+    port: 12345
+    cipher: rc4-md5
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_195_123_237_12_888"
+    type: ss
+    server: 195.123.237.12
+    port: 888
+    cipher: rc4-md5
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_195_123_240_241_12345"
+    type: ss
+    server: 195.123.240.241
+    port: 12345
+    cipher: aes-256-gcm
+    password: "ntdtv.com 123abc"
+    udp: true
+
+  - name: "S_109_166_37_200_12345"
+    type: ss
+    server: 109.166.37.200
+    port: 12345
+    cipher: aes-256-gcm
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_104_233_224_193_888"
+    type: ss
+    server: 104.233.224.193
+    port: 888
+    cipher: aes-256-gcm
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_45_253_65_247_996"
+    type: ss
+    server: 45.253.65.247
+    port: 996
+    cipher: aes-256-cfb
+    password: "jrMqHm0ki"
+    udp: true
+
+  - name: "S_45_85_3_85_50014"
+    type: ss
+    server: 45.85.3.85
+    port: 50014
+    cipher: rc4-md5
+    password: "http://t.cn/EGJIyrl"
+    udp: true
+
+  - name: "S_154_84_1_141_40908"
+    type: ss
+    server: 154.84.1.141
+    port: 40908
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_210_203_20_91_8080"
+    type: ss
+    server: 210.203.20.91
+    port: 8080
+    cipher: aes-256-cfb
+    password: "l9GnDewIE"
+    udp: true
+
+  - name: "S_167_71_201_29_17550"
+    type: ss
+    server: 167.71.201.29
+    port: 17550
+    cipher: aes-256-cfb
+    password: "0j3CCJ4VyWC9"
+    udp: true
+
+  - name: "S_154_84_1_136_27700"
+    type: ss
+    server: 154.84.1.136
+    port: 27700
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_45_85_3_85_50015"
+    type: ss
+    server: 45.85.3.85
+    port: 50015
+    cipher: rc4-md5
+    password: "http://t.cn/RD0D7sx"
+    udp: true
+
+  - name: "S_45_85_3_85_50013"
+    type: ss
+    server: 45.85.3.85
+    port: 50013
+    cipher: rc4-md5
+    password: "t.me/SSRSUB"
+    udp: true
+
+  - name: "S_192_240_99_182_8097"
+    type: ss
+    server: 192.240.99.182
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_103_29_68_199_40304"
+    type: ss
+    server: 103.29.68.199
+    port: 40304
+    cipher: aes-256-cfb
+    password: "jij9hPjvnOc1"
+    udp: true
+
+  - name: "S_154_84_1_141_30909"
+    type: ss
+    server: 154.84.1.141
+    port: 30909
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_172_105_71_82_8099"
+    type: ss
+    server: 172.105.71.82
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_91_203_192_187_50010"
+    type: ss
+    server: 91.203.192.187
+    port: 50010
+    cipher: rc4-md5
+    password: "t.me/SSRSUB"
+    udp: true
+
+  - name: "S_167_71_201_29_17549"
+    type: ss
+    server: 167.71.201.29
+    port: 17549
+    cipher: aes-256-cfb
+    password: "0j3CCJ4VyWC9"
+    udp: true
+
+  - name: "S_172_105_192_135_8099"
+    type: ss
+    server: 172.105.192.135
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_154_84_1_142_41695"
+    type: ss
+    server: 154.84.1.142
+    port: 41695
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_129_21800"
+    type: ss
+    server: 154.84.1.129
+    port: 21800
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_172_105_227_188_17820"
+    type: ss
+    server: 172.105.227.188
+    port: 17820
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    udp: true
+
+  - name: "S_154_84_1_101_12466"
+    type: ss
+    server: 154.84.1.101
+    port: 12466
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_136_55509"
+    type: ss
+    server: 154.84.1.136
+    port: 55509
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_45_79_111_214_443"
+    type: ss
+    server: 45.79.111.214
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_176_58_97_137_8099"
+    type: ss
+    server: 176.58.97.137
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_23_254_204_203_8097"
+    type: ss
+    server: 23.254.204.203
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_185_186_245_44_8097"
+    type: ss
+    server: 185.186.245.44
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_154_84_1_139_33367"
+    type: ss
+    server: 154.84.1.139
+    port: 33367
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_96_8_121_149_65201"
+    type: ss
+    server: 96.8.121.149
+    port: 65201
+    cipher: chacha20-ietf
+    password: "xiaofeiji520"
+    udp: true
+
+  - name: "S_172_105_227_188_17824"
+    type: ss
+    server: 172.105.227.188
+    port: 17824
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    udp: true
+
+  - name: "S_172_105_227_188_17825"
+    type: ss
+    server: 172.105.227.188
+    port: 17825
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    udp: true
+
+  - name: "S_172_105_227_188_17826"
+    type: ss
+    server: 172.105.227.188
+    port: 17826
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    udp: true
+
+  - name: "S_69_36_182_52_8097"
+    type: ss
+    server: 69.36.182.52
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_45_79_79_37_443"
+    type: ss
+    server: 45.79.79.37
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_172_104_131_24_8099"
+    type: ss
+    server: 172.104.131.24
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_85_117_235_171_50006"
+    type: ss
+    server: 85.117.235.171
+    port: 50006
+    cipher: rc4-md5
+    password: "http://t.cn/RD0D7sx"
+    udp: true
+
+  - name: "S_91_203_192_187_50011"
+    type: ss
+    server: 91.203.192.187
+    port: 50011
+    cipher: rc4-md5
+    password: "http://t.cn/EGJIyrl"
+    udp: true
+
+  - name: "S_149_129_81_235_41087"
+    type: ss
+    server: 149.129.81.235
+    port: 41087
+    cipher: aes-256-cfb
+    password: "Leung！8848."
+    udp: true
+
+  - name: "S_199_223_119_92_8099"
+    type: ss
+    server: 199.223.119.92
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_172_104_152_149_8099"
+    type: ss
+    server: 172.104.152.149
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_209_58_188_157_8099"
+    type: ss
+    server: 209.58.188.157
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_178_170_68_250_10003"
+    type: ss
+    server: 178.170.68.250
+    port: 10003
+    cipher: aes-128-ctr
+    password: "mLFBNEi0"
+    udp: true
+
+  - name: "S_199_223_119_83_8097"
+    type: ss
+    server: 199.223.119.83
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_45_33_93_207_443"
+    type: ss
+    server: 45.33.93.207
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_hktj2_servep2p_com_8080"
+    type: ss
+    server: hktj2.servep2p.com
+    port: 8080
+    cipher: aes-256-cfb
+    password: "ZPi5WJydD"
+    udp: true
+
+  - name: "S_23_92_18_28_443"
+    type: ss
+    server: 23.92.18.28
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_45_79_108_12_443"
+    type: ss
+    server: 45.79.108.12
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_50_116_15_74_443"
+    type: ss
+    server: 50.116.15.74
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_85_117_235_171_50004"
+    type: ss
+    server: 85.117.235.171
+    port: 50004
+    cipher: rc4-md5
+    password: "t.me/SSRSUB"
+    udp: true
+
+  - name: "S_154_84_1_111_22345"
+    type: ss
+    server: 154.84.1.111
+    port: 22345
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_139_162_224_44_26625"
+    type: ss
+    server: 139.162.224.44
+    port: 26625
+    cipher: aes-256-cfb
+    password: "YkeC2XDIA2kr"
+    udp: true
+
+  - name: "S_45_79_93_178_443"
+    type: ss
+    server: 45.79.93.178
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_45_33_88_190_443"
+    type: ss
+    server: 45.33.88.190
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_50_7_12_147_8099"
+    type: ss
+    server: 50.7.12.147
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_23_92_20_37_443"
+    type: ss
+    server: 23.92.20.37
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_204_45_182_34_8097"
+    type: ss
+    server: 204.45.182.34
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_172_105_192_82_26850"
+    type: ss
+    server: 172.105.192.82
+    port: 26850
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    udp: true
+
+  - name: "S_154_84_1_141_51010"
+    type: ss
+    server: 154.84.1.141
+    port: 51010
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_133_61100"
+    type: ss
+    server: 154.84.1.133
+    port: 61100
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_111_55113"
+    type: ss
+    server: 154.84.1.111
+    port: 55113
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_185_243_57_221_543"
+    type: ss
+    server: 185.243.57.221
+    port: 543
+    cipher: aes-256-ctr
+    password: "t.me/SSRSUB"
+    udp: true
+
+  - name: "S_2_56_240_77_11288"
+    type: ss
+    server: 2.56.240.77
+    port: 11288
+    cipher: aes-256-cfb
+    password: "zsljjilu520"
+    udp: true
+
+  - name: "S_45_56_94_40_443"
+    type: ss
+    server: 45.56.94.40
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_154_84_1_138_22765"
+    type: ss
+    server: 154.84.1.138
+    port: 22765
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_143_41683"
+    type: ss
+    server: 154.84.1.143
+    port: 41683
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_45_79_75_86_443"
+    type: ss
+    server: 45.79.75.86
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_chengdu-china-proxy1_darren-lee_net_8081"
+    type: ss
+    server: chengdu-china-proxy1.darren-lee.net
+    port: 8081
+    cipher: rc4-md5
+    password: "8081"
+    udp: true
+
+  - name: "S_23_239_12_251_443"
+    type: ss
+    server: 23.239.12.251
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_154_84_1_129_23100"
+    type: ss
+    server: 154.84.1.129
+    port: 23100
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_185_243_57_221_48886"
+    type: ss
+    server: 185.243.57.221
+    port: 48886
+    cipher: aes-128-ctr
+    password: "@SSRSUB"
+    udp: true
+
+  - name: "S_45_56_93_244_443"
+    type: ss
+    server: 45.56.93.244
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_45_56_91_37_443"
+    type: ss
+    server: 45.56.91.37
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_5_252_199_12_64520"
+    type: ss
+    server: 5.252.199.12
+    port: 64520
+    cipher: chacha20-ietf
+    password: "xiaofeiji520"
+    udp: true
+
+  - name: "S_139_162_38_42_8097"
+    type: ss
+    server: 139.162.38.42
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_139_162_15_45_8099"
+    type: ss
+    server: 139.162.15.45
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_172_104_178_58_8099"
+    type: ss
+    server: 172.104.178.58
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_154_84_1_136_48000"
+    type: ss
+    server: 154.84.1.136
+    port: 48000
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_167_71_201_29_17545"
+    type: ss
+    server: 167.71.201.29
+    port: 17545
+    cipher: aes-256-cfb
+    password: "0j3CCJ4VyWC9"
+    udp: true
+
+  - name: "S_154_84_1_121_33311"
+    type: ss
+    server: 154.84.1.121
+    port: 33311
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_185_243_57_221_80"
+    type: ss
+    server: 185.243.57.221
+    port: 80
+    cipher: aes-256-ctr
+    password: "http://t.cn/EGJIyrl"
+    udp: true
+
+  - name: "S_198_255_103_62_8099"
+    type: ss
+    server: 198.255.103.62
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_50_7_12_147_8097"
+    type: ss
+    server: 50.7.12.147
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_23_92_18_110_443"
+    type: ss
+    server: 23.92.18.110
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_172_105_192_82_26854"
+    type: ss
+    server: 172.105.192.82
+    port: 26854
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    udp: true
+
+  - name: "S_172_105_192_82_26855"
+    type: ss
+    server: 172.105.192.82
+    port: 26855
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    udp: true
+
+  - name: "S_172_105_192_82_26856"
+    type: ss
+    server: 172.105.192.82
+    port: 26856
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    udp: true
+
+  - name: "S_23_92_20_90_443"
+    type: ss
+    server: 23.92.20.90
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_139_162_67_40_8097"
+    type: ss
+    server: 139.162.67.40
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    udp: true
+
+  - name: "S_154_84_1_11_22122"
+    type: ss
+    server: 154.84.1.11
+    port: 22122
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_127_26671"
+    type: ss
+    server: 154.84.1.127
+    port: 26671
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_154_84_1_144_27981"
+    type: ss
+    server: 154.84.1.144
+    port: 27981
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    udp: true
+
+  - name: "S_185_243_57_221_443"
+    type: ss
+    server: 185.243.57.221
+    port: 443
+    cipher: aes-256-ctr
+    password: "http://t.cn/RD0D7sx"
+    udp: true
+
+  - name: "S_45_79_98_239_443"
+    type: ss
+    server: 45.79.98.239
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_45_79_66_9_443"
+    type: ss
+    server: 45.79.66.9
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_45_33_93_132_443"
+    type: ss
+    server: 45.33.93.132
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    udp: true
+
+  - name: "S_192_241_194_74_15856"
+    type: ss
+    server: 192.241.194.74
+    port: 15856
+    cipher: aes-256-gcm
+    password: "isx.yt-66872328"
+    udp: true
+
+  - name: "S_159_65_99_228_12172"
+    type: ss
+    server: 159.65.99.228
+    port: 12172
+    cipher: aes-256-cfb
+    password: "ssx.re-44108692"
+    udp: true
+
+  - name: "S_173_0_55_66_12345"
+    type: ss
+    server: 173.0.55.66
+    port: 12345
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_192_241_204_205_10533"
+    type: ss
+    server: 192.241.204.205
+    port: 10533
+    cipher: aes-256-gcm
+    password: "isx.yt-38415844"
+    udp: true
+
+  - name: "S_109_166_37_21_34567"
+    type: ss
+    server: 109.166.37.21
+    port: 34567
+    cipher: rc4-md5
+    password: "dongtaiwang.com 123abc"
+    udp: true
+
+  - name: "S_128_199_165_174_19559"
+    type: ss
+    server: 128.199.165.174
+    port: 19559
+    cipher: aes-256-gcm
+    password: "isx.yt-29534224"
+    udp: true
+
+  - name: "S_206_189_151_59_19235"
+    type: ss
+    server: 206.189.151.59
+    port: 19235
+    cipher: aes-256-cfb
+    password: "ssx.re-14396276"
+    udp: true
+
+  - name: "S_192_241_215_191_12857"
+    type: ss
+    server: 192.241.215.191
+    port: 12857
+    cipher: aes-256-cfb
+    password: "ssx.re-27242655"
+    udp: true
+
+
+
 proxy-groups:
   - name: Proxy
     type: select
     proxies:
+
+      - S_172_104_131_24_8099
+
       - Free107_148_215_140
       - Free198_52_125_212
       - Free176_119_158_161
       - Free45_82_255_152
+
+
+
+      - S_89_163_224_93_12345
+      - S_89_163_224_142_12345
+      - S_45_147_200_161_12345
+      - S_45_129_2_169_888
+      - S_195_123_240_241_9999
+      - S_67_21_68_252_12345
+      - S_64_32_6_195_888
+      - S_104_233_224_63_12345
+      - S_104_233_224_155_9999
+      - S_104_192_80_86_9999
+      - S_104_233_224_193_9999
+      - S_109_166_37_200_666
+      - S_45_88_43_37_12345
+      - S_104_233_163_123_666
+      - S_104_233_163_215_666
+      - S_45_90_57_171_12345
+      - S_195_123_237_12_888
+      - S_195_123_240_241_12345
+      - S_109_166_37_200_12345
+      - S_104_233_224_193_888
+      - S_45_253_65_247_996
+      - S_45_85_3_85_50014
+      - S_154_84_1_141_40908
+      - S_210_203_20_91_8080
+      - S_167_71_201_29_17550
+      - S_154_84_1_136_27700
+      - S_45_85_3_85_50015
+      - S_45_85_3_85_50013
+      - S_192_240_99_182_8097
+      - S_103_29_68_199_40304
+      - S_154_84_1_141_30909
+      - S_172_105_71_82_8099
+      - S_91_203_192_187_50010
+      - S_167_71_201_29_17549
+      - S_172_105_192_135_8099
+      - S_154_84_1_142_41695
+      - S_154_84_1_129_21800
+      - S_172_105_227_188_17820
+      - S_154_84_1_101_12466
+      - S_154_84_1_136_55509
+      - S_45_79_111_214_443
+      - S_176_58_97_137_8099
+      - S_23_254_204_203_8097
+      - S_185_186_245_44_8097
+      - S_154_84_1_139_33367
+      - S_96_8_121_149_65201
+      - S_172_105_227_188_17824
+      - S_172_105_227_188_17825
+      - S_172_105_227_188_17826
+      - S_69_36_182_52_8097
+      - S_45_79_79_37_443
+      - S_85_117_235_171_50006
+      - S_91_203_192_187_50011
+      - S_149_129_81_235_41087
+      - S_199_223_119_92_8099
+      - S_172_104_152_149_8099
+      - S_209_58_188_157_8099
+      - S_178_170_68_250_10003
+      - S_199_223_119_83_8097
+      - S_45_33_93_207_443
+      - S_hktj2_servep2p_com_8080
+      - S_23_92_18_28_443
+      - S_45_79_108_12_443
+      - S_50_116_15_74_443
+      - S_85_117_235_171_50004
+      - S_154_84_1_111_22345
+      - S_139_162_224_44_26625
+      - S_45_79_93_178_443
+      - S_45_33_88_190_443
+      - S_50_7_12_147_8099
+      - S_23_92_20_37_443
+      - S_204_45_182_34_8097
+      - S_172_105_192_82_26850
+      - S_154_84_1_141_51010
+      - S_154_84_1_133_61100
+      - S_154_84_1_111_55113
+      - S_185_243_57_221_543
+      - S_2_56_240_77_11288
+      - S_45_56_94_40_443
+      - S_154_84_1_138_22765
+      - S_154_84_1_143_41683
+      - S_45_79_75_86_443
+      - S_chengdu-china-proxy1_darren-lee_net_8081
+      - S_23_239_12_251_443
+      - S_154_84_1_129_23100
+      - S_185_243_57_221_48886
+      - S_45_56_93_244_443
+      - S_45_56_91_37_443
+      - S_5_252_199_12_64520
+      - S_139_162_38_42_8097
+      - S_139_162_15_45_8099
+      - S_172_104_178_58_8099
+      - S_154_84_1_136_48000
+      - S_167_71_201_29_17545
+      - S_154_84_1_121_33311
+      - S_185_243_57_221_80
+      - S_198_255_103_62_8099
+      - S_50_7_12_147_8097
+      - S_23_92_18_110_443
+      - S_172_105_192_82_26854
+      - S_172_105_192_82_26855
+      - S_172_105_192_82_26856
+      - S_23_92_20_90_443
+      - S_139_162_67_40_8097
+      - S_154_84_1_11_22122
+      - S_154_84_1_127_26671
+      - S_154_84_1_144_27981
+      - S_185_243_57_221_443
+      - S_45_79_98_239_443
+      - S_45_79_66_9_443
+      - S_45_33_93_132_443
+      - S_192_241_194_74_15856
+      - S_159_65_99_228_12172
+      - S_173_0_55_66_12345
+      - S_192_241_204_205_10533
+      - S_109_166_37_21_34567
+      - S_128_199_165_174_19559
+      - S_206_189_151_59_19235
+      - S_192_241_215_191_12857
+
+
+
+
+
 
 rules:
 
