@@ -63,15 +63,6 @@ proxies:
       obfs: plain
       protocol: origin
 
-    - name: "ssr_152_89_208_159_80"
-      type: ssr
-      server: 152.89.208.159
-      port: 80
-      cipher: none
-      password: "fKJWbq"
-      obfs: http_simple
-      protocol: auth_chain_a
-
     - name: "ssr_154_84_1_101_12466"
       type: ssr
       server: 154.84.1.101
@@ -738,15 +729,6 @@ proxies:
       obfs: http_simple
       protocol: auth_sha1_v4
 
-    - name: "ssr_45_89_228_192_80"
-      type: ssr
-      server: 45.89.228.192
-      port: 80
-      cipher: none
-      password: "freess.cf"
-      obfs: http_simple
-      protocol: auth_chain_a
-
     - name: "ssr_47_240_57_114_543"
       type: ssr
       server: 47.240.57.114
@@ -755,15 +737,6 @@ proxies:
       password: "one"
       obfs: plain
       protocol: origin
-
-    - name: "ssr_5_252_198_59_80"
-      type: ssr
-      server: 5.252.198.59
-      port: 80
-      cipher: none
-      password: "fKJWbq"
-      obfs: http_simple
-      protocol: auth_chain_a
 
     - name: "ssr_5_252_199_12_64520"
       type: ssr
@@ -882,15 +855,6 @@ proxies:
       obfs: tls1.2_ticket_auth
       protocol: origin
 
-    - name: "ssr_s253_okss_top_443"
-      type: ssr
-      server: s253.okss.top
-      port: 443
-      cipher: none
-      password: "superssr.me"
-      obfs: tls1.2_ticket_auth
-      protocol: auth_chain_a
-
     - name: "ssr_sgp3_m87cloud_xyz_13145"
       type: ssr
       server: sgp3.m87cloud.xyz
@@ -913,7 +877,6 @@ proxy-groups:
         - ssr_139_162_38_42_8097
         - ssr_139_162_67_40_8097
         - ssr_149_129_81_235_41087
-        - ssr_152_89_208_159_80
         - ssr_154_84_1_101_12466
         - ssr_154_84_1_11_22122
         - ssr_154_84_1_111_22345
@@ -988,9 +951,7 @@ proxy-groups:
         - ssr_45_85_3_85_50013
         - ssr_45_85_3_85_50014
         - ssr_45_85_3_85_50015
-        - ssr_45_89_228_192_80
         - ssr_47_240_57_114_543
-        - ssr_5_252_198_59_80
         - ssr_5_252_199_12_64520
         - ssr_50_116_15_74_443
         - ssr_50_7_12_147_8097
@@ -1004,7 +965,6 @@ proxy-groups:
         - ssr_96_8_121_149_65201
         - ssr_chengdu-china-proxy1_darren-lee_net_8081
         - ssr_hktj2_servep2p_com_8080
-        - ssr_s253_okss_top_443
         - ssr_sgp3_m87cloud_xyz_13145
 
 rules:
