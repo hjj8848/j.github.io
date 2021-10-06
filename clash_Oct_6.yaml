@@ -16,9 +16,7 @@ proxies:
       cipher: aes-256-cfb
       password: "jij9hPjvnOc1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_107_175_18_48_80"
       type: ssr
@@ -27,9 +25,7 @@ proxies:
       cipher: chacha20
       password: "19981110zxq"
       obfs: tls1.2_ticket_fastauth
-
       protocol: auth_aes128_md5
-    
 
     - name: "ssr_139_162_15_45_8099"
       type: ssr
@@ -38,9 +34,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_139_162_224_44_26625"
       type: ssr
@@ -49,9 +43,7 @@ proxies:
       cipher: aes-256-cfb
       password: "YkeC2XDIA2kr"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_139_162_38_42_8097"
       type: ssr
@@ -60,9 +52,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_139_162_67_40_8097"
       type: ssr
@@ -71,9 +61,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_149_129_81_235_41087"
       type: ssr
@@ -82,9 +70,7 @@ proxies:
       cipher: aes-256-cfb
       password: "Leung！8848."
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_152_89_208_159_80"
       type: ssr
@@ -93,9 +79,7 @@ proxies:
       cipher: none
       password: "fKJWbq"
       obfs: http_simple
-
       protocol: auth_chain_a
-    
 
     - name: "ssr_154_84_1_101_12466"
       type: ssr
@@ -104,9 +88,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_11_22122"
       type: ssr
@@ -115,9 +97,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_111_22345"
       type: ssr
@@ -126,9 +106,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_111_55113"
       type: ssr
@@ -137,9 +115,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_121_33311"
       type: ssr
@@ -148,9 +124,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_127_26671"
       type: ssr
@@ -159,9 +133,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_129_21800"
       type: ssr
@@ -170,9 +142,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_129_23100"
       type: ssr
@@ -181,9 +151,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_133_61100"
       type: ssr
@@ -192,9 +160,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_136_27700"
       type: ssr
@@ -203,9 +169,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_136_48000"
       type: ssr
@@ -214,9 +178,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_136_55509"
       type: ssr
@@ -225,9 +187,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_138_22765"
       type: ssr
@@ -236,9 +196,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_139_33367"
       type: ssr
@@ -247,9 +205,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_141_30909"
       type: ssr
@@ -258,9 +214,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_141_40908"
       type: ssr
@@ -269,9 +223,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_141_51010"
       type: ssr
@@ -280,9 +232,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_142_41695"
       type: ssr
@@ -291,9 +241,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_143_41683"
       type: ssr
@@ -302,9 +250,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_154_84_1_144_27981"
       type: ssr
@@ -313,9 +259,7 @@ proxies:
       cipher: aes-256-cfb
       password: "4XVeP1"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_167_71_201_29_17545"
       type: ssr
@@ -324,9 +268,7 @@ proxies:
       cipher: aes-256-cfb
       password: "0j3CCJ4VyWC9"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_167_71_201_29_17549"
       type: ssr
@@ -335,9 +277,7 @@ proxies:
       cipher: aes-256-cfb
       password: "0j3CCJ4VyWC9"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_167_71_201_29_17550"
       type: ssr
@@ -346,9 +286,7 @@ proxies:
       cipher: aes-256-cfb
       password: "0j3CCJ4VyWC9"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_104_131_24_8099"
       type: ssr
@@ -357,9 +295,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_104_152_149_8099"
       type: ssr
@@ -368,9 +304,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_104_178_58_8099"
       type: ssr
@@ -379,9 +313,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_192_135_8099"
       type: ssr
@@ -390,9 +322,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_192_82_26850"
       type: ssr
@@ -401,9 +331,7 @@ proxies:
       cipher: aes-256-cfb
       password: "10rQMbABljoc"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_192_82_26854"
       type: ssr
@@ -412,9 +340,7 @@ proxies:
       cipher: aes-256-cfb
       password: "10rQMbABljoc"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_192_82_26855"
       type: ssr
@@ -423,9 +349,7 @@ proxies:
       cipher: aes-256-cfb
       password: "10rQMbABljoc"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_192_82_26856"
       type: ssr
@@ -434,9 +358,7 @@ proxies:
       cipher: aes-256-cfb
       password: "10rQMbABljoc"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_227_188_17820"
       type: ssr
@@ -445,9 +367,7 @@ proxies:
       cipher: aes-256-cfb
       password: "AN9jvZPlu4Sb"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_227_188_17824"
       type: ssr
@@ -456,9 +376,7 @@ proxies:
       cipher: aes-256-cfb
       password: "AN9jvZPlu4Sb"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_227_188_17825"
       type: ssr
@@ -467,9 +385,7 @@ proxies:
       cipher: aes-256-cfb
       password: "AN9jvZPlu4Sb"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_227_188_17826"
       type: ssr
@@ -478,9 +394,7 @@ proxies:
       cipher: aes-256-cfb
       password: "AN9jvZPlu4Sb"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_172_105_71_82_8099"
       type: ssr
@@ -489,9 +403,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_176_58_97_137_8099"
       type: ssr
@@ -500,9 +412,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_178_170_68_250_10003"
       type: ssr
@@ -511,9 +421,7 @@ proxies:
       cipher: aes-128-ctr
       password: "mLFBNEi0"
       obfs: tls1.2_ticket_auth
-
       protocol: auth_aes128_md5
-    
 
     - name: "ssr_185_186_245_44_8097"
       type: ssr
@@ -522,9 +430,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_185_243_57_221_443"
       type: ssr
@@ -533,9 +439,7 @@ proxies:
       cipher: aes-256-ctr
       password: "http://t.cn/RD0D7sx"
       obfs: tls1.2_ticket_auth
-
       protocol: auth_aes128_md5
-    
 
     - name: "ssr_185_243_57_221_48886"
       type: ssr
@@ -544,9 +448,7 @@ proxies:
       cipher: aes-128-ctr
       password: "@SSRSUB"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_185_243_57_221_543"
       type: ssr
@@ -555,9 +457,7 @@ proxies:
       cipher: aes-256-ctr
       password: "t.me/SSRSUB"
       obfs: tls1.2_ticket_auth
-
       protocol: auth_aes128_md5
-    
 
     - name: "ssr_185_243_57_221_80"
       type: ssr
@@ -566,9 +466,7 @@ proxies:
       cipher: aes-256-ctr
       password: "http://t.cn/EGJIyrl"
       obfs: tls1.2_ticket_auth
-
       protocol: auth_aes128_md5
-    
 
     - name: "ssr_192_240_99_182_8097"
       type: ssr
@@ -577,9 +475,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_198_255_103_62_8099"
       type: ssr
@@ -588,9 +484,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_199_223_119_83_8097"
       type: ssr
@@ -599,9 +493,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_199_223_119_92_8099"
       type: ssr
@@ -610,9 +502,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_2_56_240_77_11288"
       type: ssr
@@ -621,9 +511,7 @@ proxies:
       cipher: aes-256-cfb
       password: "zsljjilu520"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_204_45_182_34_8097"
       type: ssr
@@ -632,9 +520,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_209_58_188_157_8099"
       type: ssr
@@ -643,9 +529,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_210_203_20_91_8080"
       type: ssr
@@ -654,9 +538,7 @@ proxies:
       cipher: aes-256-cfb
       password: "l9GnDewIE"
       obfs: tls1.2_ticket_auth
-
       protocol: origin
-    
 
     - name: "ssr_23_239_12_251_443"
       type: ssr
@@ -665,9 +547,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_23_254_204_203_8097"
       type: ssr
@@ -676,9 +556,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_23_92_18_110_443"
       type: ssr
@@ -687,9 +565,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_23_92_18_28_443"
       type: ssr
@@ -698,9 +574,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_23_92_20_37_443"
       type: ssr
@@ -709,9 +583,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_23_92_20_90_443"
       type: ssr
@@ -720,9 +592,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_253_65_247_996"
       type: ssr
@@ -731,9 +601,7 @@ proxies:
       cipher: aes-256-cfb
       password: "jrMqHm0ki"
       obfs: tls1.2_ticket_auth
-
       protocol: origin
-    
 
     - name: "ssr_45_33_88_190_443"
       type: ssr
@@ -742,9 +610,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_33_93_132_443"
       type: ssr
@@ -753,9 +619,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_33_93_207_443"
       type: ssr
@@ -764,9 +628,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_56_91_37_443"
       type: ssr
@@ -775,9 +637,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_56_93_244_443"
       type: ssr
@@ -786,9 +646,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_56_94_40_443"
       type: ssr
@@ -797,9 +655,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_108_12_443"
       type: ssr
@@ -808,9 +664,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_111_214_443"
       type: ssr
@@ -819,9 +673,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_66_9_443"
       type: ssr
@@ -830,9 +682,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_75_86_443"
       type: ssr
@@ -841,9 +691,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_79_37_443"
       type: ssr
@@ -852,9 +700,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_93_178_443"
       type: ssr
@@ -863,9 +709,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_79_98_239_443"
       type: ssr
@@ -874,9 +718,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_45_85_3_85_50013"
       type: ssr
@@ -885,9 +727,7 @@ proxies:
       cipher: rc4-md5
       password: "t.me/SSRSUB"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_45_85_3_85_50014"
       type: ssr
@@ -896,9 +736,7 @@ proxies:
       cipher: rc4-md5
       password: "http://t.cn/EGJIyrl"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_45_85_3_85_50015"
       type: ssr
@@ -907,9 +745,7 @@ proxies:
       cipher: rc4-md5
       password: "http://t.cn/RD0D7sx"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_45_89_228_192_80"
       type: ssr
@@ -918,9 +754,7 @@ proxies:
       cipher: none
       password: "freess.cf"
       obfs: http_simple
-
       protocol: auth_chain_a
-    
 
     - name: "ssr_47_240_57_114_543"
       type: ssr
@@ -929,9 +763,7 @@ proxies:
       cipher: chacha20
       password: "one"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_5_252_198_59_80"
       type: ssr
@@ -940,9 +772,7 @@ proxies:
       cipher: none
       password: "fKJWbq"
       obfs: http_simple
-
       protocol: auth_chain_a
-    
 
     - name: "ssr_5_252_199_12_64520"
       type: ssr
@@ -951,9 +781,7 @@ proxies:
       cipher: chacha20-ietf
       password: "xiaofeiji520"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_50_116_15_74_443"
       type: ssr
@@ -962,9 +790,7 @@ proxies:
       cipher: aes-256-cfb
       password: "9d6cceaa373bf2c8acb22e60b6a58be6"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_50_7_12_147_8097"
       type: ssr
@@ -973,9 +799,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_50_7_12_147_8099"
       type: ssr
@@ -984,9 +808,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_54_169_133_81_443"
       type: ssr
@@ -995,9 +817,7 @@ proxies:
       cipher: chacha20
       password: "bbrc173"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_69_36_182_52_8097"
       type: ssr
@@ -1006,9 +826,7 @@ proxies:
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_85_117_235_171_50004"
       type: ssr
@@ -1017,9 +835,7 @@ proxies:
       cipher: rc4-md5
       password: "t.me/SSRSUB"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_85_117_235_171_50006"
       type: ssr
@@ -1028,9 +844,7 @@ proxies:
       cipher: rc4-md5
       password: "http://t.cn/RD0D7sx"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_91_203_192_187_50010"
       type: ssr
@@ -1039,9 +853,7 @@ proxies:
       cipher: rc4-md5
       password: "t.me/SSRSUB"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_91_203_192_187_50011"
       type: ssr
@@ -1050,9 +862,7 @@ proxies:
       cipher: rc4-md5
       password: "http://t.cn/EGJIyrl"
       obfs: http_simple
-
       protocol: auth_sha1_v4
-    
 
     - name: "ssr_96_8_121_149_65201"
       type: ssr
@@ -1061,9 +871,7 @@ proxies:
       cipher: chacha20-ietf
       password: "xiaofeiji520"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_chengdu-china-proxy1_darren-lee_net_8081"
       type: ssr
@@ -1072,9 +880,7 @@ proxies:
       cipher: rc4-md5
       password: "8081"
       obfs: plain
-
       protocol: origin
-    
 
     - name: "ssr_hktj2_servep2p_com_8080"
       type: ssr
@@ -1083,9 +889,7 @@ proxies:
       cipher: aes-256-cfb
       password: "ZPi5WJydD"
       obfs: tls1.2_ticket_auth
-
       protocol: origin
-    
 
     - name: "ssr_s253_okss_top_443"
       type: ssr
@@ -1094,9 +898,7 @@ proxies:
       cipher: none
       password: "superssr.me"
       obfs: tls1.2_ticket_auth
-
       protocol: auth_chain_a
-    
 
     - name: "ssr_sgp3_m87cloud_xyz_13145"
       type: ssr
