@@ -18,15 +18,6 @@ proxies:
       obfs: plain
       protocol: origin
 
-    - name: "ssr_107_175_18_48_80"
-      type: ssr
-      server: 107.175.18.48
-      port: 80
-      cipher: chacha20
-      password: "19981110zxq"
-      obfs: tls1.2_ticket_fastauth
-      protocol: auth_aes128_md5
-
     - name: "ssr_139_162_15_45_8099"
       type: ssr
       server: 139.162.15.45
@@ -917,7 +908,6 @@ proxy-groups:
     proxies:
 
         - ssr_103_29_68_199_40304
-        - ssr_107_175_18_48_80
         - ssr_139_162_15_45_8099
         - ssr_139_162_224_44_26625
         - ssr_139_162_38_42_8097
