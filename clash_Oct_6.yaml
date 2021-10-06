@@ -729,24 +729,6 @@ proxies:
       obfs: http_simple
       protocol: auth_sha1_v4
 
-    - name: "ssr_47_240_57_114_543"
-      type: ssr
-      server: 47.240.57.114
-      port: 543
-      cipher: chacha20
-      password: "one"
-      obfs: plain
-      protocol: origin
-
-    - name: "ssr_5_252_199_12_64520"
-      type: ssr
-      server: 5.252.199.12
-      port: 64520
-      cipher: chacha20-ietf
-      password: "xiaofeiji520"
-      obfs: plain
-      protocol: origin
-
     - name: "ssr_50_116_15_74_443"
       type: ssr
       server: 50.116.15.74
@@ -771,15 +753,6 @@ proxies:
       port: 8099
       cipher: aes-256-cfb
       password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-      obfs: plain
-      protocol: origin
-
-    - name: "ssr_54_169_133_81_443"
-      type: ssr
-      server: 54.169.133.81
-      port: 443
-      cipher: chacha20
-      password: "bbrc173"
       obfs: plain
       protocol: origin
 
@@ -828,15 +801,6 @@ proxies:
       obfs: http_simple
       protocol: auth_sha1_v4
 
-    - name: "ssr_96_8_121_149_65201"
-      type: ssr
-      server: 96.8.121.149
-      port: 65201
-      cipher: chacha20-ietf
-      password: "xiaofeiji520"
-      obfs: plain
-      protocol: origin
-
     - name: "ssr_chengdu-china-proxy1_darren-lee_net_8081"
       type: ssr
       server: chengdu-china-proxy1.darren-lee.net
@@ -855,17 +819,7 @@ proxies:
       obfs: tls1.2_ticket_auth
       protocol: origin
 
-    - name: "ssr_sgp3_m87cloud_xyz_13145"
-      type: ssr
-      server: sgp3.m87cloud.xyz
-      port: 13145
-      cipher: chacha20
-      password: "sLQvGQ"
-      obfs: http_simple
-      protocol: auth_aes128_md5
-      
-      
-      
+
 proxy-groups:
   - name: Proxy
     type: select
