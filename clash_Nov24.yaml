@@ -1,26 +1,178 @@
-#---------------------------------------------------#
-## 配置文件需要放置在 $HOME/.config/clash/*.yaml
-
-## 这份文件是clashX的基础配置文件，请尽量新建配置文件进行修改。
-## ！！！只有这份文件的端口设置会随ClashX启动生效
-
-## 如果您不知道如何操作，请参阅 SS-Rule-Snippet：https://github.com/Hackl0us/SS-Rule-Snippet/blob/master/LAZY_RULES/clash.yaml
-## 或者官方Github文档 https://github.com/Dreamacro/clash/blob/master/README.md
-#---------------------------------------------------#
-
+# Port of HTTP(S) proxy server on the local end
 port: 7890
+
+# Port of SOCKS5 proxy server on the local end
 socks-port: 7891
-allow-lan: true
+
+# Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
+# redir-port: 7892
+
+# Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
+# tproxy-port: 7893
+
+# HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
+# mixed-port: 7890
+
+# authentication of local SOCKS5/HTTP(S) server
+# authentication:
+#  - "user1:pass1"
+#  - "user2:pass2"
+
+# Set to true to allow connections to the local-end server from
+# other LAN IP addresses
+allow-lan: false
+
+# This is only applicable when `allow-lan` is `true`
+# '*': bind all IP addresses
+# 192.168.122.11: bind a single IPv4 address
+# "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
+bind-address: '*'
+
+# Clash router working mode
+# rule: rule-based packet routing
+# global: all packets will be forwarded to a single endpoint
+# direct: directly forward the packets to the Internet
 mode: rule
+
+# Clash by default prints logs to STDOUT
+# info / warning / error / debug / silent
 log-level: info
+
+# When set to false, resolver won't translate hostnames to IPv6 addresses
+ipv6: false
+
+# RESTful web API listening address
 external-controller: 127.0.0.1:9090
-# Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
-redir-port: 7892
-#external-controller: 0.0.0.0:9090
-secret: ""
-# external-ui: dashboard
+
+# A relative path to the configuration directory or an absolute path to a
+# directory in which you put some static web resource. Clash core will then
+# serve it at `http://{{external-controller}}/ui`.
+# external-ui: folder
+
+# Secret for the RESTful API (optional)
+# Authenticate by spedifying HTTP header `Authorization: Bearer ${secret}`
+# ALWAYS set a secret if RESTful API is listening on 0.0.0.0
+# secret: ""
+
+# Outbound interface name
+interface-name: en0
+
+# fwmark on Linux only
+routing-mark: 6666
+
+# Static hosts for DNS server and connection establishment (like /etc/hosts)
+#
+# Wildcard hostnames are supported (e.g. *.clash.dev, *.foo.*.example.com)
+# Non-wildcard domain names have a higher priority than wildcard domain names
+# e.g. foo.example.com > *.example.com > .example.com
+# P.S. +.foo.com equals to .foo.com and foo.com
+hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
+
+profile:
+  # Store the `select` results in $HOME/.config/clash/.cache
+  # set false If you don't want this behavior
+  # when two different configurations have groups with the same name, the selected values are shared
+  store-selected: false
+
+  # persistence fakeip
+  store-fake-ip: true
+
+# DNS server settings
+# This section is optional. When not present, the DNS server will be disabled.
+dns:
+  enable: false
+  listen: 0.0.0.0:53
+  # ipv6: false # when the false, response to AAAA questions will be empty
+
+  # These nameservers are used to resolve the DNS nameserver hostnames below.
+  # Specify IP addresses only
+  default-nameserver:
+    - 114.114.114.114
+    - 8.8.8.8
+  enhanced-mode: redir-host # or fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+  # use-hosts: true # lookup hosts and return IP record
+  
+  # Hostnames in this list will not be resolved with fake IPs
+  # i.e. questions to these domain names will always be answered with their
+  # real IP addresses
+  # fake-ip-filter:
+  #   - '*.lan'
+  #   - localhost.ptlogin2.qq.com
+  
+  # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
+  # All DNS questions are sent directly to the nameserver, without proxies
+  # involved. Clash answers the DNS question with the first result gathered.
+  nameserver:
+    - 114.114.114.114 # default value
+    - 8.8.8.8 # default value
+    - tls://dns.rubyfish.cn:853 # DNS over TLS
+    - https://1.1.1.1/dns-query # DNS over HTTPS
+    - dhcp://en0 # dns from dhcp
+
+  # When `fallback` is present, the DNS server will send concurrent requests
+  # to the servers in this section along with servers in `nameservers`.
+  # The answers from fallback servers are used when the GEOIP country
+  # is not `CN`.
+  # fallback:
+  #   - tcp://1.1.1.1
+
+  # If IP addresses resolved with servers in `nameservers` are in the specified
+  # subnets below, they are considered invalid and results from `fallback`
+  # servers are used instead.
+  #
+  # IP address resolved with servers in `nameserver` is used when
+  # `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
+  #
+  # If `fallback-filter.geoip` is false, results from `nameserver` nameservers
+  # are always used if not match `fallback-filter.ipcidr`.
+  #
+  # This is a countermeasure against DNS pollution attacks.
+  # fallback-filter:
+  #   geoip: true
+  #   geoip-code: CN
+  #   ipcidr:
+  #     - 240.0.0.0/4
+  #   domain:
+  #     - '+.google.com'
+  #     - '+.facebook.com'
+  #     - '+.youtube.com'
+  
+  # Lookup domains via specific nameservers
+  # nameserver-policy:
+  #   'www.baidu.com': '114.114.114.114'
+  #   '+.internal.crop.com': '10.0.0.1'
 
 proxies:
+  # Shadowsocks
+  # The supported ciphers (encryption methods):
+  #   aes-128-gcm aes-192-gcm aes-256-gcm
+  #   aes-128-cfb aes-192-cfb aes-256-cfb
+  #   aes-128-ctr aes-192-ctr aes-256-ctr
+  #   rc4-md5 chacha20-ietf xchacha20
+  #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
+  - name: "ss1"
+    type: ss
+    server: server
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: "password"
+    # udp: true
+
+  - name: "ss2"
+    type: ss
+    server: server
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: "password"
+    plugin: obfs
+    plugin-opts:
+      mode: tls # or http
+      # host: bing.com
+
 
   - name: "S_103_29_68_199_40304"
     type: ssr
@@ -28,196 +180,1110 @@ proxies:
     port: 40304
     cipher: aes-256-cfb
     password: "jij9hPjvnOc1"
-    plugin: "origin"
-    plugin-opts: "plain"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_139_162_15_45_8099"
+    type: ssr
+    server: 139.162.15.45
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_139_162_224_44_26625"
+    type: ssr
+    server: 139.162.224.44
+    port: 26625
+    cipher: aes-256-cfb
+    password: "YkeC2XDIA2kr"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_139_162_38_42_8097"
+    type: ssr
+    server: 139.162.38.42
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_139_162_67_40_8097"
+    type: ssr
+    server: 139.162.67.40
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_149_129_81_235_41087"
+    type: ssr
+    server: 149.129.81.235
+    port: 41087
+    cipher: aes-256-cfb
+    password: "Leung！8848."
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_101_12466"
+    type: ssr
+    server: 154.84.1.101
+    port: 12466
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_11_22122"
+    type: ssr
+    server: 154.84.1.11
+    port: 22122
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_111_22345"
+    type: ssr
+    server: 154.84.1.111
+    port: 22345
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_111_55113"
+    type: ssr
+    server: 154.84.1.111
+    port: 55113
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_121_33311"
+    type: ssr
+    server: 154.84.1.121
+    port: 33311
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_127_26671"
+    type: ssr
+    server: 154.84.1.127
+    port: 26671
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_129_21800"
+    type: ssr
+    server: 154.84.1.129
+    port: 21800
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_129_23100"
+    type: ssr
+    server: 154.84.1.129
+    port: 23100
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_133_61100"
+    type: ssr
+    server: 154.84.1.133
+    port: 61100
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_136_27700"
+    type: ssr
+    server: 154.84.1.136
+    port: 27700
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_136_48000"
+    type: ssr
+    server: 154.84.1.136
+    port: 48000
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_136_55509"
+    type: ssr
+    server: 154.84.1.136
+    port: 55509
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_138_22765"
+    type: ssr
+    server: 154.84.1.138
+    port: 22765
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_139_33367"
+    type: ssr
+    server: 154.84.1.139
+    port: 33367
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_141_30909"
+    type: ssr
+    server: 154.84.1.141
+    port: 30909
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_141_40908"
+    type: ssr
+    server: 154.84.1.141
+    port: 40908
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_141_51010"
+    type: ssr
+    server: 154.84.1.141
+    port: 51010
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_142_41695"
+    type: ssr
+    server: 154.84.1.142
+    port: 41695
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_143_41683"
+    type: ssr
+    server: 154.84.1.143
+    port: 41683
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_154_84_1_144_27981"
+    type: ssr
+    server: 154.84.1.144
+    port: 27981
+    cipher: aes-256-cfb
+    password: "4XVeP1"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_167_71_201_29_17545"
+    type: ssr
+    server: 167.71.201.29
+    port: 17545
+    cipher: aes-256-cfb
+    password: "0j3CCJ4VyWC9"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_167_71_201_29_17549"
+    type: ssr
+    server: 167.71.201.29
+    port: 17549
+    cipher: aes-256-cfb
+    password: "0j3CCJ4VyWC9"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_167_71_201_29_17550"
+    type: ssr
+    server: 167.71.201.29
+    port: 17550
+    cipher: aes-256-cfb
+    password: "0j3CCJ4VyWC9"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_104_131_24_8099"
+    type: ssr
+    server: 172.104.131.24
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_104_152_149_8099"
+    type: ssr
+    server: 172.104.152.149
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_104_178_58_8099"
+    type: ssr
+    server: 172.104.178.58
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_192_135_8099"
+    type: ssr
+    server: 172.105.192.135
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_192_82_26850"
+    type: ssr
+    server: 172.105.192.82
+    port: 26850
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_192_82_26854"
+    type: ssr
+    server: 172.105.192.82
+    port: 26854
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_192_82_26855"
+    type: ssr
+    server: 172.105.192.82
+    port: 26855
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_192_82_26856"
+    type: ssr
+    server: 172.105.192.82
+    port: 26856
+    cipher: aes-256-cfb
+    password: "10rQMbABljoc"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_227_188_17820"
+    type: ssr
+    server: 172.105.227.188
+    port: 17820
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_227_188_17824"
+    type: ssr
+    server: 172.105.227.188
+    port: 17824
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_227_188_17825"
+    type: ssr
+    server: 172.105.227.188
+    port: 17825
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_227_188_17826"
+    type: ssr
+    server: 172.105.227.188
+    port: 17826
+    cipher: aes-256-cfb
+    password: "AN9jvZPlu4Sb"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_172_105_71_82_8099"
+    type: ssr
+    server: 172.105.71.82
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_176_58_97_137_8099"
+    type: ssr
+    server: 176.58.97.137
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_178_170_68_250_10003"
+    type: ssr
+    server: 178.170.68.250
+    port: 10003
+    cipher: aes-128-ctr
+    password: "mLFBNEi0"
+    obfs: tls1.2_ticket_auth
+    protocol: auth_aes128_md5
+
+  - name: "S_185_186_245_44_8097"
+    type: ssr
+    server: 185.186.245.44
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_185_243_57_221_443"
+    type: ssr
+    server: 185.243.57.221
+    port: 443
+    cipher: aes-256-ctr
+    password: "http://t.cn/RD0D7sx"
+    obfs: tls1.2_ticket_auth
+    protocol: auth_aes128_md5
+
+  - name: "S_185_243_57_221_48886"
+    type: ssr
+    server: 185.243.57.221
+    port: 48886
+    cipher: aes-128-ctr
+    password: "@SSRSUB"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_185_243_57_221_543"
+    type: ssr
+    server: 185.243.57.221
+    port: 543
+    cipher: aes-256-ctr
+    password: "t.me/SSRSUB"
+    obfs: tls1.2_ticket_auth
+    protocol: auth_aes128_md5
+
+  - name: "S_185_243_57_221_80"
+    type: ssr
+    server: 185.243.57.221
+    port: 80
+    cipher: aes-256-ctr
+    password: "http://t.cn/EGJIyrl"
+    obfs: tls1.2_ticket_auth
+    protocol: auth_aes128_md5
+
+  - name: "S_192_240_99_182_8097"
+    type: ssr
+    server: 192.240.99.182
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_198_255_103_62_8099"
+    type: ssr
+    server: 198.255.103.62
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_199_223_119_83_8097"
+    type: ssr
+    server: 199.223.119.83
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_199_223_119_92_8099"
+    type: ssr
+    server: 199.223.119.92
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_2_56_240_77_11288"
+    type: ssr
+    server: 2.56.240.77
+    port: 11288
+    cipher: aes-256-cfb
+    password: "zsljjilu520"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_204_45_182_34_8097"
+    type: ssr
+    server: 204.45.182.34
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_209_58_188_157_8099"
+    type: ssr
+    server: 209.58.188.157
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_210_203_20_91_8080"
+    type: ssr
+    server: 210.203.20.91
+    port: 8080
+    cipher: aes-256-cfb
+    password: "l9GnDewIE"
+    obfs: tls1.2_ticket_auth
+    protocol: origin
+
+  - name: "S_23_239_12_251_443"
+    type: ssr
+    server: 23.239.12.251
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_23_254_204_203_8097"
+    type: ssr
+    server: 23.254.204.203
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_23_92_18_110_443"
+    type: ssr
+    server: 23.92.18.110
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_23_92_18_28_443"
+    type: ssr
+    server: 23.92.18.28
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_23_92_20_37_443"
+    type: ssr
+    server: 23.92.20.37
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_23_92_20_90_443"
+    type: ssr
+    server: 23.92.20.90
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_253_65_247_996"
+    type: ssr
+    server: 45.253.65.247
+    port: 996
+    cipher: aes-256-cfb
+    password: "jrMqHm0ki"
+    obfs: tls1.2_ticket_auth
+    protocol: origin
+
+  - name: "S_45_33_88_190_443"
+    type: ssr
+    server: 45.33.88.190
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_33_93_132_443"
+    type: ssr
+    server: 45.33.93.132
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_33_93_207_443"
+    type: ssr
+    server: 45.33.93.207
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_56_91_37_443"
+    type: ssr
+    server: 45.56.91.37
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_56_93_244_443"
+    type: ssr
+    server: 45.56.93.244
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_56_94_40_443"
+    type: ssr
+    server: 45.56.94.40
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_108_12_443"
+    type: ssr
+    server: 45.79.108.12
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_111_214_443"
+    type: ssr
+    server: 45.79.111.214
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_66_9_443"
+    type: ssr
+    server: 45.79.66.9
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_75_86_443"
+    type: ssr
+    server: 45.79.75.86
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_79_37_443"
+    type: ssr
+    server: 45.79.79.37
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_93_178_443"
+    type: ssr
+    server: 45.79.93.178
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_79_98_239_443"
+    type: ssr
+    server: 45.79.98.239
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_45_85_3_85_50013"
+    type: ssr
+    server: 45.85.3.85
+    port: 50013
+    cipher: rc4-md5
+    password: "t.me/SSRSUB"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_45_85_3_85_50014"
+    type: ssr
+    server: 45.85.3.85
+    port: 50014
+    cipher: rc4-md5
+    password: "http://t.cn/EGJIyrl"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_45_85_3_85_50015"
+    type: ssr
+    server: 45.85.3.85
+    port: 50015
+    cipher: rc4-md5
+    password: "http://t.cn/RD0D7sx"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_5_252_199_12_64520"
+    type: ssr
+    server: 5.252.199.12
+    port: 64520
+    cipher: chacha20-ietf
+    password: "xiaofeiji520"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_50_116_15_74_443"
+    type: ssr
+    server: 50.116.15.74
+    port: 443
+    cipher: aes-256-cfb
+    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_50_7_12_147_8097"
+    type: ssr
+    server: 50.7.12.147
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_50_7_12_147_8099"
+    type: ssr
+    server: 50.7.12.147
+    port: 8099
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_69_36_182_52_8097"
+    type: ssr
+    server: 69.36.182.52
+    port: 8097
+    cipher: aes-256-cfb
+    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_85_117_235_171_50004"
+    type: ssr
+    server: 85.117.235.171
+    port: 50004
+    cipher: rc4-md5
+    password: "t.me/SSRSUB"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_85_117_235_171_50006"
+    type: ssr
+    server: 85.117.235.171
+    port: 50006
+    cipher: rc4-md5
+    password: "http://t.cn/RD0D7sx"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_91_203_192_187_50010"
+    type: ssr
+    server: 91.203.192.187
+    port: 50010
+    cipher: rc4-md5
+    password: "t.me/SSRSUB"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_91_203_192_187_50011"
+    type: ssr
+    server: 91.203.192.187
+    port: 50011
+    cipher: rc4-md5
+    password: "http://t.cn/EGJIyrl"
+    obfs: http_simple
+    protocol: auth_sha1_v4
+
+  - name: "S_96_8_121_149_65201"
+    type: ssr
+    server: 96.8.121.149
+    port: 65201
+    cipher: chacha20-ietf
+    password: "xiaofeiji520"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_chengdu-china-proxy1_darren-lee_net_8081"
+    type: ssr
+    server: chengdu-china-proxy1.darren-lee.net
+    port: 8081
+    cipher: rc4-md5
+    password: "8081"
+    obfs: plain
+    protocol: origin
+
+  - name: "S_hktj2_servep2p_com_8080"
+    type: ssr
+    server: hktj2.servep2p.com
+    port: 8080
+    cipher: aes-256-cfb
+    password: "ZPi5WJydD"
+    obfs: tls1.2_ticket_auth
+    protocol: origin
 
 
 
 proxy-groups:
-  - name: Proxy
-    type: select
+  # relay chains the proxies. proxies shall not contain a relay. No UDP support.
+  # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
+  - name: "relay"
+    type: relay
     proxies:
-
+      - ss1
+      - ss2
       - S_103_29_68_199_40304
 
+  # url-test select which proxy will be used by benchmarking speed to a URL.
+  - name: "auto"
+    type: url-test
+    proxies:
+      - ss1
+      - ss2
+      - S_103_29_68_199_40304
+      - S_139_162_15_45_8099
+      - S_139_162_224_44_26625
+      - S_139_162_38_42_8097
+      - S_139_162_67_40_8097
+      - S_149_129_81_235_41087
+      - S_154_84_1_101_12466
+      - S_154_84_1_11_22122
+      - S_154_84_1_111_22345
+      - S_154_84_1_111_55113
+      - S_154_84_1_121_33311
+      - S_154_84_1_127_26671
+      - S_154_84_1_129_21800
+      - S_154_84_1_129_23100
+      - S_154_84_1_133_61100
+      - S_154_84_1_136_27700
+      - S_154_84_1_136_48000
+      - S_154_84_1_136_55509
+      - S_154_84_1_138_22765
+      - S_154_84_1_139_33367
+      - S_154_84_1_141_30909
+      - S_154_84_1_141_40908
+      - S_154_84_1_141_51010
+      - S_154_84_1_142_41695
+      - S_154_84_1_143_41683
+      - S_154_84_1_144_27981
+      - S_167_71_201_29_17545
+      - S_167_71_201_29_17549
+      - S_167_71_201_29_17550
+      - S_172_104_131_24_8099
+      - S_172_104_152_149_8099
+      - S_172_104_178_58_8099
+      - S_172_105_192_135_8099
+      - S_172_105_192_82_26850
+      - S_172_105_192_82_26854
+      - S_172_105_192_82_26855
+      - S_172_105_192_82_26856
+      - S_172_105_227_188_17820
+      - S_172_105_227_188_17824
+      - S_172_105_227_188_17825
+      - S_172_105_227_188_17826
+      - S_172_105_71_82_8099
+      - S_176_58_97_137_8099
+      - S_178_170_68_250_10003
+      - S_185_186_245_44_8097
+      - S_185_243_57_221_443
+      - S_185_243_57_221_48886
+      - S_185_243_57_221_543
+      - S_185_243_57_221_80
+      - S_192_240_99_182_8097
+      - S_198_255_103_62_8099
+      - S_199_223_119_83_8097
+      - S_199_223_119_92_8099
+      - S_2_56_240_77_11288
+      - S_204_45_182_34_8097
+      - S_209_58_188_157_8099
+      - S_210_203_20_91_8080
+      - S_23_239_12_251_443
+      - S_23_254_204_203_8097
+      - S_23_92_18_110_443
+      - S_23_92_18_28_443
+      - S_23_92_20_37_443
+      - S_23_92_20_90_443
+      - S_45_253_65_247_996
+      - S_45_33_88_190_443
+      - S_45_33_93_132_443
+      - S_45_33_93_207_443
+      - S_45_56_91_37_443
+      - S_45_56_93_244_443
+      - S_45_56_94_40_443
+      - S_45_79_108_12_443
+      - S_45_79_111_214_443
+      - S_45_79_66_9_443
+      - S_45_79_75_86_443
+      - S_45_79_79_37_443
+      - S_45_79_93_178_443
+      - S_45_79_98_239_443
+      - S_45_85_3_85_50013
+      - S_45_85_3_85_50014
+      - S_45_85_3_85_50015
+      - S_5_252_199_12_64520
+      - S_50_116_15_74_443
+      - S_50_7_12_147_8097
+      - S_50_7_12_147_8099
+      - S_69_36_182_52_8097
+      - S_85_117_235_171_50004
+      - S_85_117_235_171_50006
+      - S_91_203_192_187_50010
+      - S_91_203_192_187_50011
+      - S_96_8_121_149_65201
+      - S_chengdu-china-proxy1_darren-lee_net_8081
+      - S_hktj2_servep2p_com_8080
+    # tolerance: 150
+    # lazy: true
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  # fallback selects an available policy by priority. The availability is tested by accessing an URL, just like an auto url-test group.
+  - name: "fallback-auto"
+    type: fallback
+    proxies:
+      - ss1
+      - ss2
+      - S_103_29_68_199_40304
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  # load-balance: The request of the same eTLD+1 will be dial to the same proxy.
+  - name: "load-balance"
+    type: load-balance
+    proxies:
+      - ss1
+      - ss2
+      - S_103_29_68_199_40304
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    # strategy: consistent-hashing # or round-robin
+
+  # select is used for selecting proxy or proxy group
+  # you can use RESTful API to switch proxy is recommended for use in GUI.
+  - name: Proxy
+    type: select
+    # disable-udp: true
+    proxies:
+      - ss1
+      - ss2
+      - S_103_29_68_199_40304
+      - S_139_162_15_45_8099
+      - S_139_162_224_44_26625
+      - S_139_162_38_42_8097
+      - S_139_162_67_40_8097
+      - S_149_129_81_235_41087
+      - S_154_84_1_101_12466
+      - S_154_84_1_11_22122
+      - S_154_84_1_111_22345
+      - S_154_84_1_111_55113
+      - S_154_84_1_121_33311
+      - S_154_84_1_127_26671
+      - S_154_84_1_129_21800
+      - S_154_84_1_129_23100
+      - S_154_84_1_133_61100
+      - S_154_84_1_136_27700
+      - S_154_84_1_136_48000
+      - S_154_84_1_136_55509
+      - S_154_84_1_138_22765
+      - S_154_84_1_139_33367
+      - S_154_84_1_141_30909
+      - S_154_84_1_141_40908
+      - S_154_84_1_141_51010
+      - S_154_84_1_142_41695
+      - S_154_84_1_143_41683
+      - S_154_84_1_144_27981
+      - S_167_71_201_29_17545
+      - S_167_71_201_29_17549
+      - S_167_71_201_29_17550
+      - S_172_104_131_24_8099
+      - S_172_104_152_149_8099
+      - S_172_104_178_58_8099
+      - S_172_105_192_135_8099
+      - S_172_105_192_82_26850
+      - S_172_105_192_82_26854
+      - S_172_105_192_82_26855
+      - S_172_105_192_82_26856
+      - S_172_105_227_188_17820
+      - S_172_105_227_188_17824
+      - S_172_105_227_188_17825
+      - S_172_105_227_188_17826
+      - S_172_105_71_82_8099
+      - S_176_58_97_137_8099
+      - S_178_170_68_250_10003
+      - S_185_186_245_44_8097
+      - S_185_243_57_221_443
+      - S_185_243_57_221_48886
+      - S_185_243_57_221_543
+      - S_185_243_57_221_80
+      - S_192_240_99_182_8097
+      - S_198_255_103_62_8099
+      - S_199_223_119_83_8097
+      - S_199_223_119_92_8099
+      - S_2_56_240_77_11288
+      - S_204_45_182_34_8097
+      - S_209_58_188_157_8099
+      - S_210_203_20_91_8080
+      - S_23_239_12_251_443
+      - S_23_254_204_203_8097
+      - S_23_92_18_110_443
+      - S_23_92_18_28_443
+      - S_23_92_20_37_443
+      - S_23_92_20_90_443
+      - S_45_253_65_247_996
+      - S_45_33_88_190_443
+      - S_45_33_93_132_443
+      - S_45_33_93_207_443
+      - S_45_56_91_37_443
+      - S_45_56_93_244_443
+      - S_45_56_94_40_443
+      - S_45_79_108_12_443
+      - S_45_79_111_214_443
+      - S_45_79_66_9_443
+      - S_45_79_75_86_443
+      - S_45_79_79_37_443
+      - S_45_79_93_178_443
+      - S_45_79_98_239_443
+      - S_45_85_3_85_50013
+      - S_45_85_3_85_50014
+      - S_45_85_3_85_50015
+      - S_5_252_199_12_64520
+      - S_50_116_15_74_443
+      - S_50_7_12_147_8097
+      - S_50_7_12_147_8099
+      - S_69_36_182_52_8097
+      - S_85_117_235_171_50004
+      - S_85_117_235_171_50006
+      - S_91_203_192_187_50010
+      - S_91_203_192_187_50011
+      - S_96_8_121_149_65201
+      - S_chengdu-china-proxy1_darren-lee_net_8081
+      - S_hktj2_servep2p_com_8080
+      - auto
+ 
+  # direct to another infacename
+  - name: en1
+    type: select
+    interface-name: en1
+    proxies:
+      - DIRECT 
+
+  # - name: UseProvider
+  #   type: select
+  #   use:
+  #     - provider1
+  #   proxies:
+  #     - Proxy
+  #     - DIRECT
+
+# proxy-providers:
+#   provider1:
+#     type: http
+#     url: "url"
+#     interval: 3600
+#     path: ./provider1.yaml
+#     health-check:
+#       enable: true
+#       interval: 600
+#       # lazy: true
+#       url: http://www.gstatic.com/generate_204
+  # test:
+  #   type: file
+  #   path: /test.yaml
+  #   health-check:
+  #     enable: true
+  #     interval: 36000
+  #     url: http://www.gstatic.com/generate_204
+
 rules:
-
-    - DOMAIN-SUFFIX,google.com,Proxy
-    - DOMAIN-KEYWORD,google,Proxy
-    - DOMAIN,google.com,Proxy
-    - DOMAIN-SUFFIX,ad.com,REJECT
-    - GEOIP,CN,DIRECT
-    - MATCH,Proxy
-
-
-    # 国内网站
-    - DOMAIN-SUFFIX,cn,DIRECT
-    - DOMAIN-KEYWORD,-cn,DIRECT
-    - DOMAIN-SUFFIX,126.com,DIRECT
-    - DOMAIN-SUFFIX,126.net,DIRECT
-    - DOMAIN-SUFFIX,127.net,DIRECT
-    - DOMAIN-SUFFIX,163.com,DIRECT
-    - DOMAIN-SUFFIX,360buyimg.com,DIRECT
-    - DOMAIN-SUFFIX,36kr.com,DIRECT
-    - DOMAIN-SUFFIX,acfun.tv,DIRECT
-    - DOMAIN-SUFFIX,air-matters.com,DIRECT
-    - DOMAIN-SUFFIX,aixifan.com,DIRECT
-    - DOMAIN-KEYWORD,alicdn,DIRECT
-    - DOMAIN-KEYWORD,alipay,DIRECT
-    - DOMAIN-KEYWORD,taobao,DIRECT
-    - DOMAIN-SUFFIX,amap.com,DIRECT
-    - DOMAIN-SUFFIX,autonavi.com,DIRECT
-    - DOMAIN-KEYWORD,baidu,DIRECT
-    - DOMAIN-SUFFIX,bdimg.com,DIRECT
-    - DOMAIN-SUFFIX,bdstatic.com,DIRECT
-    - DOMAIN-SUFFIX,bilibili.com,DIRECT
-    - DOMAIN-SUFFIX,bilivideo.com,DIRECT
-    - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
-    - DOMAIN-SUFFIX,clouddn.com,DIRECT
-    - DOMAIN-SUFFIX,cnbeta.com,DIRECT
-    - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
-    - DOMAIN-SUFFIX,cootekservice.com,DIRECT
-    - DOMAIN-SUFFIX,csdn.net,DIRECT
-    - DOMAIN-SUFFIX,ctrip.com,DIRECT
-    - DOMAIN-SUFFIX,dgtle.com,DIRECT
-    - DOMAIN-SUFFIX,dianping.com,DIRECT
-    - DOMAIN-SUFFIX,douban.com,DIRECT
-    - DOMAIN-SUFFIX,doubanio.com,DIRECT
-    - DOMAIN-SUFFIX,duokan.com,DIRECT
-    - DOMAIN-SUFFIX,easou.com,DIRECT
-    - DOMAIN-SUFFIX,ele.me,DIRECT
-    - DOMAIN-SUFFIX,feng.com,DIRECT
-    - DOMAIN-SUFFIX,fir.im,DIRECT
-    - DOMAIN-SUFFIX,frdic.com,DIRECT
-    - DOMAIN-SUFFIX,g-cores.com,DIRECT
-    - DOMAIN-SUFFIX,godic.net,DIRECT
-    - DOMAIN-SUFFIX,gtimg.com,DIRECT
-    - DOMAIN,cdn.hockeyapp.net,DIRECT
-    - DOMAIN-SUFFIX,hongxiu.com,DIRECT
-    - DOMAIN-SUFFIX,hxcdn.net,DIRECT
-    - DOMAIN-SUFFIX,iciba.com,DIRECT
-    - DOMAIN-SUFFIX,ifeng.com,DIRECT
-    - DOMAIN-SUFFIX,ifengimg.com,DIRECT
-    - DOMAIN-SUFFIX,ipip.net,DIRECT
-    - DOMAIN-SUFFIX,iqiyi.com,DIRECT
-    - DOMAIN-SUFFIX,jd.com,DIRECT
-    - DOMAIN-SUFFIX,jianshu.com,DIRECT
-    - DOMAIN-SUFFIX,knewone.com,DIRECT
-    - DOMAIN-SUFFIX,le.com,DIRECT
-    - DOMAIN-SUFFIX,lecloud.com,DIRECT
-    - DOMAIN-SUFFIX,lemicp.com,DIRECT
-    - DOMAIN-SUFFIX,licdn.com,DIRECT
-    - DOMAIN-SUFFIX,linkedin.com,DIRECT
-    - DOMAIN-SUFFIX,luoo.net,DIRECT
-    - DOMAIN-SUFFIX,meituan.com,DIRECT
-    - DOMAIN-SUFFIX,meituan.net,DIRECT
-    - DOMAIN-SUFFIX,mi.com,DIRECT
-    - DOMAIN-SUFFIX,miaopai.com,DIRECT
-    - DOMAIN-SUFFIX,microsoft.com,DIRECT
-    - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
-    - DOMAIN-SUFFIX,miui.com,DIRECT
-    - DOMAIN-SUFFIX,miwifi.com,DIRECT
-    - DOMAIN-SUFFIX,mob.com,DIRECT
-    - DOMAIN-SUFFIX,netease.com,DIRECT
-    - DOMAIN-SUFFIX,office.com,DIRECT
-    - DOMAIN-SUFFIX,office365.com,DIRECT
-    - DOMAIN-KEYWORD,officecdn,DIRECT
-    - DOMAIN-SUFFIX,oschina.net,DIRECT
-    - DOMAIN-SUFFIX,ppsimg.com,DIRECT
-    - DOMAIN-SUFFIX,pstatp.com,DIRECT
-    - DOMAIN-SUFFIX,qcloud.com,DIRECT
-    - DOMAIN-SUFFIX,qdaily.com,DIRECT
-    - DOMAIN-SUFFIX,qdmm.com,DIRECT
-    - DOMAIN-SUFFIX,qhimg.com,DIRECT
-    - DOMAIN-SUFFIX,qhres.com,DIRECT
-    - DOMAIN-SUFFIX,qidian.com,DIRECT
-    - DOMAIN-SUFFIX,qihucdn.com,DIRECT
-    - DOMAIN-SUFFIX,qiniu.com,DIRECT
-    - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
-    - DOMAIN-SUFFIX,qiyipic.com,DIRECT
-    - DOMAIN-SUFFIX,qq.com,DIRECT
-    - DOMAIN-SUFFIX,qqurl.com,DIRECT
-    - DOMAIN-SUFFIX,rarbg.to,DIRECT
-    - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
-    - DOMAIN-SUFFIX,segmentfault.com,DIRECT
-    - DOMAIN-SUFFIX,sinaapp.com,DIRECT
-    - DOMAIN-SUFFIX,smzdm.com,DIRECT
-    - DOMAIN-SUFFIX,snapdrop.net,DIRECT
-    - DOMAIN-SUFFIX,sogou.com,DIRECT
-    - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
-    - DOMAIN-SUFFIX,sohu.com,DIRECT
-    - DOMAIN-SUFFIX,soku.com,DIRECT
-    - DOMAIN-SUFFIX,speedtest.net,DIRECT
-    - DOMAIN-SUFFIX,sspai.com,DIRECT
-    - DOMAIN-SUFFIX,suning.com,DIRECT
-    - DOMAIN-SUFFIX,taobao.com,DIRECT
-    - DOMAIN-SUFFIX,tencent.com,DIRECT
-    - DOMAIN-SUFFIX,tenpay.com,DIRECT
-    - DOMAIN-SUFFIX,tianyancha.com,DIRECT
-    - DOMAIN-SUFFIX,tmall.com,DIRECT
-    - DOMAIN-SUFFIX,tudou.com,DIRECT
-    - DOMAIN-SUFFIX,umetrip.com,DIRECT
-    - DOMAIN-SUFFIX,upaiyun.com,DIRECT
-    - DOMAIN-SUFFIX,upyun.com,DIRECT
-    - DOMAIN-SUFFIX,veryzhun.com,DIRECT
-    - DOMAIN-SUFFIX,weather.com,DIRECT
-    - DOMAIN-SUFFIX,weibo.com,DIRECT
-    - DOMAIN-SUFFIX,xiami.com,DIRECT
-    - DOMAIN-SUFFIX,xiami.net,DIRECT
-    - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
-    - DOMAIN-SUFFIX,ximalaya.com,DIRECT
-    - DOMAIN-SUFFIX,xmcdn.com,DIRECT
-    - DOMAIN-SUFFIX,xunlei.com,DIRECT
-    - DOMAIN-SUFFIX,yhd.com,DIRECT
-    - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
-    - DOMAIN-SUFFIX,yinxiang.com,DIRECT
-    - DOMAIN-SUFFIX,ykimg.com,DIRECT
-    - DOMAIN-SUFFIX,youdao.com,DIRECT
-    - DOMAIN-SUFFIX,youku.com,DIRECT
-    - DOMAIN-SUFFIX,zealer.com,DIRECT
-    - DOMAIN-SUFFIX,zhihu.com,DIRECT
-    - DOMAIN-SUFFIX,zhimg.com,DIRECT
-    - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
-    - DOMAIN-SUFFIX,zoho.com,DIRECT
-
-
-    # 常见广告域名屏蔽
-    - DOMAIN-KEYWORD,admarvel,REJECT
-    - DOMAIN-KEYWORD,admaster,REJECT
-    - DOMAIN-KEYWORD,adsage,REJECT
-    - DOMAIN-KEYWORD,adsmogo,REJECT
-    - DOMAIN-KEYWORD,adsrvmedia,REJECT
-    - DOMAIN-KEYWORD,adwords,REJECT
-    - DOMAIN-KEYWORD,adservice,REJECT
-    - DOMAIN-SUFFIX,appsflyer.com,REJECT
-    - DOMAIN-KEYWORD,domob,REJECT
-    - DOMAIN-SUFFIX,doubleclick.net,REJECT
-    - DOMAIN-KEYWORD,duomeng,REJECT
-    - DOMAIN-KEYWORD,dwtrack,REJECT
-    - DOMAIN-KEYWORD,guanggao,REJECT
-    - DOMAIN-KEYWORD,lianmeng,REJECT
-    - DOMAIN-SUFFIX,mmstat.com,REJECT
-    - DOMAIN-KEYWORD,mopub,REJECT
-    - DOMAIN-KEYWORD,omgmta,REJECT
-    - DOMAIN-KEYWORD,openx,REJECT
-    - DOMAIN-KEYWORD,partnerad,REJECT
-    - DOMAIN-KEYWORD,pingfore,REJECT
-    - DOMAIN-KEYWORD,supersonicads,REJECT
-    - DOMAIN-KEYWORD,uedas,REJECT
-    - DOMAIN-KEYWORD,umeng,REJECT
-    - DOMAIN-KEYWORD,usage,REJECT
-    - DOMAIN-SUFFIX,vungle.com,REJECT
-    - DOMAIN-KEYWORD,wlmonitor,REJECT
-    - DOMAIN-KEYWORD,zjtoolbar,REJECT
-
-
-    # LAN
-    - DOMAIN,injections.adguard.org,DIRECT
-    - DOMAIN,local.adguard.org,DIRECT
-    - DOMAIN-SUFFIX,local,DIRECT
-    - IP-CIDR,127.0.0.0/8,DIRECT
-    - IP-CIDR,172.16.0.0/12,DIRECT
-    - IP-CIDR,192.168.0.0/16,DIRECT
-    - IP-CIDR,10.0.0.0/8,DIRECT
-    - IP-CIDR,17.0.0.0/8,DIRECT
-    - IP-CIDR,100.64.0.0/10,DIRECT
+  - DOMAIN-SUFFIX,google.com,auto
+  - DOMAIN-KEYWORD,google,auto
+  - DOMAIN,google.com,auto
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  # optional param "no-resolve" for IP rules (GEOIP, IP-CIDR, IP-CIDR6)
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - GEOIP,CN,DIRECT
+  - DST-PORT,80,DIRECT
+  - SRC-PORT,7777,DIRECT
+  # - RULE-SET,apple,REJECT # Premium only
+  - MATCH,auto
