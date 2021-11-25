@@ -154,853 +154,84 @@ proxies:
   #   aes-128-ctr aes-192-ctr aes-256-ctr
   #   rc4-md5 chacha20-ietf xchacha20
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
-  - name: "ss1"
-    type: ss
-    server: server
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: "password"
-    # udp: true
-
-  - name: "ss2"
-    type: ss
-    server: server
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: "password"
-    plugin: obfs
-    plugin-opts:
-      mode: tls # or http
-      # host: bing.com
-
-
-  - name: "S_103_29_68_199_40304"
-    type: ssr
-    server: 103.29.68.199
-    port: 40304
-    cipher: aes-256-cfb
-    password: "jij9hPjvnOc1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_139_162_15_45_8099"
-    type: ssr
-    server: 139.162.15.45
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_139_162_224_44_26625"
-    type: ssr
-    server: 139.162.224.44
-    port: 26625
-    cipher: aes-256-cfb
-    password: "YkeC2XDIA2kr"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_139_162_38_42_8097"
-    type: ssr
-    server: 139.162.38.42
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_139_162_67_40_8097"
-    type: ssr
-    server: 139.162.67.40
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_149_129_81_235_41087"
-    type: ssr
-    server: 149.129.81.235
-    port: 41087
-    cipher: aes-256-cfb
-    password: "Leung！8848."
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_101_12466"
-    type: ssr
-    server: 154.84.1.101
-    port: 12466
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_11_22122"
-    type: ssr
-    server: 154.84.1.11
-    port: 22122
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_111_22345"
-    type: ssr
-    server: 154.84.1.111
-    port: 22345
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_111_55113"
-    type: ssr
-    server: 154.84.1.111
-    port: 55113
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_121_33311"
-    type: ssr
-    server: 154.84.1.121
-    port: 33311
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_127_26671"
-    type: ssr
-    server: 154.84.1.127
-    port: 26671
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_129_21800"
-    type: ssr
-    server: 154.84.1.129
-    port: 21800
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_129_23100"
-    type: ssr
-    server: 154.84.1.129
-    port: 23100
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_133_61100"
-    type: ssr
-    server: 154.84.1.133
-    port: 61100
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_136_27700"
-    type: ssr
-    server: 154.84.1.136
-    port: 27700
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_136_48000"
-    type: ssr
-    server: 154.84.1.136
-    port: 48000
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_136_55509"
-    type: ssr
-    server: 154.84.1.136
-    port: 55509
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_138_22765"
-    type: ssr
-    server: 154.84.1.138
-    port: 22765
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_139_33367"
-    type: ssr
-    server: 154.84.1.139
-    port: 33367
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_141_30909"
-    type: ssr
-    server: 154.84.1.141
-    port: 30909
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_141_40908"
-    type: ssr
-    server: 154.84.1.141
-    port: 40908
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_141_51010"
-    type: ssr
-    server: 154.84.1.141
-    port: 51010
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_142_41695"
-    type: ssr
-    server: 154.84.1.142
-    port: 41695
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_143_41683"
-    type: ssr
-    server: 154.84.1.143
-    port: 41683
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_154_84_1_144_27981"
-    type: ssr
-    server: 154.84.1.144
-    port: 27981
-    cipher: aes-256-cfb
-    password: "4XVeP1"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_167_71_201_29_17545"
-    type: ssr
-    server: 167.71.201.29
-    port: 17545
-    cipher: aes-256-cfb
-    password: "0j3CCJ4VyWC9"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_167_71_201_29_17549"
-    type: ssr
-    server: 167.71.201.29
-    port: 17549
-    cipher: aes-256-cfb
-    password: "0j3CCJ4VyWC9"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_167_71_201_29_17550"
-    type: ssr
-    server: 167.71.201.29
-    port: 17550
-    cipher: aes-256-cfb
-    password: "0j3CCJ4VyWC9"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_104_131_24_8099"
-    type: ssr
-    server: 172.104.131.24
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_104_152_149_8099"
-    type: ssr
-    server: 172.104.152.149
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_104_178_58_8099"
-    type: ssr
-    server: 172.104.178.58
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_192_135_8099"
-    type: ssr
-    server: 172.105.192.135
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_192_82_26850"
-    type: ssr
-    server: 172.105.192.82
-    port: 26850
-    cipher: aes-256-cfb
-    password: "10rQMbABljoc"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_192_82_26854"
-    type: ssr
-    server: 172.105.192.82
-    port: 26854
-    cipher: aes-256-cfb
-    password: "10rQMbABljoc"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_192_82_26855"
-    type: ssr
-    server: 172.105.192.82
-    port: 26855
-    cipher: aes-256-cfb
-    password: "10rQMbABljoc"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_192_82_26856"
-    type: ssr
-    server: 172.105.192.82
-    port: 26856
-    cipher: aes-256-cfb
-    password: "10rQMbABljoc"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_227_188_17820"
-    type: ssr
-    server: 172.105.227.188
-    port: 17820
-    cipher: aes-256-cfb
-    password: "AN9jvZPlu4Sb"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_227_188_17824"
-    type: ssr
-    server: 172.105.227.188
-    port: 17824
-    cipher: aes-256-cfb
-    password: "AN9jvZPlu4Sb"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_227_188_17825"
-    type: ssr
-    server: 172.105.227.188
-    port: 17825
-    cipher: aes-256-cfb
-    password: "AN9jvZPlu4Sb"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_227_188_17826"
-    type: ssr
-    server: 172.105.227.188
-    port: 17826
-    cipher: aes-256-cfb
-    password: "AN9jvZPlu4Sb"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_172_105_71_82_8099"
-    type: ssr
-    server: 172.105.71.82
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_176_58_97_137_8099"
-    type: ssr
-    server: 176.58.97.137
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_178_170_68_250_10003"
-    type: ssr
-    server: 178.170.68.250
-    port: 10003
-    cipher: aes-128-ctr
-    password: "mLFBNEi0"
-    obfs: tls1.2_ticket_auth
-    protocol: auth_aes128_md5
-
-  - name: "S_185_186_245_44_8097"
-    type: ssr
-    server: 185.186.245.44
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_185_243_57_221_443"
-    type: ssr
-    server: 185.243.57.221
-    port: 443
-    cipher: aes-256-ctr
-    password: "http://t.cn/RD0D7sx"
-    obfs: tls1.2_ticket_auth
-    protocol: auth_aes128_md5
-
-  - name: "S_185_243_57_221_48886"
-    type: ssr
-    server: 185.243.57.221
-    port: 48886
-    cipher: aes-128-ctr
-    password: "@SSRSUB"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_185_243_57_221_543"
-    type: ssr
-    server: 185.243.57.221
-    port: 543
-    cipher: aes-256-ctr
-    password: "t.me/SSRSUB"
-    obfs: tls1.2_ticket_auth
-    protocol: auth_aes128_md5
-
-  - name: "S_185_243_57_221_80"
-    type: ssr
-    server: 185.243.57.221
-    port: 80
-    cipher: aes-256-ctr
-    password: "http://t.cn/EGJIyrl"
-    obfs: tls1.2_ticket_auth
-    protocol: auth_aes128_md5
-
-  - name: "S_192_240_99_182_8097"
-    type: ssr
-    server: 192.240.99.182
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_198_255_103_62_8099"
-    type: ssr
-    server: 198.255.103.62
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_199_223_119_83_8097"
-    type: ssr
-    server: 199.223.119.83
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_199_223_119_92_8099"
-    type: ssr
-    server: 199.223.119.92
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_2_56_240_77_11288"
-    type: ssr
-    server: 2.56.240.77
-    port: 11288
-    cipher: aes-256-cfb
-    password: "zsljjilu520"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_204_45_182_34_8097"
-    type: ssr
-    server: 204.45.182.34
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_209_58_188_157_8099"
-    type: ssr
-    server: 209.58.188.157
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_210_203_20_91_8080"
-    type: ssr
-    server: 210.203.20.91
-    port: 8080
-    cipher: aes-256-cfb
-    password: "l9GnDewIE"
-    obfs: tls1.2_ticket_auth
-    protocol: origin
-
-  - name: "S_23_239_12_251_443"
-    type: ssr
-    server: 23.239.12.251
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_23_254_204_203_8097"
-    type: ssr
-    server: 23.254.204.203
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_23_92_18_110_443"
-    type: ssr
-    server: 23.92.18.110
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_23_92_18_28_443"
-    type: ssr
-    server: 23.92.18.28
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_23_92_20_37_443"
-    type: ssr
-    server: 23.92.20.37
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_23_92_20_90_443"
-    type: ssr
-    server: 23.92.20.90
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_253_65_247_996"
-    type: ssr
-    server: 45.253.65.247
-    port: 996
-    cipher: aes-256-cfb
-    password: "jrMqHm0ki"
-    obfs: tls1.2_ticket_auth
-    protocol: origin
-
-  - name: "S_45_33_88_190_443"
-    type: ssr
-    server: 45.33.88.190
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_33_93_132_443"
-    type: ssr
-    server: 45.33.93.132
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_33_93_207_443"
-    type: ssr
-    server: 45.33.93.207
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_56_91_37_443"
-    type: ssr
-    server: 45.56.91.37
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_56_93_244_443"
-    type: ssr
-    server: 45.56.93.244
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_56_94_40_443"
-    type: ssr
-    server: 45.56.94.40
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_108_12_443"
-    type: ssr
-    server: 45.79.108.12
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_111_214_443"
-    type: ssr
-    server: 45.79.111.214
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_66_9_443"
-    type: ssr
-    server: 45.79.66.9
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_75_86_443"
-    type: ssr
-    server: 45.79.75.86
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_79_37_443"
-    type: ssr
-    server: 45.79.79.37
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_93_178_443"
-    type: ssr
-    server: 45.79.93.178
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_79_98_239_443"
-    type: ssr
-    server: 45.79.98.239
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_45_85_3_85_50013"
-    type: ssr
-    server: 45.85.3.85
-    port: 50013
-    cipher: rc4-md5
-    password: "t.me/SSRSUB"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_45_85_3_85_50014"
-    type: ssr
-    server: 45.85.3.85
-    port: 50014
-    cipher: rc4-md5
-    password: "http://t.cn/EGJIyrl"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_45_85_3_85_50015"
-    type: ssr
-    server: 45.85.3.85
-    port: 50015
-    cipher: rc4-md5
-    password: "http://t.cn/RD0D7sx"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_5_252_199_12_64520"
-    type: ssr
-    server: 5.252.199.12
-    port: 64520
-    cipher: chacha20-ietf
-    password: "xiaofeiji520"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_50_116_15_74_443"
-    type: ssr
-    server: 50.116.15.74
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_50_7_12_147_8097"
-    type: ssr
-    server: 50.7.12.147
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_50_7_12_147_8099"
-    type: ssr
-    server: 50.7.12.147
-    port: 8099
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_69_36_182_52_8097"
-    type: ssr
-    server: 69.36.182.52
-    port: 8097
-    cipher: aes-256-cfb
-    password: "eIW0Dnk69454e6nSwuspv9DmS201tQ0D"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_85_117_235_171_50004"
-    type: ssr
-    server: 85.117.235.171
-    port: 50004
-    cipher: rc4-md5
-    password: "t.me/SSRSUB"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_85_117_235_171_50006"
-    type: ssr
-    server: 85.117.235.171
-    port: 50006
-    cipher: rc4-md5
-    password: "http://t.cn/RD0D7sx"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_91_203_192_187_50010"
-    type: ssr
-    server: 91.203.192.187
-    port: 50010
-    cipher: rc4-md5
-    password: "t.me/SSRSUB"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_91_203_192_187_50011"
-    type: ssr
-    server: 91.203.192.187
-    port: 50011
-    cipher: rc4-md5
-    password: "http://t.cn/EGJIyrl"
-    obfs: http_simple
-    protocol: auth_sha1_v4
-
-  - name: "S_96_8_121_149_65201"
-    type: ssr
-    server: 96.8.121.149
-    port: 65201
-    cipher: chacha20-ietf
-    password: "xiaofeiji520"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_chengdu-china-proxy1_darren-lee_net_8081"
-    type: ssr
-    server: chengdu-china-proxy1.darren-lee.net
-    port: 8081
-    cipher: rc4-md5
-    password: "8081"
-    obfs: plain
-    protocol: origin
-
-  - name: "S_hktj2_servep2p_com_8080"
-    type: ssr
-    server: hktj2.servep2p.com
-    port: 8080
-    cipher: aes-256-cfb
-    password: "ZPi5WJydD"
-    obfs: tls1.2_ticket_auth
-    protocol: origin
+- name: "ss_134_195_196_71_2375"
+  type: ss
+  server: 134.195.196.71
+  port: 2375
+  cipher: aes-256-gcm
+  password: "faBAoD54k87UJG7"
+- name: "ss_134_195_196_214_5004"
+  type: ss
+  server: 134.195.196.214
+  port: 5004
+  cipher: aes-256-gcm
+  password: "g5MeD6Ft3CWlJId"
+- name: "ss_134_195_198_178_7307"
+  type: ss
+  server: 134.195.198.178
+  port: 7307
+  cipher: aes-256-gcm
+  password: "FoOiGlkAA9yPEGP"
+- name: "ss_134_195_196_154_7307"
+  type: ss
+  server: 134.195.196.154
+  port: 7307
+  cipher: aes-256-gcm
+  password: "FoOiGlkAA9yPEGP"
+- name: "ss_134_195_198_178_8090"
+  type: ss
+  server: 134.195.198.178
+  port: 8090
+  cipher: aes-256-gcm
+  password: "PCnnH6SQSnfoS27"
+- name: "ss_134_195_198_95_7306"
+  type: ss
+  server: 134.195.198.95
+  port: 7306
+  cipher: aes-256-gcm
+  password: "FoOiGlkAA9yPEGP"
+- name: "ss_134_195_198_252_2375"
+  type: ss
+  server: 134.195.198.252
+  port: 2375
+  cipher: aes-256-gcm
+  password: "faBAoD54k87UJG7"
+- name: "ss_46_29_218_6_2376"
+  type: ss
+  server: 46.29.218.6
+  port: 2376
+  cipher: aes-256-gcm
+  password: "faBAoD54k87UJG7"
+- name: "ss_145_239_1_137_2375"
+  type: ss
+  server: 145.239.1.137
+  port: 2375
+  cipher: aes-256-gcm
+  password: "faBAoD54k87UJG7"
+- name: "ss_198_57_27_218_2376"
+  type: ss
+  server: 198.57.27.218
+  port: 2376
+  cipher: aes-256-gcm
+  password: "faBAoD54k87UJG7"
+- name: "ss_134_195_198_252_2376"
+  type: ss
+  server: 134.195.198.252
+  port: 2376
+  cipher: aes-256-gcm
+  password: "faBAoD54k87UJG7"
+- name: "ss_118_107_244_110_5003"
+  type: ss
+  server: 118.107.244.110
+  port: 5003
+  cipher: aes-256-gcm
+  password: "g5MeD6Ft3CWlJId"
+- name: "ss_134_195_196_193_8090"
+  type: ss
+  server: 134.195.196.193
+  port: 8090
+  cipher: aes-256-gcm
+  password: "PCnnH6SQSnfoS27"
 
 
 
@@ -1010,108 +241,38 @@ proxy-groups:
   - name: "relay"
     type: relay
     proxies:
-      - ss1
-      - ss2
-      - S_103_29_68_199_40304
+      - ss_134_195_196_71_2375
+      - ss_134_195_196_214_5004
+      - ss_134_195_198_178_7307
+      - ss_134_195_196_154_7307
+      - ss_134_195_198_178_8090
+      - ss_134_195_198_95_7306
+      - ss_134_195_198_252_2375
+      - ss_46_29_218_6_2376
+      - ss_145_239_1_137_2375
+      - ss_198_57_27_218_2376
+      - ss_134_195_198_252_2376
+      - ss_118_107_244_110_5003
+      - ss_134_195_196_193_8090
 
   # url-test select which proxy will be used by benchmarking speed to a URL.
   - name: "auto"
     type: url-test
     proxies:
-      - ss1
-      - ss2
-      - S_103_29_68_199_40304
-      - S_139_162_15_45_8099
-      - S_139_162_224_44_26625
-      - S_139_162_38_42_8097
-      - S_139_162_67_40_8097
-      - S_149_129_81_235_41087
-      - S_154_84_1_101_12466
-      - S_154_84_1_11_22122
-      - S_154_84_1_111_22345
-      - S_154_84_1_111_55113
-      - S_154_84_1_121_33311
-      - S_154_84_1_127_26671
-      - S_154_84_1_129_21800
-      - S_154_84_1_129_23100
-      - S_154_84_1_133_61100
-      - S_154_84_1_136_27700
-      - S_154_84_1_136_48000
-      - S_154_84_1_136_55509
-      - S_154_84_1_138_22765
-      - S_154_84_1_139_33367
-      - S_154_84_1_141_30909
-      - S_154_84_1_141_40908
-      - S_154_84_1_141_51010
-      - S_154_84_1_142_41695
-      - S_154_84_1_143_41683
-      - S_154_84_1_144_27981
-      - S_167_71_201_29_17545
-      - S_167_71_201_29_17549
-      - S_167_71_201_29_17550
-      - S_172_104_131_24_8099
-      - S_172_104_152_149_8099
-      - S_172_104_178_58_8099
-      - S_172_105_192_135_8099
-      - S_172_105_192_82_26850
-      - S_172_105_192_82_26854
-      - S_172_105_192_82_26855
-      - S_172_105_192_82_26856
-      - S_172_105_227_188_17820
-      - S_172_105_227_188_17824
-      - S_172_105_227_188_17825
-      - S_172_105_227_188_17826
-      - S_172_105_71_82_8099
-      - S_176_58_97_137_8099
-      - S_178_170_68_250_10003
-      - S_185_186_245_44_8097
-      - S_185_243_57_221_443
-      - S_185_243_57_221_48886
-      - S_185_243_57_221_543
-      - S_185_243_57_221_80
-      - S_192_240_99_182_8097
-      - S_198_255_103_62_8099
-      - S_199_223_119_83_8097
-      - S_199_223_119_92_8099
-      - S_2_56_240_77_11288
-      - S_204_45_182_34_8097
-      - S_209_58_188_157_8099
-      - S_210_203_20_91_8080
-      - S_23_239_12_251_443
-      - S_23_254_204_203_8097
-      - S_23_92_18_110_443
-      - S_23_92_18_28_443
-      - S_23_92_20_37_443
-      - S_23_92_20_90_443
-      - S_45_253_65_247_996
-      - S_45_33_88_190_443
-      - S_45_33_93_132_443
-      - S_45_33_93_207_443
-      - S_45_56_91_37_443
-      - S_45_56_93_244_443
-      - S_45_56_94_40_443
-      - S_45_79_108_12_443
-      - S_45_79_111_214_443
-      - S_45_79_66_9_443
-      - S_45_79_75_86_443
-      - S_45_79_79_37_443
-      - S_45_79_93_178_443
-      - S_45_79_98_239_443
-      - S_45_85_3_85_50013
-      - S_45_85_3_85_50014
-      - S_45_85_3_85_50015
-      - S_5_252_199_12_64520
-      - S_50_116_15_74_443
-      - S_50_7_12_147_8097
-      - S_50_7_12_147_8099
-      - S_69_36_182_52_8097
-      - S_85_117_235_171_50004
-      - S_85_117_235_171_50006
-      - S_91_203_192_187_50010
-      - S_91_203_192_187_50011
-      - S_96_8_121_149_65201
-      - S_chengdu-china-proxy1_darren-lee_net_8081
-      - S_hktj2_servep2p_com_8080
+      - ss_134_195_196_71_2375
+      - ss_134_195_196_214_5004
+      - ss_134_195_198_178_7307
+      - ss_134_195_196_154_7307
+      - ss_134_195_198_178_8090
+      - ss_134_195_198_95_7306
+      - ss_134_195_198_252_2375
+      - ss_46_29_218_6_2376
+      - ss_145_239_1_137_2375
+      - ss_198_57_27_218_2376
+      - ss_134_195_198_252_2376
+      - ss_118_107_244_110_5003
+      - ss_134_195_196_193_8090
+
     # tolerance: 150
     # lazy: true
     url: 'http://www.gstatic.com/generate_204'
@@ -1121,9 +282,20 @@ proxy-groups:
   - name: "fallback-auto"
     type: fallback
     proxies:
-      - ss1
-      - ss2
-      - S_103_29_68_199_40304
+      - ss_134_195_196_71_2375
+      - ss_134_195_196_214_5004
+      - ss_134_195_198_178_7307
+      - ss_134_195_196_154_7307
+      - ss_134_195_198_178_8090
+      - ss_134_195_198_95_7306
+      - ss_134_195_198_252_2375
+      - ss_46_29_218_6_2376
+      - ss_145_239_1_137_2375
+      - ss_198_57_27_218_2376
+      - ss_134_195_198_252_2376
+      - ss_118_107_244_110_5003
+      - ss_134_195_196_193_8090
+
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -1131,9 +303,20 @@ proxy-groups:
   - name: "load-balance"
     type: load-balance
     proxies:
-      - ss1
-      - ss2
-      - S_103_29_68_199_40304
+      - ss_134_195_196_71_2375
+      - ss_134_195_196_214_5004
+      - ss_134_195_198_178_7307
+      - ss_134_195_196_154_7307
+      - ss_134_195_198_178_8090
+      - ss_134_195_198_95_7306
+      - ss_134_195_198_252_2375
+      - ss_46_29_218_6_2376
+      - ss_145_239_1_137_2375
+      - ss_198_57_27_218_2376
+      - ss_134_195_198_252_2376
+      - ss_118_107_244_110_5003
+      - ss_134_195_196_193_8090
+
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     # strategy: consistent-hashing # or round-robin
@@ -1144,100 +327,19 @@ proxy-groups:
     type: select
     # disable-udp: true
     proxies:
-      - ss1
-      - ss2
-      - S_103_29_68_199_40304
-      - S_139_162_15_45_8099
-      - S_139_162_224_44_26625
-      - S_139_162_38_42_8097
-      - S_139_162_67_40_8097
-      - S_149_129_81_235_41087
-      - S_154_84_1_101_12466
-      - S_154_84_1_11_22122
-      - S_154_84_1_111_22345
-      - S_154_84_1_111_55113
-      - S_154_84_1_121_33311
-      - S_154_84_1_127_26671
-      - S_154_84_1_129_21800
-      - S_154_84_1_129_23100
-      - S_154_84_1_133_61100
-      - S_154_84_1_136_27700
-      - S_154_84_1_136_48000
-      - S_154_84_1_136_55509
-      - S_154_84_1_138_22765
-      - S_154_84_1_139_33367
-      - S_154_84_1_141_30909
-      - S_154_84_1_141_40908
-      - S_154_84_1_141_51010
-      - S_154_84_1_142_41695
-      - S_154_84_1_143_41683
-      - S_154_84_1_144_27981
-      - S_167_71_201_29_17545
-      - S_167_71_201_29_17549
-      - S_167_71_201_29_17550
-      - S_172_104_131_24_8099
-      - S_172_104_152_149_8099
-      - S_172_104_178_58_8099
-      - S_172_105_192_135_8099
-      - S_172_105_192_82_26850
-      - S_172_105_192_82_26854
-      - S_172_105_192_82_26855
-      - S_172_105_192_82_26856
-      - S_172_105_227_188_17820
-      - S_172_105_227_188_17824
-      - S_172_105_227_188_17825
-      - S_172_105_227_188_17826
-      - S_172_105_71_82_8099
-      - S_176_58_97_137_8099
-      - S_178_170_68_250_10003
-      - S_185_186_245_44_8097
-      - S_185_243_57_221_443
-      - S_185_243_57_221_48886
-      - S_185_243_57_221_543
-      - S_185_243_57_221_80
-      - S_192_240_99_182_8097
-      - S_198_255_103_62_8099
-      - S_199_223_119_83_8097
-      - S_199_223_119_92_8099
-      - S_2_56_240_77_11288
-      - S_204_45_182_34_8097
-      - S_209_58_188_157_8099
-      - S_210_203_20_91_8080
-      - S_23_239_12_251_443
-      - S_23_254_204_203_8097
-      - S_23_92_18_110_443
-      - S_23_92_18_28_443
-      - S_23_92_20_37_443
-      - S_23_92_20_90_443
-      - S_45_253_65_247_996
-      - S_45_33_88_190_443
-      - S_45_33_93_132_443
-      - S_45_33_93_207_443
-      - S_45_56_91_37_443
-      - S_45_56_93_244_443
-      - S_45_56_94_40_443
-      - S_45_79_108_12_443
-      - S_45_79_111_214_443
-      - S_45_79_66_9_443
-      - S_45_79_75_86_443
-      - S_45_79_79_37_443
-      - S_45_79_93_178_443
-      - S_45_79_98_239_443
-      - S_45_85_3_85_50013
-      - S_45_85_3_85_50014
-      - S_45_85_3_85_50015
-      - S_5_252_199_12_64520
-      - S_50_116_15_74_443
-      - S_50_7_12_147_8097
-      - S_50_7_12_147_8099
-      - S_69_36_182_52_8097
-      - S_85_117_235_171_50004
-      - S_85_117_235_171_50006
-      - S_91_203_192_187_50010
-      - S_91_203_192_187_50011
-      - S_96_8_121_149_65201
-      - S_chengdu-china-proxy1_darren-lee_net_8081
-      - S_hktj2_servep2p_com_8080
+      - ss_134_195_196_71_2375
+      - ss_134_195_196_214_5004
+      - ss_134_195_198_178_7307
+      - ss_134_195_196_154_7307
+      - ss_134_195_198_178_8090
+      - ss_134_195_198_95_7306
+      - ss_134_195_198_252_2375
+      - ss_46_29_218_6_2376
+      - ss_145_239_1_137_2375
+      - ss_198_57_27_218_2376
+      - ss_134_195_198_252_2376
+      - ss_118_107_244_110_5003
+      - ss_134_195_196_193_8090
       - auto
  
   # direct to another infacename
