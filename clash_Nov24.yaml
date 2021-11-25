@@ -113,39 +113,6 @@ dns:
     - https://1.1.1.1/dns-query # DNS over HTTPS
     - dhcp://en0 # dns from dhcp
 
-  # When `fallback` is present, the DNS server will send concurrent requests
-  # to the servers in this section along with servers in `nameservers`.
-  # The answers from fallback servers are used when the GEOIP country
-  # is not `CN`.
-  # fallback:
-  #   - tcp://1.1.1.1
-
-  # If IP addresses resolved with servers in `nameservers` are in the specified
-  # subnets below, they are considered invalid and results from `fallback`
-  # servers are used instead.
-  #
-  # IP address resolved with servers in `nameserver` is used when
-  # `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
-  #
-  # If `fallback-filter.geoip` is false, results from `nameserver` nameservers
-  # are always used if not match `fallback-filter.ipcidr`.
-  #
-  # This is a countermeasure against DNS pollution attacks.
-  # fallback-filter:
-  #   geoip: true
-  #   geoip-code: CN
-  #   ipcidr:
-  #     - 240.0.0.0/4
-  #   domain:
-  #     - '+.google.com'
-  #     - '+.facebook.com'
-  #     - '+.youtube.com'
-  
-  # Lookup domains via specific nameservers
-  # nameserver-policy:
-  #   'www.baidu.com': '114.114.114.114'
-  #   '+.internal.crop.com': '10.0.0.1'
-
 proxies:
   # Shadowsocks
   # The supported ciphers (encryption methods):
