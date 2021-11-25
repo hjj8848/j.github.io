@@ -198,6 +198,7 @@ proxies:
     server: 134.195.196.193
     port: 8090
     cipher: aes-256-gcm
+    password: "PCnnH6SQSnfoS27"
 
 
 
