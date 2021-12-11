@@ -200,6 +200,25 @@ proxies:
     cipher: aes-256-gcm
     password: "PCnnH6SQSnfoS27"
 
+  - name: "ss_23_19_26_246_10515"
+    type: ss
+    server: 23.19.26.246
+    port: 10515
+    cipher: aes-256-gcm
+    password: "dongtaiwang.com"
+  - name: "ss_45_140_169_176_10055"
+    type: ss
+    server: 45.140.169.176
+    port: 10055
+    cipher: aes-256-gcm
+    password: "dongtaiwang.com"
+  - name: "ss_45_137_154_208_10033"
+    type: ss
+    server: 45.137.154.208
+    port: 10033
+    cipher: aes-256-gcm
+    password: "dongtaiwang.com"
+
 
 
 proxy-groups:
@@ -239,6 +258,9 @@ proxy-groups:
       - ss_134_195_198_252_2376
       - ss_118_107_244_110_5003
       - ss_134_195_196_193_8090
+      - ss_23_19_26_246_10515
+      - ss_45_140_169_176_10055
+      - ss_45_137_154_208_10033
 
     # tolerance: 150
     # lazy: true
@@ -307,6 +329,9 @@ proxy-groups:
       - ss_134_195_198_252_2376
       - ss_118_107_244_110_5003
       - ss_134_195_196_193_8090
+      - ss_23_19_26_246_10515
+      - ss_45_140_169_176_10055
+      - ss_45_137_154_208_10033
       - auto
  
   # direct to another infacename
