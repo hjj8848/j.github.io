@@ -219,62 +219,60 @@ proxies:
     cipher: aes-256-gcm
     password: "dongtaiwang.com"
 
-
-
-    - name: "ss_198_147_22_87_39772"
-      type: ss
-      server: 198.147.22.87
-      port: 39772
-      cipher: aes-256-gcm
-      password: "CUndSZnYsPKcu6Kj8THVMBHD"
-    - name: "ss_207_244_67_149_35294"
-      type: ss
-      server: 207.244.67.149
-      port: 35294
-      cipher: aes-256-gcm
-      password: "J9Y2ncrdPEC38gwydNFFGBna"
-    - name: "ss_195_47_194_56_39772"
-      type: ss
-      server: 195.47.194.56
-      port: 39772
-      cipher: aes-256-gcm
-      password: "CUndSZnYsPKcu6Kj8THVMBHD"
-    - name: "ss_212_102_44_93_33992"
-      type: ss
-      server: 212.102.44.93
-      port: 33992
-      cipher: aes-256-gcm
-      password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
-    - name: "ss_185_2_100_166_39772"
-      type: ss
-      server: 185.2.100.166
-      port: 39772
-      cipher: aes-256-gcm
-      password: "CUndSZnYsPKcu6Kj8THVMBHD"
-    - name: "ss_185_44_76_188_31572"
-      type: ss
-      server: 185.44.76.188
-      port: 31572
-      cipher: aes-256-gcm
-      password: "n8w4StnbVD9dmXYn4Ajt87EA"
-    - name: "ss_107_181_166_55_33992"
-      type: ss
-      server: 107.181.166.55
-      port: 33992
-      cipher: aes-256-gcm
-      password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
-    - name: "ss_185_2_100_166_33992"
-      type: ss
-      server: 185.2.100.166
-      port: 33992
-      cipher: aes-256-gcm
-      password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
-    - name: "ss_185_44_76_188_31764"
-      type: ss
-      server: 185.44.76.188
-      port: 31764
-      cipher: aes-256-gcm
-      password: "YgusH2MWA8PWc3p2VDsR7AVv"
+  - name: "ss_198_147_22_87_39772"
+    type: ss
+    server: 198.147.22.87
+    port: 39772
+    cipher: aes-256-gcm
+    password: "CUndSZnYsPKcu6Kj8THVMBHD"
+  - name: "ss_207_244_67_149_35294"
+    type: ss
+    server: 207.244.67.149
+    port: 35294
+    cipher: aes-256-gcm
+    password: "J9Y2ncrdPEC38gwydNFFGBna"
+  - name: "ss_195_47_194_56_39772"
+    type: ss
+    server: 195.47.194.56
+    port: 39772
+    cipher: aes-256-gcm
+    password: "CUndSZnYsPKcu6Kj8THVMBHD"
+  - name: "ss_212_102_44_93_33992"
+    type: ss
+    server: 212.102.44.93
+    port: 33992
+    cipher: aes-256-gcm
+    password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
+  - name: "ss_185_2_100_166_39772"
+    type: ss
+    server: 185.2.100.166
+    port: 39772
+    cipher: aes-256-gcm
+    password: "CUndSZnYsPKcu6Kj8THVMBHD"
+  - name: "ss_185_44_76_188_31572"
+    type: ss
+    server: 185.44.76.188
+    port: 31572
+    cipher: aes-256-gcm
+    password: "n8w4StnbVD9dmXYn4Ajt87EA"
+  - name: "ss_107_181_166_55_33992"
+    type: ss
+    server: 107.181.166.55
+    port: 33992
+    cipher: aes-256-gcm
+    password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
+  - name: "ss_185_2_100_166_33992"
+    type: ss
+    server: 185.2.100.166
+    port: 33992
+    cipher: aes-256-gcm
+    password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
+  - name: "ss_185_44_76_188_31764"
+    type: ss
+    server: 185.44.76.188
+    port: 31764
+    cipher: aes-256-gcm
+    password: "YgusH2MWA8PWc3p2VDsR7AVv"
 
 
 proxy-groups:
@@ -523,7 +521,6 @@ rules:
     - DOMAIN-SUFFIX,vungle.com,REJECT
     - DOMAIN-KEYWORD,wlmonitor,REJECT
     - DOMAIN-KEYWORD,zjtoolbar,REJECT
-
 
     # LAN
     - DOMAIN,injections.adguard.org,DIRECT
