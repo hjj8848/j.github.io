@@ -278,35 +278,6 @@ proxies:
 
 
 proxy-groups:
-  # relay chains the proxies. proxies shall not contain a relay. No UDP support.
-  # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
-  - name: "relay"
-    type: relay
-    proxies:
-      - ss_134_195_196_71_2375
-      - ss_134_195_196_214_5004
-      - ss_134_195_198_178_7307
-      - ss_134_195_196_154_7307
-      - ss_134_195_198_178_8090
-      - ss_134_195_198_95_7306
-      - ss_134_195_198_252_2375
-      - ss_46_29_218_6_2376
-      - ss_145_239_1_137_2375
-      - ss_198_57_27_218_2376
-      - ss_134_195_198_252_2376
-      - ss_118_107_244_110_5003
-      - ss_134_195_196_193_8090
-      
-      - ss_198_147_22_87_39772
-      - ss_207_244_67_149_35294
-      - ss_195_47_194_56_39772
-      - ss_212_102_44_93_33992
-      - ss_185_2_100_166_39772
-      - ss_185_44_76_188_31572
-      - ss_107_181_166_55_33992
-      - ss_185_2_100_166_33992
-      - ss_185_44_76_188_31764
-
   # url-test select which proxy will be used by benchmarking speed to a URL.
   - name: "auto"
     type: url-test
@@ -342,49 +313,6 @@ proxy-groups:
     # lazy: true
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
-
-  # fallback selects an available policy by priority. The availability is tested by accessing an URL, just like an auto url-test group.
-  - name: "fallback-auto"
-    type: fallback
-    proxies:
-      - ss_134_195_196_71_2375
-      - ss_134_195_196_214_5004
-      - ss_134_195_198_178_7307
-      - ss_134_195_196_154_7307
-      - ss_134_195_198_178_8090
-      - ss_134_195_198_95_7306
-      - ss_134_195_198_252_2375
-      - ss_46_29_218_6_2376
-      - ss_145_239_1_137_2375
-      - ss_198_57_27_218_2376
-      - ss_134_195_198_252_2376
-      - ss_118_107_244_110_5003
-      - ss_134_195_196_193_8090
-
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-
-  # load-balance: The request of the same eTLD+1 will be dial to the same proxy.
-  - name: "load-balance"
-    type: load-balance
-    proxies:
-      - ss_134_195_196_71_2375
-      - ss_134_195_196_214_5004
-      - ss_134_195_198_178_7307
-      - ss_134_195_196_154_7307
-      - ss_134_195_198_178_8090
-      - ss_134_195_198_95_7306
-      - ss_134_195_198_252_2375
-      - ss_46_29_218_6_2376
-      - ss_145_239_1_137_2375
-      - ss_198_57_27_218_2376
-      - ss_134_195_198_252_2376
-      - ss_118_107_244_110_5003
-      - ss_134_195_196_193_8090
-
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    # strategy: consistent-hashing # or round-robin
 
   # select is used for selecting proxy or proxy group
   # you can use RESTful API to switch proxy is recommended for use in GUI.
@@ -428,43 +356,182 @@ proxy-groups:
     proxies:
       - DIRECT 
 
-  # - name: UseProvider
-  #   type: select
-  #   use:
-  #     - provider1
-  #   proxies:
-  #     - Proxy
-  #     - DIRECT
-
-# proxy-providers:
-#   provider1:
-#     type: http
-#     url: "url"
-#     interval: 3600
-#     path: ./provider1.yaml
-#     health-check:
-#       enable: true
-#       interval: 600
-#       # lazy: true
-#       url: http://www.gstatic.com/generate_204
-  # test:
-  #   type: file
-  #   path: /test.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 36000
-  #     url: http://www.gstatic.com/generate_204
-
 rules:
-  - DOMAIN-SUFFIX,google.com,auto
-  - DOMAIN-KEYWORD,google,auto
-  - DOMAIN,google.com,auto
-  - DOMAIN-SUFFIX,ad.com,REJECT
-  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
-  # optional param "no-resolve" for IP rules (GEOIP, IP-CIDR, IP-CIDR6)
-  - IP-CIDR,127.0.0.0/8,DIRECT
-  - GEOIP,CN,DIRECT
-  - DST-PORT,80,DIRECT
-  - SRC-PORT,7777,DIRECT
-  # - RULE-SET,apple,REJECT # Premium only
-  - MATCH,auto
+    - DOMAIN-SUFFIX,google.com,Proxy
+    - DOMAIN-KEYWORD,google,Proxy
+    - DOMAIN,google.com,Proxy
+    - DOMAIN-SUFFIX,ad.com,REJECT
+    - GEOIP,CN,DIRECT
+    - MATCH,auto
+
+    # 国内网站
+    - DOMAIN-SUFFIX,cn,DIRECT
+    - DOMAIN-KEYWORD,-cn,DIRECT
+    - DOMAIN-SUFFIX,126.com,DIRECT
+    - DOMAIN-SUFFIX,126.net,DIRECT
+    - DOMAIN-SUFFIX,127.net,DIRECT
+    - DOMAIN-SUFFIX,163.com,DIRECT
+    - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+    - DOMAIN-SUFFIX,36kr.com,DIRECT
+    - DOMAIN-SUFFIX,acfun.tv,DIRECT
+    - DOMAIN-SUFFIX,air-matters.com,DIRECT
+    - DOMAIN-SUFFIX,aixifan.com,DIRECT
+    - DOMAIN-KEYWORD,alicdn,DIRECT
+    - DOMAIN-KEYWORD,alipay,DIRECT
+    - DOMAIN-KEYWORD,taobao,DIRECT
+    - DOMAIN-SUFFIX,amap.com,DIRECT
+    - DOMAIN-SUFFIX,autonavi.com,DIRECT
+    - DOMAIN-KEYWORD,baidu,DIRECT
+    - DOMAIN-SUFFIX,bdimg.com,DIRECT
+    - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+    - DOMAIN-SUFFIX,bilibili.com,DIRECT
+    - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+    - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+    - DOMAIN-SUFFIX,clouddn.com,DIRECT
+    - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+    - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+    - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+    - DOMAIN-SUFFIX,csdn.net,DIRECT
+    - DOMAIN-SUFFIX,ctrip.com,DIRECT
+    - DOMAIN-SUFFIX,dgtle.com,DIRECT
+    - DOMAIN-SUFFIX,dianping.com,DIRECT
+    - DOMAIN-SUFFIX,douban.com,DIRECT
+    - DOMAIN-SUFFIX,doubanio.com,DIRECT
+    - DOMAIN-SUFFIX,duokan.com,DIRECT
+    - DOMAIN-SUFFIX,easou.com,DIRECT
+    - DOMAIN-SUFFIX,ele.me,DIRECT
+    - DOMAIN-SUFFIX,feng.com,DIRECT
+    - DOMAIN-SUFFIX,fir.im,DIRECT
+    - DOMAIN-SUFFIX,frdic.com,DIRECT
+    - DOMAIN-SUFFIX,g-cores.com,DIRECT
+    - DOMAIN-SUFFIX,godic.net,DIRECT
+    - DOMAIN-SUFFIX,gtimg.com,DIRECT
+    - DOMAIN,cdn.hockeyapp.net,DIRECT
+    - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+    - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+    - DOMAIN-SUFFIX,iciba.com,DIRECT
+    - DOMAIN-SUFFIX,ifeng.com,DIRECT
+    - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+    - DOMAIN-SUFFIX,ipip.net,DIRECT
+    - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+    - DOMAIN-SUFFIX,jd.com,DIRECT
+    - DOMAIN-SUFFIX,jianshu.com,DIRECT
+    - DOMAIN-SUFFIX,knewone.com,DIRECT
+    - DOMAIN-SUFFIX,le.com,DIRECT
+    - DOMAIN-SUFFIX,lecloud.com,DIRECT
+    - DOMAIN-SUFFIX,lemicp.com,DIRECT
+    - DOMAIN-SUFFIX,licdn.com,DIRECT
+    - DOMAIN-SUFFIX,linkedin.com,DIRECT
+    - DOMAIN-SUFFIX,luoo.net,DIRECT
+    - DOMAIN-SUFFIX,meituan.com,DIRECT
+    - DOMAIN-SUFFIX,meituan.net,DIRECT
+    - DOMAIN-SUFFIX,mi.com,DIRECT
+    - DOMAIN-SUFFIX,miaopai.com,DIRECT
+    - DOMAIN-SUFFIX,microsoft.com,DIRECT
+    - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+    - DOMAIN-SUFFIX,miui.com,DIRECT
+    - DOMAIN-SUFFIX,miwifi.com,DIRECT
+    - DOMAIN-SUFFIX,mob.com,DIRECT
+    - DOMAIN-SUFFIX,netease.com,DIRECT
+    - DOMAIN-SUFFIX,office.com,DIRECT
+    - DOMAIN-SUFFIX,office365.com,DIRECT
+    - DOMAIN-KEYWORD,officecdn,DIRECT
+    - DOMAIN-SUFFIX,oschina.net,DIRECT
+    - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+    - DOMAIN-SUFFIX,pstatp.com,DIRECT
+    - DOMAIN-SUFFIX,qcloud.com,DIRECT
+    - DOMAIN-SUFFIX,qdaily.com,DIRECT
+    - DOMAIN-SUFFIX,qdmm.com,DIRECT
+    - DOMAIN-SUFFIX,qhimg.com,DIRECT
+    - DOMAIN-SUFFIX,qhres.com,DIRECT
+    - DOMAIN-SUFFIX,qidian.com,DIRECT
+    - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+    - DOMAIN-SUFFIX,qiniu.com,DIRECT
+    - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+    - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+    - DOMAIN-SUFFIX,qq.com,DIRECT
+    - DOMAIN-SUFFIX,qqurl.com,DIRECT
+    - DOMAIN-SUFFIX,rarbg.to,DIRECT
+    - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+    - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+    - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+    - DOMAIN-SUFFIX,smzdm.com,DIRECT
+    - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+    - DOMAIN-SUFFIX,sogou.com,DIRECT
+    - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+    - DOMAIN-SUFFIX,sohu.com,DIRECT
+    - DOMAIN-SUFFIX,soku.com,DIRECT
+    - DOMAIN-SUFFIX,speedtest.net,DIRECT
+    - DOMAIN-SUFFIX,sspai.com,DIRECT
+    - DOMAIN-SUFFIX,suning.com,DIRECT
+    - DOMAIN-SUFFIX,taobao.com,DIRECT
+    - DOMAIN-SUFFIX,tencent.com,DIRECT
+    - DOMAIN-SUFFIX,tenpay.com,DIRECT
+    - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+    - DOMAIN-SUFFIX,tmall.com,DIRECT
+    - DOMAIN-SUFFIX,tudou.com,DIRECT
+    - DOMAIN-SUFFIX,umetrip.com,DIRECT
+    - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+    - DOMAIN-SUFFIX,upyun.com,DIRECT
+    - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+    - DOMAIN-SUFFIX,weather.com,DIRECT
+    - DOMAIN-SUFFIX,weibo.com,DIRECT
+    - DOMAIN-SUFFIX,xiami.com,DIRECT
+    - DOMAIN-SUFFIX,xiami.net,DIRECT
+    - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+    - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+    - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+    - DOMAIN-SUFFIX,xunlei.com,DIRECT
+    - DOMAIN-SUFFIX,yhd.com,DIRECT
+    - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+    - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+    - DOMAIN-SUFFIX,ykimg.com,DIRECT
+    - DOMAIN-SUFFIX,youdao.com,DIRECT
+    - DOMAIN-SUFFIX,youku.com,DIRECT
+    - DOMAIN-SUFFIX,zealer.com,DIRECT
+    - DOMAIN-SUFFIX,zhihu.com,DIRECT
+    - DOMAIN-SUFFIX,zhimg.com,DIRECT
+    - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+    - DOMAIN-SUFFIX,zoho.com,DIRECT
+
+
+    # 常见广告域名屏蔽
+    - DOMAIN-KEYWORD,admarvel,REJECT
+    - DOMAIN-KEYWORD,admaster,REJECT
+    - DOMAIN-KEYWORD,adsage,REJECT
+    - DOMAIN-KEYWORD,adsmogo,REJECT
+    - DOMAIN-KEYWORD,adsrvmedia,REJECT
+    - DOMAIN-KEYWORD,adwords,REJECT
+    - DOMAIN-KEYWORD,adservice,REJECT
+    - DOMAIN-SUFFIX,appsflyer.com,REJECT
+    - DOMAIN-KEYWORD,domob,REJECT
+    - DOMAIN-SUFFIX,doubleclick.net,REJECT
+    - DOMAIN-KEYWORD,duomeng,REJECT
+    - DOMAIN-KEYWORD,dwtrack,REJECT
+    - DOMAIN-KEYWORD,guanggao,REJECT
+    - DOMAIN-KEYWORD,lianmeng,REJECT
+    - DOMAIN-SUFFIX,mmstat.com,REJECT
+    - DOMAIN-KEYWORD,mopub,REJECT
+    - DOMAIN-KEYWORD,omgmta,REJECT
+    - DOMAIN-KEYWORD,openx,REJECT
+    - DOMAIN-KEYWORD,partnerad,REJECT
+    - DOMAIN-KEYWORD,pingfore,REJECT
+    - DOMAIN-KEYWORD,supersonicads,REJECT
+    - DOMAIN-KEYWORD,uedas,REJECT
+    - DOMAIN-KEYWORD,umeng,REJECT
+    - DOMAIN-KEYWORD,usage,REJECT
+    - DOMAIN-SUFFIX,vungle.com,REJECT
+    - DOMAIN-KEYWORD,wlmonitor,REJECT
+    - DOMAIN-KEYWORD,zjtoolbar,REJECT
+
+
+    # LAN
+    - DOMAIN,injections.adguard.org,DIRECT
+    - DOMAIN,local.adguard.org,DIRECT
+    - DOMAIN-SUFFIX,local,DIRECT
+    - IP-CIDR,127.0.0.0/8,DIRECT
+    - IP-CIDR,172.16.0.0/12,DIRECT
+    - IP-CIDR,192.168.0.0/16,DIRECT
+    - IP-CIDR,10.0.0.0/8,DIRECT
+    - IP-CIDR,17.0.0.0/8,DIRECT
+    - IP-CIDR,100.64.0.0/10,DIRECT
