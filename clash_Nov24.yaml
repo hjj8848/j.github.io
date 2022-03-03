@@ -281,7 +281,13 @@ proxies:
     uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
     alterId: 4
     cipher: aes-128-gcm
-
+  - name: "vmess_116_wowogg_cyou_52216"
+    type: vmess
+    server: 116.wowogg.cyou
+    port: 52216
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
 
 
 proxy-groups:
@@ -317,6 +323,7 @@ proxy-groups:
       - ss_185_44_76_188_31764
 
       - vmess_202_61_141_130
+      - vmess_116_wowogg_cyou_52216
 
     # tolerance: 150
     # lazy: true
@@ -357,6 +364,7 @@ proxy-groups:
       - ss_185_44_76_188_31764
 
       - vmess_202_61_141_130
+      - vmess_116_wowogg_cyou_52216
 
       - auto
  
