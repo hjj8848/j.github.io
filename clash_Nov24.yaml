@@ -46,7 +46,7 @@ external-controller: 127.0.0.1:9090
 
 # A relative path to the configuration directory or an absolute path to a
 # directory in which you put some static web resource. Clash core will then
-# serve it at `http://{{external-controller}}/ui`.
+# serve it at `http://{external-controller}/ui`.
 # external-ui: folder
 
 # Secret for the RESTful API (optional)
@@ -121,174 +121,729 @@ proxies:
   #   aes-128-ctr aes-192-ctr aes-256-ctr
   #   rc4-md5 chacha20-ietf xchacha20
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
-  - name: "ss_134_195_196_71_2375"
-    type: ss
-    server: 134.195.196.71
-    port: 2375
-    cipher: aes-256-gcm
-    password: "faBAoD54k87UJG7"
-  - name: "ss_134_195_196_214_5004"
-    type: ss
-    server: 134.195.196.214
-    port: 5004
-    cipher: aes-256-gcm
-    password: "g5MeD6Ft3CWlJId"
-  - name: "ss_134_195_198_178_7307"
-    type: ss
-    server: 134.195.198.178
-    port: 7307
-    cipher: aes-256-gcm
-    password: "FoOiGlkAA9yPEGP"
-  - name: "ss_134_195_196_154_7307"
-    type: ss
-    server: 134.195.196.154
-    port: 7307
-    cipher: aes-256-gcm
-    password: "FoOiGlkAA9yPEGP"
+  
+
+  - name: "vmess_0326kr_fans8_xyz_443"
+    type: vmess
+    server: 0326kr.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
   - name: "ss_134_195_198_178_8090"
     type: ss
     server: 134.195.198.178
     port: 8090
     cipher: aes-256-gcm
     password: "PCnnH6SQSnfoS27"
+    
+  - name: "vmess_jp06-vm0_entry_ikuuu_casa_447"
+    type: vmess
+    server: jp06-vm0.entry.ikuuu.casa
+    port: 447
+    uuid: 74bf73ff-b403-3a17-a662-67d024d0ffec
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_202_61_141_130_443"
+    type: vmess
+    server: 202.61.141.130
+    port: 443
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 4
+    cipher: auto
+    
+  - name: "vmess_210_3_245_46_50021"
+    type: vmess
+    server: 210.3.245.46
+    port: 50021
+    uuid: f3666ca6-b94a-4a27-9aa9-00c8eaede12c
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_v2fly_sab_quest_443"
+    type: vmess
+    server: v2fly.sab.quest
+    port: 443
+    uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_sg03_linkzones_xyz_31984"
+    type: vmess
+    server: sg03.linkzones.xyz
+    port: 31984
+    uuid: d85d3fcd-17e0-3448-8694-6834a8fcf4b9
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_cm1_worldmuseum_buzz_12100"
+    type: vmess
+    server: cm1.worldmuseum.buzz
+    port: 12100
+    uuid: ff52c519-91fb-3ca3-9b55-f96e75201532
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_sg03_xiaocloud_icu_20366"
+    type: vmess
+    server: sg03.xiaocloud.icu
+    port: 20366
+    uuid: 2889291a-ebd6-355a-ba6f-983acf09d68a
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_cloudflare_xrenblog_com_443"
+    type: vmess
+    server: cloudflare.xrenblog.com
+    port: 443
+    uuid: 6c175d1a-a57f-4881-a471-173eb139694b
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_us-ny-rn_licom_ga_62008"
+    type: vmess
+    server: us-ny-rn.licom.ga
+    port: 62008
+    uuid: f81e990e-1283-48f9-9eff-acacad6fb661
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_86_wowogg_cyou_52286"
+    type: vmess
+    server: 86.wowogg.cyou
+    port: 52286
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_0319ru99_fans8_xyz_443"
+    type: vmess
+    server: 0319ru99.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_sh_xiaohouzi_club_17902"
+    type: vmess
+    server: sh.xiaohouzi.club
+    port: 17902
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_niaop_tk_443"
+    type: vmess
+    server: niaop.tk
+    port: 443
+    uuid: a0b0df87-bda2-440e-830f-347da6cc7760
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19084"
+    type: vmess
+    server: 120.232.214.210
+    port: 19084
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_app_ssfree_ru_443"
+    type: vmess
+    server: app.ssfree.ru
+    port: 443
+    uuid: f2b28170-b754-11ec-a015-000017022008
+    alterId: 64
+    cipher: auto
+    
+  - name: "vmess_0319hzm01_fans8_xyz_443"
+    type: vmess
+    server: 0319hzm01.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_ua1_uuv2_co_uk_443"
+    type: vmess
+    server: ua1.uuv2.co.uk
+    port: 443
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 4
+    cipher: auto
+    
+  - name: "vmess_azhk096_xiaohouzi_club_10082"
+    type: vmess
+    server: azhk096.xiaohouzi.club
+    port: 10082
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_vs_mumi_bid_10124"
+    type: vmess
+    server: vs.mumi.bid
+    port: 10124
+    uuid: 0748a567-ca97-4fc8-9d9c-9ca18f2b9ff4
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_mc_xiaohouzi_club_28325"
+    type: vmess
+    server: mc.xiaohouzi.club
+    port: 28325
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_92_wowogg_cyou_52292"
+    type: vmess
+    server: 92.wowogg.cyou
+    port: 52292
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_v6d1_moonfree_top_443"
+    type: vmess
+    server: v6d1.moonfree.top
+    port: 443
+    uuid: 734d6ca1-88fa-44ff-86a6-8466498be934
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_hk3_fdns_unino_tech_80"
+    type: vmess
+    server: hk3.fdns.unino.tech
+    port: 80
+    uuid: 518cec6c-a82c-4f5a-a5ed-084d57677d0b
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_ahdaeph8_com_443"
+    type: vmess
+    server: ahdaeph8.com
+    port: 443
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 4
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1952"
+    type: vmess
+    server: 183.232.56.161
+    port: 1952
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_139_162_122_205_3845"
+    type: vmess
+    server: 139.162.122.205
+    port: 3845
+    uuid: 76d5c6e3-c74c-3406-b9e8-9859d0a71c56
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1202"
+    type: vmess
+    server: 183.232.56.161
+    port: 1202
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_47_56_143_21_443"
+    type: vmess
+    server: 47.56.143.21
+    port: 443
+    uuid: 514e8598-aae2-4c76-a1a7-da12941f8e09
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_116_162_14_228_21103"
+    type: vmess
+    server: 116.162.14.228
+    port: 21103
+    uuid: 1b693eb3-3241-362a-9001-5b503789cfbe
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_api_ssfree_ru_443"
+    type: vmess
+    server: api.ssfree.ru
+    port: 443
+    uuid: 2a51b350-4da4-11ec-bcec-000017022008
+    alterId: 64
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1302"
+    type: vmess
+    server: 183.232.56.161
+    port: 1302
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19084"
+    type: vmess
+    server: 112.14.22.104
+    port: 19084
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_in02_dns2333_xyz_64071"
+    type: vmess
+    server: in02.dns2333.xyz
+    port: 64071
+    uuid: 41cee8f2-56b3-324a-a7e3-dd9ca92c09cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_20_239_93_20_44325"
+    type: vmess
+    server: 20.239.93.20
+    port: 44325
+    uuid: 11b06661-917f-40e1-8b87-461455993abb
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_iepl02_zerohost_live_11010"
+    type: vmess
+    server: iepl02.zerohost.live
+    port: 11010
+    uuid: c008a763-2123-312f-bae6-bf7630517e22
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_tw02_linkzones_xyz_41982"
+    type: vmess
+    server: tw02.linkzones.xyz
+    port: 41982
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_shk01_xiaohouzi_club_10050"
+    type: vmess
+    server: shk01.xiaohouzi.club
+    port: 10050
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_dj2_qiancheng_ml_443"
+    type: vmess
+    server: dj2.qiancheng.ml
+    port: 443
+    uuid: 4f295c55-e5d4-4661-c527-fa6b2d9f0f7d
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_usa-dallas_lvuft_com_443"
+    type: vmess
+    server: usa-dallas.lvuft.com
+    port: 443
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 4
+    cipher: auto
+    
+  - name: "vmess_jp04-vm0_entry_ikuuu_casa_448"
+    type: vmess
+    server: jp04-vm0.entry.ikuuu.casa
+    port: 448
+    uuid: e1241a61-e533-3aa0-a25e-ad86cf34cd64
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_104_225_239_41_53528"
+    type: vmess
+    server: 104.225.239.41
+    port: 53528
+    uuid: f90f4cb7-d345-4c8b-be17-dfa016994855
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_www_zhangss_xyz_59627"
+    type: vmess
+    server: www.zhangss.xyz
+    port: 59627
+    uuid: 7cb9b8c1-ddc8-4bdc-b365-d8b73aafa0ec
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_107_wowogg_cyou_52207"
+    type: vmess
+    server: 107.wowogg.cyou
+    port: 52207
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_172_67_190_72_443"
+    type: vmess
+    server: 172.67.190.72
+    port: 443
+    uuid: a8910831-f56b-4ac4-c68f-e4dd83f71e60
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_azhk04_yitaiml_xyz_443"
+    type: vmess
+    server: azhk04.yitaiml.xyz
+    port: 443
+    uuid: 787eabe8-0c76-48b9-80d1-1f211036e1cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_c23s3_jamjams_net_61173"
+    type: vmess
+    server: c23s3.jamjams.net
+    port: 61173
+    uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b
+    alterId: 8
+    cipher: auto
+    
+  - name: "vmess_us06_xiaohouzi_club_10082"
+    type: vmess
+    server: us06.xiaohouzi.club
+    port: 10082
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19094"
+    type: vmess
+    server: 120.232.208.195
+    port: 19094
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_v2-r03_xiaohouzi_club_10083"
+    type: vmess
+    server: v2-r03.xiaohouzi.club
+    port: 10083
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_67_207_92_252_55239"
+    type: vmess
+    server: 67.207.92.252
+    port: 55239
+    uuid: 1a923713-6220-4246-fd24-7192619740d0
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_0320hk857_fans8_xyz_443"
+    type: vmess
+    server: 0320hk857.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_154_84_1_239_443"
+    type: vmess
+    server: 154.84.1.239
+    port: 443
+    uuid: bcca23ea-be73-4caf-b143-cbab2be93145
+    alterId: 64
+    cipher: auto
+    
+  - name: "vmess_43_129_189_128_443"
+    type: vmess
+    server: 43.129.189.128
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_147_135_164_113_44423"
+    type: vmess
+    server: 147.135.164.113
+    port: 44423
+    uuid: e6ee3fe5-7602-47b0-8d8f-52853321107f
+    alterId: 64
+    cipher: auto
+    
+  - name: "ss_134_195_196_51_7306"
+    type: ss
+    server: 134.195.196.51
+    port: 7306
+    cipher: aes-256-gcm
+    password: "FoOiGlkAA9yPEGP"
+    
+  - name: "vmess_sxqxj_cn_2164"
+    type: vmess
+    server: sxqxj.cn
+    port: 2164
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 4
+    cipher: auto
+    
+  - name: "vmess_tw03_linkzones_xyz_51984"
+    type: vmess
+    server: tw03.linkzones.xyz
+    port: 51984
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_152_70_106_35_39033"
+    type: vmess
+    server: 152.70.106.35
+    port: 39033
+    uuid: ed6e41e8-1803-4af7-d65a-0581a5e9220a
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_208_101_112_34554"
+    type: vmess
+    server: 104.208.101.112
+    port: 34554
+    uuid: ec57dccf-467d-4785-99d5-7b57a65b2bac
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19084"
+    type: vmess
+    server: 120.232.208.195
+    port: 19084
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_awsxjp_moonfree_top_443"
+    type: vmess
+    server: awsxjp.moonfree.top
+    port: 443
+    uuid: 734d6ca1-88fa-44ff-86a6-8466498be934
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_34_106_38_4_25698"
+    type: vmess
+    server: 34.106.38.4
+    port: 25698
+    uuid: 9f7300fd-04cb-4896-97f0-532516e66be1
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_v2ray_788644_xyz_443"
+    type: vmess
+    server: v2ray.788644.xyz
+    port: 443
+    uuid: 000fe881-b655-4212-b804-b00f9970d5aa
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_16_162_16_2053"
+    type: vmess
+    server: 104.16.162.16
+    port: 2053
+    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_169_197_142_99_8091"
+    type: ss
+    server: 169.197.142.99
+    port: 8091
+    cipher: aes-256-gcm
+    password: "PCnnH6SQSnfoS27"
+    
+  - name: "vmess_cf_rutracker-cn_com_443"
+    type: vmess
+    server: cf.rutracker-cn.com
+    port: 443
+    uuid: 55dc4077-3fed-4903-9c39-a3b12cb979db
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_182_190_19085"
+    type: vmess
+    server: 120.232.182.190
+    port: 19085
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_192_18_134_27_50134"
+    type: vmess
+    server: 192.18.134.27
+    port: 50134
+    uuid: 76f7ba25-bc7a-47b8-9a08-30010edd54de
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_134_195_196_214_5004"
+    type: ss
+    server: 134.195.196.214
+    port: 5004
+    cipher: aes-256-gcm
+    password: "g5MeD6Ft3CWlJId"
+    
+  - name: "vmess_in-v1_sdgdn_com_50207"
+    type: vmess
+    server: in-v1.sdgdn.com
+    port: 50207
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
+    cipher: auto
+    
   - name: "ss_134_195_198_95_7306"
     type: ss
     server: 134.195.198.95
     port: 7306
     cipher: aes-256-gcm
     password: "FoOiGlkAA9yPEGP"
-  - name: "ss_134_195_198_252_2375"
-    type: ss
-    server: 134.195.198.252
-    port: 2375
-    cipher: aes-256-gcm
-    password: "faBAoD54k87UJG7"
+    
+  - name: "vmess_116_162_14_228_20785"
+    type: vmess
+    server: 116.162.14.228
+    port: 20785
+    uuid: 1b693eb3-3241-362a-9001-5b503789cfbe
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_120_232_182_190_19079"
+    type: vmess
+    server: 120.232.182.190
+    port: 19079
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_150_230_43_65_14564"
+    type: vmess
+    server: 150.230.43.65
+    port: 14564
+    uuid: 1556e040-31d3-4c47-b0d2-ddf888010b4e
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_13_75_44_200_40903"
+    type: vmess
+    server: 13.75.44.200
+    port: 40903
+    uuid: 6d1f4a41-f79e-45f5-8268-460e4f9f5d63
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19083"
+    type: vmess
+    server: 120.232.214.210
+    port: 19083
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
   - name: "ss_46_29_218_6_2376"
     type: ss
     server: 46.29.218.6
     port: 2376
     cipher: aes-256-gcm
     password: "faBAoD54k87UJG7"
-  - name: "ss_145_239_1_137_2375"
-    type: ss
-    server: 145.239.1.137
-    port: 2375
-    cipher: aes-256-gcm
-    password: "faBAoD54k87UJG7"
-  - name: "ss_198_57_27_218_2376"
-    type: ss
-    server: 198.57.27.218
-    port: 2376
-    cipher: aes-256-gcm
-    password: "faBAoD54k87UJG7"
-  - name: "ss_134_195_198_252_2376"
-    type: ss
-    server: 134.195.198.252
-    port: 2376
-    cipher: aes-256-gcm
-    password: "faBAoD54k87UJG7"
-  - name: "ss_118_107_244_110_5003"
-    type: ss
-    server: 118.107.244.110
-    port: 5003
-    cipher: aes-256-gcm
-    password: "g5MeD6Ft3CWlJId"
-  - name: "ss_134_195_196_193_8090"
-    type: ss
-    server: 134.195.196.193
-    port: 8090
-    cipher: aes-256-gcm
-    password: "PCnnH6SQSnfoS27"
-
-  - name: "ss_23_19_26_246_10515"
-    type: ss
-    server: 23.19.26.246
-    port: 10515
-    cipher: aes-256-gcm
-    password: "dongtaiwang.com"
-  - name: "ss_45_140_169_176_10055"
-    type: ss
-    server: 45.140.169.176
-    port: 10055
-    cipher: aes-256-gcm
-    password: "dongtaiwang.com"
-  - name: "ss_45_137_154_208_10033"
-    type: ss
-    server: 45.137.154.208
-    port: 10033
-    cipher: aes-256-gcm
-    password: "dongtaiwang.com"
-
-  - name: "ss_198_147_22_87_39772"
-    type: ss
-    server: 198.147.22.87
-    port: 39772
-    cipher: aes-256-gcm
-    password: "CUndSZnYsPKcu6Kj8THVMBHD"
-  - name: "ss_207_244_67_149_35294"
-    type: ss
-    server: 207.244.67.149
-    port: 35294
-    cipher: aes-256-gcm
-    password: "J9Y2ncrdPEC38gwydNFFGBna"
-  - name: "ss_195_47_194_56_39772"
-    type: ss
-    server: 195.47.194.56
-    port: 39772
-    cipher: aes-256-gcm
-    password: "CUndSZnYsPKcu6Kj8THVMBHD"
-  - name: "ss_212_102_44_93_33992"
-    type: ss
-    server: 212.102.44.93
-    port: 33992
-    cipher: aes-256-gcm
-    password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
-  - name: "ss_185_2_100_166_39772"
-    type: ss
-    server: 185.2.100.166
-    port: 39772
-    cipher: aes-256-gcm
-    password: "CUndSZnYsPKcu6Kj8THVMBHD"
-  - name: "ss_185_44_76_188_31572"
-    type: ss
-    server: 185.44.76.188
-    port: 31572
-    cipher: aes-256-gcm
-    password: "n8w4StnbVD9dmXYn4Ajt87EA"
-  - name: "ss_107_181_166_55_33992"
-    type: ss
-    server: 107.181.166.55
-    port: 33992
-    cipher: aes-256-gcm
-    password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
-  - name: "ss_185_2_100_166_33992"
-    type: ss
-    server: 185.2.100.166
-    port: 33992
-    cipher: aes-256-gcm
-    password: "8n6pwAcrrv2pj6tFY2p3TbQ6"
-  - name: "ss_185_44_76_188_31764"
-    type: ss
-    server: 185.44.76.188
-    port: 31764
-    cipher: aes-256-gcm
-    password: "YgusH2MWA8PWc3p2VDsR7AVv"
-
-  - name: "vmess_202_61_141_130"
+    
+  - name: "vmess_149_248_18_17_3626"
     type: vmess
-    server: 202.61.141.130
+    server: 149.248.18.17
+    port: 3626
+    uuid: 999e1b2c-aa47-11ec-8a2c-560003ead5bb
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_159_203_73_153_4396"
+    type: vmess
+    server: 159.203.73.153
+    port: 4396
+    uuid: 7ef93298-6931-4d0e-a9c1-98005ab374df
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_152_70_80_195_31703"
+    type: vmess
+    server: 152.70.80.195
+    port: 31703
+    uuid: 7f1c4dc9-be0d-4530-cab0-50220950fad5
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_165_154_225_231_443"
+    type: vmess
+    server: 165.154.225.231
     port: 443
-    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-    alterId: 4
-    cipher: aes-128-gcm
-  - name: "vmess_116_wowogg_cyou_52216"
-    type: vmess
-    server: 116.wowogg.cyou
-    port: 52216
-    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
     alterId: 2
     cipher: auto
-
+    
+  - name: "vmess_0320hk567_fans8_xyz_443"
+    type: vmess
+    server: 0320hk567.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_jp04-vm0_entry_ikuuu_casa_444"
+    type: vmess
+    server: jp04-vm0.entry.ikuuu.casa
+    port: 444
+    uuid: 62e7b8dd-b9fd-3ea5-aa62-d5e770dd389d
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_103_164_81_46_443"
+    type: vmess
+    server: 103.164.81.46
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_104_19_62_119_443"
+    type: vmess
+    server: 104.19.62.119
+    port: 443
+    uuid: e40d2888-03f6-4859-e84d-a743db763d52
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_vv01_xiaohouzi_club_10083"
+    type: vmess
+    server: vv01.xiaohouzi.club
+    port: 10083
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_43_128_1_112_443"
+    type: vmess
+    server: 43.128.1.112
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_0320jp_fans8_xyz_443"
+    type: vmess
+    server: 0320jp.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_sg02_linkzones_xyz_31983"
+    type: vmess
+    server: sg02.linkzones.xyz
+    port: 31983
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
     
   - name: "ss_51_255_66_185_7306"
     type: ss
@@ -296,198 +851,1453 @@ proxies:
     port: 7306
     cipher: aes-256-gcm
     password: "FoOiGlkAA9yPEGP"
-
-
-
-
-  - name: "ss_134_195_196_81_8882"
-    type: ss
-    server: 134.195.196.81
-    port: 8882
-    cipher: aes-256-gcm
-    password: "kDWvXYZoTBcGkC4"
     
-  - name: "ss_134_195_196_68_5500"
-    type: ss
-    server: 134.195.196.68
-    port: 5500
-    cipher: aes-256-gcm
-    password: "KixLvKzwjekG00rm"
+  - name: "vmess_112_14_22_104_19057"
+    type: vmess
+    server: 112.14.22.104
+    port: 19057
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
     
-  - name: "ss_134_195_196_3_5600"
-    type: ss
-    server: 134.195.196.3
-    port: 5600
-    cipher: aes-256-gcm
-    password: "Y6R9pAtvxxzmGC"
+  - name: "vmess_tw2501_cloudmatrix_xyz_2501"
+    type: vmess
+    server: tw2501.cloudmatrix.xyz
+    port: 2501
+    uuid: 3b78a19f-20f8-34f5-a818-2a02e10446ac
+    alterId: 2
+    cipher: auto
     
-  - name: "ss_172_99_190_92_9102"
-    type: ss
-    server: 172.99.190.92
-    port: 9102
-    cipher: aes-256-gcm
-    password: "e4FCWrgpkji3QY"
+  - name: "vmess_hk01_linkzones_xyz_31911"
+    type: vmess
+    server: hk01.linkzones.xyz
+    port: 31911
+    uuid: d85d3fcd-17e0-3448-8694-6834a8fcf4b9
+    alterId: 0
+    cipher: auto
     
-  - name: "ss_134_195_196_3_3306"
+  - name: "ss_14_29_124_168_25270"
     type: ss
-    server: 134.195.196.3
-    port: 3306
-    cipher: aes-256-gcm
-    password: "Y6R9pAtvxxzmGC"
+    server: 14.29.124.168
+    port: 25270
+    cipher: aes-128-cfb
+    password: "QazEdcTgb159@$*"
     
-  - name: "ss_134_195_196_81_8091"
-    type: ss
-    server: 134.195.196.81
-    port: 8091
-    cipher: aes-256-gcm
-    password: "PCnnH6SQSnfoS27"
+  - name: "vmess_183_232_30_53_15006"
+    type: vmess
+    server: 183.232.30.53
+    port: 15006
+    uuid: bbf5b153-89bd-353e-ba51-fc23994f9ef5
+    alterId: 0
+    cipher: auto
     
-  - name: "ss_134_195_196_81_7307"
-    type: ss
-    server: 134.195.196.81
-    port: 7307
-    cipher: aes-256-gcm
-    password: "FoOiGlkAA9yPEGP"
-    
-  - name: "ss_134_195_196_81_8888"
-    type: ss
-    server: 134.195.196.81
-    port: 8888
-    cipher: aes-256-gcm
-    password: "Y6R9pAtvxxzmGC"
-    
-  - name: "ss_134_195_196_68_443"
-    type: ss
-    server: 134.195.196.68
+  - name: "vmess_138_197_236_77_443"
+    type: vmess
+    server: 138.197.236.77
     port: 443
-    cipher: aes-256-gcm
-    password: "pKEW8JPByTVTLtM"
+    uuid: 3579436c-b37e-11eb-8529-0242ac130003
+    alterId: 0
+    cipher: auto
     
-  - name: "ss_172_99_190_92_7307"
-    type: ss
-    server: 172.99.190.92
-    port: 7307
-    cipher: aes-256-gcm
-    password: "FoOiGlkAA9yPEGP"
+  - name: "vmess_165_154_224_243_443"
+    type: vmess
+    server: 165.154.224.243
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
     
-  - name: "ss_134_195_196_68_7002"
-    type: ss
-    server: 134.195.196.68
-    port: 7002
-    cipher: aes-256-gcm
-    password: "RexnBgU7EV5ADxG"
+  - name: "vmess_ce_rutracker-cn_com_443"
+    type: vmess
+    server: ce.rutracker-cn.com
+    port: 443
+    uuid: ed5b1c2a-0f6d-4607-9725-a70a20727ab7
+    alterId: 0
+    cipher: auto
     
-  - name: "ss_134_195_196_187_8009"
+  - name: "ss_23_19_10_134_12345"
     type: ss
-    server: 134.195.196.187
-    port: 8009
+    server: 23.19.10.134
+    port: 12345
     cipher: aes-256-gcm
-    password: "XKFKl2rULjIp74"
+    password: "dongtaiwang.com"
     
-  - name: "ss_134_195_196_51_3389"
+  - name: "vmess_45_116_163_157_443"
+    type: vmess
+    server: 45.116.163.157
+    port: 443
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_66_90_74_4_2005"
+    type: vmess
+    server: 66.90.74.4
+    port: 2005
+    uuid: 39341a52-b53c-48a8-8033-a693656543ca
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_18_90_4_443"
+    type: vmess
+    server: 104.18.90.4
+    port: 443
+    uuid: e40d2888-03f6-4859-e84d-a743db763d52
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_19_3_23_443"
+    type: vmess
+    server: 104.19.3.23
+    port: 443
+    uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19057"
+    type: vmess
+    server: 120.232.208.195
+    port: 19057
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp03_linkzones_xyz_31991"
+    type: vmess
+    server: jp03.linkzones.xyz
+    port: 31991
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp01_xiaocloud_icu_20124"
+    type: vmess
+    server: jp01.xiaocloud.icu
+    port: 20124
+    uuid: 2889291a-ebd6-355a-ba6f-983acf09d68a
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_95_179_198_22_233"
+    type: vmess
+    server: 95.179.198.22
+    port: 233
+    uuid: ee9e6945-97b8-4a2b-9ff8-8b0b2666b3bb
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_fri_ncugo_cf_443"
+    type: vmess
+    server: fri.ncugo.cf
+    port: 443
+    uuid: de0eb598-2cea-43a0-c5fe-77335fb07a35
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1704"
+    type: vmess
+    server: 183.232.56.161
+    port: 1704
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_bgp_xiaohouzi_club_28523"
+    type: vmess
+    server: bgp.xiaohouzi.club
+    port: 28523
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_jp01-vm0_entry_ikuuu_casa_448"
+    type: vmess
+    server: jp01-vm0.entry.ikuuu.casa
+    port: 448
+    uuid: e1241a61-e533-3aa0-a25e-ad86cf34cd64
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_94_wowogg_cyou_52294"
+    type: vmess
+    server: 94.wowogg.cyou
+    port: 52294
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "ss_134_195_196_71_2375"
     type: ss
-    server: 134.195.196.51
-    port: 3389
+    server: 134.195.196.71
+    port: 2375
     cipher: aes-256-gcm
-    password: "Y6R9pAtvxxzmGC"
+    password: "faBAoD54k87UJG7"
     
-  - name: "ss_134_195_196_68_6697"
+  - name: "vmess_104_18_96_85_2053"
+    type: vmess
+    server: 104.18.96.85
+    port: 2053
+    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_45_35_84_162_443"
+    type: vmess
+    server: 45.35.84.162
+    port: 443
+    uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+    alterId: 4
+    cipher: auto
+    
+  - name: "ss_118_107_244_110_5003"
     type: ss
-    server: 134.195.196.68
+    server: 118.107.244.110
+    port: 5003
+    cipher: aes-256-gcm
+    password: "g5MeD6Ft3CWlJId"
+    
+  - name: "vmess_150_109_147_14_443"
+    type: vmess
+    server: 150.109.147.14
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_182_190_19084"
+    type: vmess
+    server: 120.232.182.190
+    port: 19084
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19085"
+    type: vmess
+    server: 120.232.214.210
+    port: 19085
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_wowogg_cyou_11222"
+    type: vmess
+    server: 104.wowogg.cyou
+    port: 11222
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "ss_169_197_142_99_6697"
+    type: ss
+    server: 169.197.142.99
     port: 6697
     cipher: aes-256-gcm
     password: "TEzjfAYq2IjtuoS"
     
-  - name: "ss_134_195_196_68_4444"
+  - name: "vmess_183_232_56_161_5019"
+    type: vmess
+    server: 183.232.56.161
+    port: 5019
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_v2ray_ifuckgfw_ga_8443"
+    type: vmess
+    server: v2ray.ifuckgfw.ga
+    port: 8443
+    uuid: e0184058-a2e7-11ec-96d8-52ac0014346a
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19094"
+    type: vmess
+    server: 112.14.22.104
+    port: 19094
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_134_195_196_154_7307"
     type: ss
-    server: 134.195.196.68
-    port: 4444
+    server: 134.195.196.154
+    port: 7307
+    cipher: aes-256-gcm
+    password: "FoOiGlkAA9yPEGP"
+    
+  - name: "vmess_172_67_68_58_443"
+    type: vmess
+    server: 172.67.68.58
+    port: 443
+    uuid: f2f578e4-692d-40b5-af99-9f1dd712eb32
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_0316ro_fans8_xyz_443"
+    type: vmess
+    server: 0316ro.fans8.xyz
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_91_wowogg_cyou_52291"
+    type: vmess
+    server: 91.wowogg.cyou
+    port: 52291
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_ddns-kr02_ayanami_best_80"
+    type: vmess
+    server: ddns-kr02.ayanami.best
+    port: 80
+    uuid: 787eabe8-0c76-48b9-80d1-1f211036e1cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp2803_cloudmatrix_xyz_2803"
+    type: vmess
+    server: jp2803.cloudmatrix.xyz
+    port: 2803
+    uuid: 3b78a19f-20f8-34f5-a818-2a02e10446ac
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_jp04-vm0_entry_ikuuu_casa_447"
+    type: vmess
+    server: jp04-vm0.entry.ikuuu.casa
+    port: 447
+    uuid: 74bf73ff-b403-3a17-a662-67d024d0ffec
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_88_wowogg_cyou_52288"
+    type: vmess
+    server: 88.wowogg.cyou
+    port: 52288
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_84_wowogg_cyou_52284"
+    type: vmess
+    server: 84.wowogg.cyou
+    port: 52284
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_azhk098_xiaohouzi_club_10090"
+    type: vmess
+    server: azhk098.xiaohouzi.club
+    port: 10090
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_us02_linkzones_xyz_31964"
+    type: vmess
+    server: us02.linkzones.xyz
+    port: 31964
+    uuid: d85d3fcd-17e0-3448-8694-6834a8fcf4b9
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp02-vm0_entry_ikuuu_casa_447"
+    type: vmess
+    server: jp02-vm0.entry.ikuuu.casa
+    port: 447
+    uuid: 74bf73ff-b403-3a17-a662-67d024d0ffec
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_192_9_248_151_23326"
+    type: vmess
+    server: 192.9.248.151
+    port: 23326
+    uuid: ace2e8da-5c52-45c1-8ccc-089e738fb54b
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_182_190_19048"
+    type: vmess
+    server: 120.232.182.190
+    port: 19048
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_v1_369855_xyz_11443"
+    type: vmess
+    server: v1.369855.xyz
+    port: 11443
+    uuid: d5c70a71-1b3c-41f2-a8e0-17323bc23821
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_china-gzyd-1_forwardserver_xyz_52024"
+    type: vmess
+    server: china-gzyd-1.forwardserver.xyz
+    port: 52024
+    uuid: 9e2c37d4-ab58-4730-8869-cb7b923d55d1
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_103_138_75_235_443"
+    type: vmess
+    server: 103.138.75.235
+    port: 443
+    uuid: 8ccc3052-4941-47e4-b85f-a67ea71e3fe6
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_116_wowogg_cyou_52216"
+    type: vmess
+    server: 116.wowogg.cyou
+    port: 52216
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "ss_134_195_198_252_443"
+    type: ss
+    server: 134.195.198.252
+    port: 443
     cipher: aes-256-gcm
     password: "pKEW8JPByTVTLtM"
     
-  - name: "ss_134_195_196_187_5601"
+  - name: "vmess_jp02-vm0_entry_ikuuu_casa_444"
+    type: vmess
+    server: jp02-vm0.entry.ikuuu.casa
+    port: 444
+    uuid: 62e7b8dd-b9fd-3ea5-aa62-d5e770dd389d
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_43_129_253_120_443"
+    type: vmess
+    server: 43.129.253.120
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19085"
+    type: vmess
+    server: 112.14.22.104
+    port: 19085
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19085"
+    type: vmess
+    server: 120.232.208.195
+    port: 19085
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_165_154_225_176_443"
+    type: vmess
+    server: 165.154.225.176
+    port: 443
+    uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_146_56_105_192_52660"
+    type: vmess
+    server: 146.56.105.192
+    port: 52660
+    uuid: b4e44960-44ed-4c5e-9577-e945b93e41fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp01_linkzones_xyz_31961"
+    type: vmess
+    server: jp01.linkzones.xyz
+    port: 31961
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_212_103_62_37_443"
+    type: vmess
+    server: 212.103.62.37
+    port: 443
+    uuid: 17beadf3-1878-4beb-9417-b47295aefc12
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_cn-cu-2_sgdns_club_11190"
+    type: vmess
+    server: cn-cu-2.sgdns.club
+    port: 11190
+    uuid: 2dc10784-c7fb-377d-a579-2b541eb16d7b
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_azhk097_xiaohouzi_club_443"
+    type: vmess
+    server: azhk097.xiaohouzi.club
+    port: 443
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_81_wowogg_cyou_52281"
+    type: vmess
+    server: 81.wowogg.cyou
+    port: 52281
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_129_226_178_235_443"
+    type: vmess
+    server: 129.226.178.235
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_hk5_fdns_unino_tech_80"
+    type: vmess
+    server: hk5.fdns.unino.tech
+    port: 80
+    uuid: 518cec6c-a82c-4f5a-a5ed-084d57677d0b
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_101_32_10_238_443"
+    type: vmess
+    server: 101.32.10.238
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_in02_dns2333_xyz_64088"
+    type: vmess
+    server: in02.dns2333.xyz
+    port: 64088
+    uuid: 41cee8f2-56b3-324a-a7e3-dd9ca92c09cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19038"
+    type: vmess
+    server: 112.14.22.104
+    port: 19038
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_aws-hk02_xiaohouzi_club_10081"
+    type: vmess
+    server: aws-hk02.xiaohouzi.club
+    port: 10081
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_52_175_12_141_24396"
+    type: vmess
+    server: 52.175.12.141
+    port: 24396
+    uuid: c4b30765-3dbc-422e-93c4-3591b1debb6a
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_21_100_200_2087"
+    type: vmess
+    server: 104.21.100.200
+    port: 2087
+    uuid: 9c1dda93-8c98-dbf9-25a0-1c4c2c84baa8
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_251_233_106_13723"
+    type: vmess
+    server: 104.251.233.106
+    port: 13723
+    uuid: a90597c1-bab3-4217-ad6f-0838675c8638
+    alterId: 10
+    cipher: auto
+    
+  - name: "vmess_114_wowogg_cyou_52214"
+    type: vmess
+    server: 114.wowogg.cyou
+    port: 52214
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19048"
+    type: vmess
+    server: 112.14.22.104
+    port: 19048
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_nazhk03_xiaohouzi_club_10030"
+    type: vmess
+    server: nazhk03.xiaohouzi.club
+    port: 10030
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_117_wowogg_cyou_52217"
+    type: vmess
+    server: 117.wowogg.cyou
+    port: 52217
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19083"
+    type: vmess
+    server: 120.232.208.195
+    port: 19083
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_182_190_19038"
+    type: vmess
+    server: 120.232.182.190
+    port: 19038
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_154_23_190_162_443"
+    type: vmess
+    server: 154.23.190.162
+    port: 443
+    uuid: b9984674-f771-4e67-a198-c7e60720ba2c
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_169_197_142_99_8090"
     type: ss
-    server: 134.195.196.187
-    port: 5601
+    server: 169.197.142.99
+    port: 8090
     cipher: aes-256-gcm
-    password: "Y6R9pAtvxxzmGC"
+    password: "PCnnH6SQSnfoS27"
     
-  - name: "ss_117_28_242_137_9359"
-    type: ss
-    server: 117.28.242.137
-    port: 9359
-    cipher: aes-256-cfb
-    password: "73117962"
+  - name: "vmess_183_232_56_161_1301"
+    type: vmess
+    server: 183.232.56.161
+    port: 1301
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 2
+    cipher: auto
     
-  - name: "ss_134_195_196_81_8000"
+  - name: "vmess_v2-r02_xiaohouzi_club_10082"
+    type: vmess
+    server: v2-r02.xiaohouzi.club
+    port: 10082
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_208_79_9_57209"
+    type: vmess
+    server: 104.208.79.9
+    port: 57209
+    uuid: 0de8896e-462c-4653-9f89-8dc8a1748c17
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_17_103_125_80"
+    type: vmess
+    server: 104.17.103.125
+    port: 80
+    uuid: e46835e3-b770-4d5b-8ba0-5507f8385c44
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_152_70_49_174_55988"
+    type: vmess
+    server: 152.70.49.174
+    port: 55988
+    uuid: 2c644a6a-5817-40b2-b149-2f3ac7eb2447
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_105_wowogg_cyou_52205"
+    type: vmess
+    server: 105.wowogg.cyou
+    port: 52205
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_61_222_202_140_33792"
+    type: vmess
+    server: 61.222.202.140
+    port: 33792
+    uuid: e55cd182-01b0-4fb7-a510-363701a491c5
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_us1_31vpn_com_80"
+    type: vmess
+    server: us1.31vpn.com
+    port: 80
+    uuid: bb4b9e95-c9ff-411c-9a47-483570e169aa
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19038"
+    type: vmess
+    server: 120.232.214.210
+    port: 19038
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp01-tls-vm0_entry_ikuuu_casa_892"
+    type: vmess
+    server: jp01-tls-vm0.entry.ikuuu.casa
+    port: 892
+    uuid: 3046e7e6-1c41-361f-8616-434c76c32d48
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_119_wowogg_cyou_52219"
+    type: vmess
+    server: 119.wowogg.cyou
+    port: 52219
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19057"
+    type: vmess
+    server: 120.232.214.210
+    port: 19057
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_eu_licom_ga_62011"
+    type: vmess
+    server: eu.licom.ga
+    port: 62011
+    uuid: f81e990e-1283-48f9-9eff-acacad6fb661
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_ingress-i1_onebox6_org_38501"
+    type: vmess
+    server: ingress-i1.onebox6.org
+    port: 38501
+    uuid: 79386685-16da-327c-9e14-aa6d702d86bc
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_49_234_158_14_10909"
+    type: vmess
+    server: 49.234.158.14
+    port: 10909
+    uuid: c3082e6f-37b2-41b6-b40a-1063bc8e2853
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_azhk099_xiaohouzi_club_10089"
+    type: vmess
+    server: azhk099.xiaohouzi.club
+    port: 10089
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_cloudflare_a-yu_xyz_443"
+    type: vmess
+    server: cloudflare.a-yu.xyz
+    port: 443
+    uuid: a8910831-f56b-4ac4-c68f-e4dd83f71e60
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_ddns-kr01_ayanami_best_80"
+    type: vmess
+    server: ddns-kr01.ayanami.best
+    port: 80
+    uuid: 787eabe8-0c76-48b9-80d1-1f211036e1cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1101"
+    type: vmess
+    server: 183.232.56.161
+    port: 1101
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_209_209_115_192_22233"
     type: ss
-    server: 134.195.196.81
-    port: 8000
+    server: 209.209.115.192
+    port: 22233
     cipher: aes-256-gcm
-    password: "KixLvKzwjekG00rm"
+    password: "dongtaiwang.com"
     
-  - name: "ss_134_195_196_81_5600"
+  - name: "vmess_104_208_84_177_33578"
+    type: vmess
+    server: 104.208.84.177
+    port: 33578
+    uuid: 5919b468-a268-4012-9cf1-08f96260d0c8
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_45_137_10_174_39043"
+    type: vmess
+    server: 45.137.10.174
+    port: 39043
+    uuid: 1b2f44e4-a810-48a8-b620-a4567b46c9b7
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1951"
+    type: vmess
+    server: 183.232.56.161
+    port: 1951
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_198_41_212_18_443"
+    type: vmess
+    server: 198.41.212.18
+    port: 443
+    uuid: a8910831-f56b-4ac4-c68f-e4dd83f71e60
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_134_195_196_193_8090"
     type: ss
-    server: 134.195.196.81
-    port: 5600
+    server: 134.195.196.193
+    port: 8090
     cipher: aes-256-gcm
-    password: "Y6R9pAtvxxzmGC"
+    password: "PCnnH6SQSnfoS27"
     
-  - name: "ss_134_195_196_187_2376"
+  - name: "vmess_ca02_linkzones_xyz_31976"
+    type: vmess
+    server: ca02.linkzones.xyz
+    port: 31976
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_in03_dns2333_xyz_64071"
+    type: vmess
+    server: in03.dns2333.xyz
+    port: 64071
+    uuid: 41cee8f2-56b3-324a-a7e3-dd9ca92c09cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_ingress-i1_onebox6_org_38701"
+    type: vmess
+    server: ingress-i1.onebox6.org
+    port: 38701
+    uuid: 79386685-16da-327c-9e14-aa6d702d86bc
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19079"
+    type: vmess
+    server: 112.14.22.104
+    port: 19079
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_aws-hk03_xiaohouzi_club_10050"
+    type: vmess
+    server: aws-hk03.xiaohouzi.club
+    port: 10050
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_azhk01_xiaohouzi_club_10050"
+    type: vmess
+    server: azhk01.xiaohouzi.club
+    port: 10050
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_14_29_124_168_25266"
     type: ss
-    server: 134.195.196.187
+    server: 14.29.124.168
+    port: 25266
+    cipher: aes-128-cfb
+    password: "QazEdcTgb159@$*"
+    
+  - name: "vmess_13_67_113_86_80"
+    type: vmess
+    server: 13.67.113.86
+    port: 80
+    uuid: 943c9358-c3da-4ece-bae3-b35bed1743fd
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_172_64_143_70_443"
+    type: vmess
+    server: 172.64.143.70
+    port: 443
+    uuid: e9a1bf07-ba3c-2bf0-c18a-632c80084fbb
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_on999_herokuapp_com_443"
+    type: vmess
+    server: on999.herokuapp.com
+    port: 443
+    uuid: 885c1119-ffe3-45a3-ab23-f819326107f4
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_122_wowogg_cyou_52222"
+    type: vmess
+    server: 122.wowogg.cyou
+    port: 52222
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_使用前记得更新订阅_0"
+    type: vmess
+    server: 使用前记得更新订阅
+    port: 0
+    uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19079"
+    type: vmess
+    server: 120.232.208.195
+    port: 19079
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_in01_dns2333_xyz_64071"
+    type: vmess
+    server: in01.dns2333.xyz
+    port: 64071
+    uuid: 41cee8f2-56b3-324a-a7e3-dd9ca92c09cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_198_13_61_192_10110"
+    type: vmess
+    server: 198.13.61.192
+    port: 10110
+    uuid: 29430b3d-f83f-3c74-94a2-e8c1a459219f
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_61_222_202_140_15789"
+    type: vmess
+    server: 61.222.202.140
+    port: 15789
+    uuid: 4535e708-5988-4377-a083-755ed60d8068
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_198_57_27_218_2376"
+    type: ss
+    server: 198.57.27.218
     port: 2376
     cipher: aes-256-gcm
     password: "faBAoD54k87UJG7"
     
-  - name: "ss_134_195_196_81_5004"
-    type: ss
-    server: 134.195.196.81
-    port: 5004
-    cipher: aes-256-gcm
-    password: "g5MeD6Ft3CWlJId"
+  - name: "vmess_jp01-vm0_entry_ikuuu_casa_447"
+    type: vmess
+    server: jp01-vm0.entry.ikuuu.casa
+    port: 447
+    uuid: 3046e7e6-1c41-361f-8616-434c76c32d48
+    alterId: 1
+    cipher: auto
     
-  - name: "ss_134_195_196_187_8008"
-    type: ss
-    server: 134.195.196.187
-    port: 8008
-    cipher: aes-256-gcm
-    password: "XKFKl2rULjIp74"
+  - name: "vmess_120_232_182_190_19094"
+    type: vmess
+    server: 120.232.182.190
+    port: 19094
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
     
-  - name: "ss_134_195_196_3_8881"
+  - name: "ss_169_197_142_99_443"
     type: ss
-    server: 134.195.196.3
-    port: 8881
-    cipher: aes-256-gcm
-    password: "kDWvXYZoTBcGkC4"
-    
-  - name: "ss_134_195_196_187_9102"
-    type: ss
-    server: 134.195.196.187
-    port: 9102
-    cipher: aes-256-gcm
-    password: "e4FCWrgpkji3QY"
-    
-  - name: "ss_45_79_111_214_443"
-    type: ss
-    server: 45.79.111.214
-    port: 443
-    cipher: aes-256-cfb
-    password: "9d6cceaa373bf2c8acb22e60b6a58be6"
-    
-  - name: "ss_172_99_190_92_443"
-    type: ss
-    server: 172.99.190.92
+    server: 169.197.142.99
     port: 443
     cipher: aes-256-gcm
     password: "pKEW8JPByTVTLtM"
     
-  - name: "ss_172_99_190_92_6379"
+  - name: "vmess_198_144_166_45_153"
+    type: vmess
+    server: 198.144.166.45
+    port: 153
+    uuid: 077e42c8-c62e-3cbb-b69c-c0c7edb3f25a
+    alterId: 64
+    cipher: auto
+    
+  - name: "vmess_aws-hk06_xiaohouzi_club_443"
+    type: vmess
+    server: aws-hk06.xiaohouzi.club
+    port: 443
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_90_wowogg_cyou_52290"
+    type: vmess
+    server: 90.wowogg.cyou
+    port: 52290
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_102_wowogg_cyou_11221"
+    type: vmess
+    server: 102.wowogg.cyou
+    port: 11221
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_us04_xiaohouzi_club_10083"
+    type: vmess
+    server: us04.xiaohouzi.club
+    port: 10083
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_123_6_78_227_809"
+    type: vmess
+    server: 123.6.78.227
+    port: 809
+    uuid: 8aab5d93-f9f5-4514-e9f4-dd25c79e4fbc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_sg1_31vpn_com_80"
+    type: vmess
+    server: sg1.31vpn.com
+    port: 80
+    uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_128_199_131_91_41976"
+    type: vmess
+    server: 128.199.131.91
+    port: 41976
+    uuid: 5db07bd0-e392-45a4-ad73-4663b4b59155
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_207_246_94_28_42383"
+    type: vmess
+    server: 207.246.94.28
+    port: 42383
+    uuid: 4773dfdc-9c85-4873-8720-ce8cf5f74f7c
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_cd_rutracker-cn_com_443"
+    type: vmess
+    server: cd.rutracker-cn.com
+    port: 443
+    uuid: 8f5ccb11-a196-4c07-a6d2-aa9fbe10a737
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_test_0dc_cn_443"
+    type: vmess
+    server: test.0dc.cn
+    port: 443
+    uuid: ebe5703b-c18e-4664-c3a7-9fcf52453898
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_43_154_87_207_24821"
+    type: vmess
+    server: 43.154.87.207
+    port: 24821
+    uuid: 357000f2-e4a9-4d35-8248-58ab72b7a0eb
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_104_21_84_81_443"
+    type: vmess
+    server: 104.21.84.81
+    port: 443
+    uuid: a8910831-f56b-4ac4-c68f-e4dd83f71e60
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_in04_dns2333_xyz_64071"
+    type: vmess
+    server: in04.dns2333.xyz
+    port: 64071
+    uuid: 41cee8f2-56b3-324a-a7e3-dd9ca92c09cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_oz_moonfree_top_443"
+    type: vmess
+    server: oz.moonfree.top
+    port: 443
+    uuid: ecea9b32-d571-460f-bb74-2010c6acd6ff
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_127_wowogg_cyou_52227"
+    type: vmess
+    server: 127.wowogg.cyou
+    port: 52227
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_jp03-vm0_entry_ikuuu_casa_447"
+    type: vmess
+    server: jp03-vm0.entry.ikuuu.casa
+    port: 447
+    uuid: 74bf73ff-b403-3a17-a662-67d024d0ffec
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_jp01-tls-vm0_entry_ikuuu_casa_893"
+    type: vmess
+    server: jp01-tls-vm0.entry.ikuuu.casa
+    port: 893
+    uuid: e1241a61-e533-3aa0-a25e-ad86cf34cd64
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19048"
+    type: vmess
+    server: 120.232.208.195
+    port: 19048
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_140_82_21_142_34762"
+    type: vmess
+    server: 140.82.21.142
+    port: 34762
+    uuid: b48abbe4-b603-11ec-8a20-560003efb98f
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_43_128_9_149_443"
+    type: vmess
+    server: 43.128.9.149
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_43_132_162_119_443"
+    type: vmess
+    server: 43.132.162.119
+    port: 443
+    uuid: 2beb7a52-a3cd-43ba-8cef-0ea8f69d38de
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_198_41_221_169_443"
+    type: vmess
+    server: 198.41.221.169
+    port: 443
+    uuid: a8910831-f56b-4ac4-c68f-e4dd83f71e60
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_sgpcu_dfnode_top_15736"
+    type: vmess
+    server: sgpcu.dfnode.top
+    port: 15736
+    uuid: a6ef37c5-1a0f-3204-8ca6-fa7a18c062c1
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_65_52_171_156_15031"
+    type: vmess
+    server: 65.52.171.156
+    port: 15031
+    uuid: 047184b7-6da2-3d3f-ac27-6a1a8701daf8
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_124_156_137_34_443"
+    type: vmess
+    server: 124.156.137.34
+    port: 443
+    uuid: 514e8598-aae2-4c76-a1a7-da12941f8e09
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_csct_ayanami_best_832"
+    type: vmess
+    server: csct.ayanami.best
+    port: 832
+    uuid: 787eabe8-0c76-48b9-80d1-1f211036e1cc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_nyyd_zerohost_live_53000"
+    type: vmess
+    server: nyyd.zerohost.live
+    port: 53000
+    uuid: c008a763-2123-312f-bae6-bf7630517e22
+    alterId: 2
+    cipher: auto
+    
+  - name: "ss_134_195_198_252_2376"
     type: ss
-    server: 172.99.190.92
-    port: 6379
+    server: 134.195.198.252
+    port: 2376
     cipher: aes-256-gcm
-    password: "zDNVedRFPQexG9v"
+    password: "faBAoD54k87UJG7"
+    
+  - name: "vmess_relay1_sgdns_club_11070"
+    type: vmess
+    server: relay1.sgdns.club
+    port: 11070
+    uuid: 2dc10784-c7fb-377d-a579-2b541eb16d7b
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_ingress-i1_onebox6_org_38201"
+    type: vmess
+    server: ingress-i1.onebox6.org
+    port: 38201
+    uuid: 79386685-16da-327c-9e14-aa6d702d86bc
+    alterId: 1
+    cipher: auto
+    
+  - name: "ss_145_239_1_137_2375"
+    type: ss
+    server: 145.239.1.137
+    port: 2375
+    cipher: aes-256-gcm
+    password: "faBAoD54k87UJG7"
+    
+  - name: "vmess_120_232_182_190_19057"
+    type: vmess
+    server: 120.232.182.190
+    port: 19057
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_208_195_19038"
+    type: vmess
+    server: 120.232.208.195
+    port: 19038
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_jp01-tls-vm0_entry_ikuuu_casa_889"
+    type: vmess
+    server: jp01-tls-vm0.entry.ikuuu.casa
+    port: 889
+    uuid: 62e7b8dd-b9fd-3ea5-aa62-d5e770dd389d
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19048"
+    type: vmess
+    server: 120.232.214.210
+    port: 19048
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_132_145_92_147_29660"
+    type: vmess
+    server: 132.145.92.147
+    port: 29660
+    uuid: 2c02504a-1067-4835-9235-5d50840b4530
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_www_kernels_bid_80"
+    type: vmess
+    server: www.kernels.bid
+    port: 80
+    uuid: 25ec39f7-7cdd-4c3c-bc3c-60e9a8927b4a
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_134_195_198_178_7307"
+    type: ss
+    server: 134.195.198.178
+    port: 7307
+    cipher: aes-256-gcm
+    password: "FoOiGlkAA9yPEGP"
+    
+  - name: "vmess_azhk003_xiaohouzi_club_10051"
+    type: vmess
+    server: azhk003.xiaohouzi.club
+    port: 10051
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_azhk02_xiaohouzi_club_443"
+    type: vmess
+    server: azhk02.xiaohouzi.club
+    port: 443
+    uuid: dbf20899-f0d8-33bd-bed0-ddc16105dfe3
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_jp06-vm0_entry_ikuuu_casa_444"
+    type: vmess
+    server: jp06-vm0.entry.ikuuu.casa
+    port: 444
+    uuid: 62e7b8dd-b9fd-3ea5-aa62-d5e770dd389d
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_89_wowogg_cyou_52289"
+    type: vmess
+    server: 89.wowogg.cyou
+    port: 52289
+    uuid: 08103798-414e-32b6-8748-2507732d2c51
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_jp03-vm0_entry_ikuuu_casa_448"
+    type: vmess
+    server: jp03-vm0.entry.ikuuu.casa
+    port: 448
+    uuid: e1241a61-e533-3aa0-a25e-ad86cf34cd64
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_hk02_linkzones_xyz_31913"
+    type: vmess
+    server: hk02.linkzones.xyz
+    port: 31913
+    uuid: 9086ee83-fed9-3549-b2e4-fa3ac6b0d7fc
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_in-v1_sdgdn_com_50206"
+    type: vmess
+    server: in-v1.sdgdn.com
+    port: 50206
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
+    cipher: auto
+    
+  - name: "vmess_jp02_linkzones_xyz_31972"
+    type: vmess
+    server: jp02.linkzones.xyz
+    port: 31972
+    uuid: d85d3fcd-17e0-3448-8694-6834a8fcf4b9
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_182_190_19083"
+    type: vmess
+    server: 120.232.182.190
+    port: 19083
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_120_232_214_210_19079"
+    type: vmess
+    server: 120.232.214.210
+    port: 19079
+    uuid: b1f64afe-67ae-3b44-bcb3-5ff2bc913170
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_183_232_56_161_1212"
+    type: vmess
+    server: 183.232.56.161
+    port: 1212
+    uuid: 3a226645-c640-39a2-8177-000381e29f20
+    alterId: 2
+    cipher: auto
+    
+  - name: "vmess_65_52_171_156_8080"
+    type: vmess
+    server: 65.52.171.156
+    port: 8080
+    uuid: 047184b7-6da2-3d3f-ac27-6a1a8701daf8
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_198_41_212_2_443"
+    type: vmess
+    server: 198.41.212.2
+    port: 443
+    uuid: a8910831-f56b-4ac4-c68f-e4dd83f71e60
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_112_14_22_104_19083"
+    type: vmess
+    server: 112.14.22.104
+    port: 19083
+    uuid: 1b9b7dfc-d92b-35f0-88a3-587c7798d9e3
+    alterId: 0
+    cipher: auto
+    
+  - name: "vmess_03071t_moonfree_top_443"
+    type: vmess
+    server: 03071t.moonfree.top
+    port: 443
+    uuid: aa5dd703-195d-4682-8c35-ea0083ea1a74
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_14_29_124_168_25210"
+    type: ss
+    server: 14.29.124.168
+    port: 25210
+    cipher: aes-128-cfb
+    password: "QazEdcTgb159@$*"
+    
+  - name: "vmess_www_kernels_bid_443"
+    type: vmess
+    server: www.kernels.bid
+    port: 443
+    uuid: 6c7c5e3a-73ad-467a-1241-206987daa04f
+    alterId: 0
+    cipher: auto
+    
+  - name: "ss_134_195_198_252_2375"
+    type: ss
+    server: 134.195.198.252
+    port: 2375
+    cipher: aes-256-gcm
+    password: "faBAoD54k87UJG7"
+    
 
 
 
@@ -496,65 +2306,282 @@ proxy-groups:
   - name: "auto"
     type: url-test
     proxies:
-      - ss_134_195_196_71_2375
-      - ss_134_195_196_214_5004
-      - ss_134_195_198_178_7307
-      - ss_134_195_196_154_7307
-      - ss_134_195_198_178_8090
-      - ss_134_195_198_95_7306
-      - ss_134_195_198_252_2375
-      - ss_46_29_218_6_2376
-      - ss_145_239_1_137_2375
-      - ss_198_57_27_218_2376
-      - ss_134_195_198_252_2376
-      - ss_118_107_244_110_5003
-      - ss_134_195_196_193_8090
-      - ss_23_19_26_246_10515
-      - ss_45_140_169_176_10055
-      - ss_45_137_154_208_10033
       
-      - ss_198_147_22_87_39772
-      - ss_207_244_67_149_35294
-      - ss_195_47_194_56_39772
-      - ss_212_102_44_93_33992
-      - ss_185_2_100_166_39772
-      - ss_185_44_76_188_31572
-      - ss_107_181_166_55_33992
-      - ss_185_2_100_166_33992
-      - ss_185_44_76_188_31764
-
-      - vmess_202_61_141_130
-      - vmess_116_wowogg_cyou_52216
+      - vmess_0326kr_fans8_xyz_443
+      - ss_134_195_198_178_8090
+      - vmess_jp06-vm0_entry_ikuuu_casa_447
+      - vmess_202_61_141_130_443
+      - vmess_210_3_245_46_50021
+      - vmess_v2fly_sab_quest_443
+      - vmess_sg03_linkzones_xyz_31984
+      - vmess_cm1_worldmuseum_buzz_12100
+      - vmess_sg03_xiaocloud_icu_20366
+      - vmess_cloudflare_xrenblog_com_443
+      - vmess_us-ny-rn_licom_ga_62008
+      - vmess_86_wowogg_cyou_52286
+      - vmess_0319ru99_fans8_xyz_443
+      - vmess_sh_xiaohouzi_club_17902
+      - vmess_niaop_tk_443
+      - vmess_120_232_214_210_19084
+      - vmess_app_ssfree_ru_443
+      - vmess_0319hzm01_fans8_xyz_443
+      - vmess_ua1_uuv2_co_uk_443
+      - vmess_azhk096_xiaohouzi_club_10082
+      - vmess_vs_mumi_bid_10124
+      - vmess_mc_xiaohouzi_club_28325
+      - vmess_92_wowogg_cyou_52292
+      - vmess_v6d1_moonfree_top_443
+      - vmess_hk3_fdns_unino_tech_80
+      - vmess_ahdaeph8_com_443
+      - vmess_183_232_56_161_1952
+      - vmess_139_162_122_205_3845
+      - vmess_183_232_56_161_1202
+      - vmess_47_56_143_21_443
+      - vmess_116_162_14_228_21103
+      - vmess_api_ssfree_ru_443
+      - vmess_183_232_56_161_1302
+      - vmess_112_14_22_104_19084
+      - vmess_in02_dns2333_xyz_64071
+      - vmess_20_239_93_20_44325
+      - vmess_iepl02_zerohost_live_11010
+      - vmess_tw02_linkzones_xyz_41982
+      - vmess_shk01_xiaohouzi_club_10050
+      - vmess_dj2_qiancheng_ml_443
+      - vmess_usa-dallas_lvuft_com_443
+      - vmess_jp04-vm0_entry_ikuuu_casa_448
+      - vmess_104_225_239_41_53528
+      - vmess_www_zhangss_xyz_59627
+      - vmess_107_wowogg_cyou_52207
+      - vmess_172_67_190_72_443
+      - vmess_azhk04_yitaiml_xyz_443
+      - vmess_c23s3_jamjams_net_61173
+      - vmess_us06_xiaohouzi_club_10082
+      - vmess_120_232_208_195_19094
+      - vmess_v2-r03_xiaohouzi_club_10083
+      - vmess_67_207_92_252_55239
+      - vmess_0320hk857_fans8_xyz_443
+      - vmess_154_84_1_239_443
+      - vmess_43_129_189_128_443
+      - vmess_147_135_164_113_44423
+      - ss_134_195_196_51_7306
+      - vmess_sxqxj_cn_2164
+      - vmess_tw03_linkzones_xyz_51984
+      - vmess_152_70_106_35_39033
+      - vmess_104_208_101_112_34554
+      - vmess_120_232_208_195_19084
+      - vmess_awsxjp_moonfree_top_443
+      - vmess_34_106_38_4_25698
+      - vmess_v2ray_788644_xyz_443
+      - vmess_104_16_162_16_2053
+      - ss_169_197_142_99_8091
+      - vmess_cf_rutracker-cn_com_443
+      - vmess_120_232_182_190_19085
+      - vmess_192_18_134_27_50134
+      - ss_134_195_196_214_5004
+      - vmess_in-v1_sdgdn_com_50207
+      - ss_134_195_198_95_7306
+      - vmess_116_162_14_228_20785
+      - vmess_120_232_182_190_19079
+      - vmess_150_230_43_65_14564
+      - vmess_13_75_44_200_40903
+      - vmess_120_232_214_210_19083
+      - ss_46_29_218_6_2376
+      - vmess_149_248_18_17_3626
+      - vmess_159_203_73_153_4396
+      - vmess_152_70_80_195_31703
+      - vmess_165_154_225_231_443
+      - vmess_0320hk567_fans8_xyz_443
+      - vmess_jp04-vm0_entry_ikuuu_casa_444
+      - vmess_103_164_81_46_443
+      - vmess_104_19_62_119_443
+      - vmess_vv01_xiaohouzi_club_10083
+      - vmess_43_128_1_112_443
+      - vmess_0320jp_fans8_xyz_443
+      - vmess_sg02_linkzones_xyz_31983
       - ss_51_255_66_185_7306
-
-
-      - ss_134_195_196_81_8882
-      - ss_134_195_196_68_5500
-      - ss_134_195_196_3_5600
-      - ss_172_99_190_92_9102
-      - ss_134_195_196_3_3306
-      - ss_134_195_196_81_8091
-      - ss_134_195_196_81_7307
-      - ss_134_195_196_81_8888
-      - ss_134_195_196_68_443
-      - ss_172_99_190_92_7307
-      - ss_134_195_196_68_7002
-      - ss_134_195_196_187_8009
-      - ss_134_195_196_51_3389
-      - ss_134_195_196_68_6697
-      - ss_134_195_196_68_4444
-      - ss_134_195_196_187_5601
-      - ss_117_28_242_137_9359
-      - ss_134_195_196_81_8000
-      - ss_134_195_196_81_5600
-      - ss_134_195_196_187_2376
-      - ss_134_195_196_81_5004
-      - ss_134_195_196_187_8008
-      - ss_134_195_196_3_8881
-      - ss_134_195_196_187_9102
-      - ss_45_79_111_214_443
-      - ss_172_99_190_92_443
-      - ss_172_99_190_92_6379
+      - vmess_112_14_22_104_19057
+      - vmess_tw2501_cloudmatrix_xyz_2501
+      - vmess_hk01_linkzones_xyz_31911
+      - ss_14_29_124_168_25270
+      - vmess_183_232_30_53_15006
+      - vmess_138_197_236_77_443
+      - vmess_165_154_224_243_443
+      - vmess_ce_rutracker-cn_com_443
+      - ss_23_19_10_134_12345
+      - vmess_45_116_163_157_443
+      - vmess_66_90_74_4_2005
+      - vmess_104_18_90_4_443
+      - vmess_104_19_3_23_443
+      - vmess_120_232_208_195_19057
+      - vmess_jp03_linkzones_xyz_31991
+      - vmess_jp01_xiaocloud_icu_20124
+      - vmess_95_179_198_22_233
+      - vmess_fri_ncugo_cf_443
+      - vmess_183_232_56_161_1704
+      - vmess_bgp_xiaohouzi_club_28523
+      - vmess_jp01-vm0_entry_ikuuu_casa_448
+      - vmess_94_wowogg_cyou_52294
+      - ss_134_195_196_71_2375
+      - vmess_104_18_96_85_2053
+      - vmess_45_35_84_162_443
+      - ss_118_107_244_110_5003
+      - vmess_150_109_147_14_443
+      - vmess_120_232_182_190_19084
+      - vmess_120_232_214_210_19085
+      - vmess_104_wowogg_cyou_11222
+      - ss_169_197_142_99_6697
+      - vmess_183_232_56_161_5019
+      - vmess_v2ray_ifuckgfw_ga_8443
+      - vmess_112_14_22_104_19094
+      - ss_134_195_196_154_7307
+      - vmess_172_67_68_58_443
+      - vmess_0316ro_fans8_xyz_443
+      - vmess_91_wowogg_cyou_52291
+      - vmess_ddns-kr02_ayanami_best_80
+      - vmess_jp2803_cloudmatrix_xyz_2803
+      - vmess_jp04-vm0_entry_ikuuu_casa_447
+      - vmess_88_wowogg_cyou_52288
+      - vmess_84_wowogg_cyou_52284
+      - vmess_azhk098_xiaohouzi_club_10090
+      - vmess_us02_linkzones_xyz_31964
+      - vmess_jp02-vm0_entry_ikuuu_casa_447
+      - vmess_192_9_248_151_23326
+      - vmess_120_232_182_190_19048
+      - vmess_v1_369855_xyz_11443
+      - vmess_china-gzyd-1_forwardserver_xyz_52024
+      - vmess_103_138_75_235_443
+      - vmess_116_wowogg_cyou_52216
+      - ss_134_195_198_252_443
+      - vmess_jp02-vm0_entry_ikuuu_casa_444
+      - vmess_43_129_253_120_443
+      - vmess_112_14_22_104_19085
+      - vmess_120_232_208_195_19085
+      - vmess_165_154_225_176_443
+      - vmess_146_56_105_192_52660
+      - vmess_jp01_linkzones_xyz_31961
+      - vmess_212_103_62_37_443
+      - vmess_cn-cu-2_sgdns_club_11190
+      - vmess_azhk097_xiaohouzi_club_443
+      - vmess_81_wowogg_cyou_52281
+      - vmess_129_226_178_235_443
+      - vmess_hk5_fdns_unino_tech_80
+      - vmess_101_32_10_238_443
+      - vmess_in02_dns2333_xyz_64088
+      - vmess_112_14_22_104_19038
+      - vmess_aws-hk02_xiaohouzi_club_10081
+      - vmess_52_175_12_141_24396
+      - vmess_104_21_100_200_2087
+      - vmess_104_251_233_106_13723
+      - vmess_114_wowogg_cyou_52214
+      - vmess_112_14_22_104_19048
+      - vmess_nazhk03_xiaohouzi_club_10030
+      - vmess_117_wowogg_cyou_52217
+      - vmess_120_232_208_195_19083
+      - vmess_120_232_182_190_19038
+      - vmess_154_23_190_162_443
+      - ss_169_197_142_99_8090
+      - vmess_183_232_56_161_1301
+      - vmess_v2-r02_xiaohouzi_club_10082
+      - vmess_104_208_79_9_57209
+      - vmess_104_17_103_125_80
+      - vmess_152_70_49_174_55988
+      - vmess_105_wowogg_cyou_52205
+      - vmess_61_222_202_140_33792
+      - vmess_us1_31vpn_com_80
+      - vmess_120_232_214_210_19038
+      - vmess_jp01-tls-vm0_entry_ikuuu_casa_892
+      - vmess_119_wowogg_cyou_52219
+      - vmess_120_232_214_210_19057
+      - vmess_eu_licom_ga_62011
+      - vmess_ingress-i1_onebox6_org_38501
+      - vmess_49_234_158_14_10909
+      - vmess_azhk099_xiaohouzi_club_10089
+      - vmess_cloudflare_a-yu_xyz_443
+      - vmess_ddns-kr01_ayanami_best_80
+      - vmess_183_232_56_161_1101
+      - ss_209_209_115_192_22233
+      - vmess_104_208_84_177_33578
+      - vmess_45_137_10_174_39043
+      - vmess_183_232_56_161_1951
+      - vmess_198_41_212_18_443
+      - ss_134_195_196_193_8090
+      - vmess_ca02_linkzones_xyz_31976
+      - vmess_in03_dns2333_xyz_64071
+      - vmess_ingress-i1_onebox6_org_38701
+      - vmess_112_14_22_104_19079
+      - vmess_aws-hk03_xiaohouzi_club_10050
+      - vmess_azhk01_xiaohouzi_club_10050
+      - ss_14_29_124_168_25266
+      - vmess_13_67_113_86_80
+      - vmess_172_64_143_70_443
+      - vmess_on999_herokuapp_com_443
+      - vmess_122_wowogg_cyou_52222
+      - vmess_使用前记得更新订阅_0
+      - vmess_120_232_208_195_19079
+      - vmess_in01_dns2333_xyz_64071
+      - vmess_198_13_61_192_10110
+      - vmess_61_222_202_140_15789
+      - ss_198_57_27_218_2376
+      - vmess_jp01-vm0_entry_ikuuu_casa_447
+      - vmess_120_232_182_190_19094
+      - ss_169_197_142_99_443
+      - vmess_198_144_166_45_153
+      - vmess_aws-hk06_xiaohouzi_club_443
+      - vmess_90_wowogg_cyou_52290
+      - vmess_102_wowogg_cyou_11221
+      - vmess_us04_xiaohouzi_club_10083
+      - vmess_123_6_78_227_809
+      - vmess_sg1_31vpn_com_80
+      - vmess_128_199_131_91_41976
+      - vmess_207_246_94_28_42383
+      - vmess_cd_rutracker-cn_com_443
+      - vmess_test_0dc_cn_443
+      - vmess_43_154_87_207_24821
+      - vmess_104_21_84_81_443
+      - vmess_in04_dns2333_xyz_64071
+      - vmess_oz_moonfree_top_443
+      - vmess_127_wowogg_cyou_52227
+      - vmess_jp03-vm0_entry_ikuuu_casa_447
+      - vmess_jp01-tls-vm0_entry_ikuuu_casa_893
+      - vmess_120_232_208_195_19048
+      - vmess_140_82_21_142_34762
+      - vmess_43_128_9_149_443
+      - vmess_43_132_162_119_443
+      - vmess_198_41_221_169_443
+      - vmess_sgpcu_dfnode_top_15736
+      - vmess_65_52_171_156_15031
+      - vmess_124_156_137_34_443
+      - vmess_csct_ayanami_best_832
+      - vmess_nyyd_zerohost_live_53000
+      - ss_134_195_198_252_2376
+      - vmess_relay1_sgdns_club_11070
+      - vmess_ingress-i1_onebox6_org_38201
+      - ss_145_239_1_137_2375
+      - vmess_120_232_182_190_19057
+      - vmess_120_232_208_195_19038
+      - vmess_jp01-tls-vm0_entry_ikuuu_casa_889
+      - vmess_120_232_214_210_19048
+      - vmess_132_145_92_147_29660
+      - vmess_www_kernels_bid_80
+      - ss_134_195_198_178_7307
+      - vmess_azhk003_xiaohouzi_club_10051
+      - vmess_azhk02_xiaohouzi_club_443
+      - vmess_jp06-vm0_entry_ikuuu_casa_444
+      - vmess_89_wowogg_cyou_52289
+      - vmess_jp03-vm0_entry_ikuuu_casa_448
+      - vmess_hk02_linkzones_xyz_31913
+      - vmess_in-v1_sdgdn_com_50206
+      - vmess_jp02_linkzones_xyz_31972
+      - vmess_120_232_182_190_19083
+      - vmess_120_232_214_210_19079
+      - vmess_183_232_56_161_1212
+      - vmess_65_52_171_156_8080
+      - vmess_198_41_212_2_443
+      - vmess_112_14_22_104_19083
+      - vmess_03071t_moonfree_top_443
+      - ss_14_29_124_168_25210
+      - vmess_www_kernels_bid_443
+      - ss_134_195_198_252_2375
 
 
     # tolerance: 150
@@ -568,69 +2595,283 @@ proxy-groups:
     type: select
     # disable-udp: true
     proxies:
-      - ss_134_195_196_71_2375
-      - ss_134_195_196_214_5004
-      - ss_134_195_198_178_7307
-      - ss_134_195_196_154_7307
-      - ss_134_195_198_178_8090
-      - ss_134_195_198_95_7306
-      - ss_134_195_198_252_2375
-      - ss_46_29_218_6_2376
-      - ss_145_239_1_137_2375
-      - ss_198_57_27_218_2376
-      - ss_134_195_198_252_2376
-      - ss_118_107_244_110_5003
-      - ss_134_195_196_193_8090
-      - ss_23_19_26_246_10515
-      - ss_45_140_169_176_10055
-      - ss_45_137_154_208_10033
-
-      - ss_198_147_22_87_39772
-      - ss_207_244_67_149_35294
-      - ss_195_47_194_56_39772
-      - ss_212_102_44_93_33992
-      - ss_185_2_100_166_39772
-      - ss_185_44_76_188_31572
-      - ss_107_181_166_55_33992
-      - ss_185_2_100_166_33992
-      - ss_185_44_76_188_31764
-
-      - vmess_202_61_141_130
-      - vmess_116_wowogg_cyou_52216
-      - ss_51_255_66_185_7306
-
-
-
-      - ss_134_195_196_81_8882
-      - ss_134_195_196_68_5500
-      - ss_134_195_196_3_5600
-      - ss_172_99_190_92_9102
-      - ss_134_195_196_3_3306
-      - ss_134_195_196_81_8091
-      - ss_134_195_196_81_7307
-      - ss_134_195_196_81_8888
-      - ss_134_195_196_68_443
-      - ss_172_99_190_92_7307
-      - ss_134_195_196_68_7002
-      - ss_134_195_196_187_8009
-      - ss_134_195_196_51_3389
-      - ss_134_195_196_68_6697
-      - ss_134_195_196_68_4444
-      - ss_134_195_196_187_5601
-      - ss_117_28_242_137_9359
-      - ss_134_195_196_81_8000
-      - ss_134_195_196_81_5600
-      - ss_134_195_196_187_2376
-      - ss_134_195_196_81_5004
-      - ss_134_195_196_187_8008
-      - ss_134_195_196_3_8881
-      - ss_134_195_196_187_9102
-      - ss_45_79_111_214_443
-      - ss_172_99_190_92_443
-      - ss_172_99_190_92_6379
-
-
       - auto
+      
+      - vmess_0326kr_fans8_xyz_443
+      - ss_134_195_198_178_8090
+      - vmess_jp06-vm0_entry_ikuuu_casa_447
+      - vmess_202_61_141_130_443
+      - vmess_210_3_245_46_50021
+      - vmess_v2fly_sab_quest_443
+      - vmess_sg03_linkzones_xyz_31984
+      - vmess_cm1_worldmuseum_buzz_12100
+      - vmess_sg03_xiaocloud_icu_20366
+      - vmess_cloudflare_xrenblog_com_443
+      - vmess_us-ny-rn_licom_ga_62008
+      - vmess_86_wowogg_cyou_52286
+      - vmess_0319ru99_fans8_xyz_443
+      - vmess_sh_xiaohouzi_club_17902
+      - vmess_niaop_tk_443
+      - vmess_120_232_214_210_19084
+      - vmess_app_ssfree_ru_443
+      - vmess_0319hzm01_fans8_xyz_443
+      - vmess_ua1_uuv2_co_uk_443
+      - vmess_azhk096_xiaohouzi_club_10082
+      - vmess_vs_mumi_bid_10124
+      - vmess_mc_xiaohouzi_club_28325
+      - vmess_92_wowogg_cyou_52292
+      - vmess_v6d1_moonfree_top_443
+      - vmess_hk3_fdns_unino_tech_80
+      - vmess_ahdaeph8_com_443
+      - vmess_183_232_56_161_1952
+      - vmess_139_162_122_205_3845
+      - vmess_183_232_56_161_1202
+      - vmess_47_56_143_21_443
+      - vmess_116_162_14_228_21103
+      - vmess_api_ssfree_ru_443
+      - vmess_183_232_56_161_1302
+      - vmess_112_14_22_104_19084
+      - vmess_in02_dns2333_xyz_64071
+      - vmess_20_239_93_20_44325
+      - vmess_iepl02_zerohost_live_11010
+      - vmess_tw02_linkzones_xyz_41982
+      - vmess_shk01_xiaohouzi_club_10050
+      - vmess_dj2_qiancheng_ml_443
+      - vmess_usa-dallas_lvuft_com_443
+      - vmess_jp04-vm0_entry_ikuuu_casa_448
+      - vmess_104_225_239_41_53528
+      - vmess_www_zhangss_xyz_59627
+      - vmess_107_wowogg_cyou_52207
+      - vmess_172_67_190_72_443
+      - vmess_azhk04_yitaiml_xyz_443
+      - vmess_c23s3_jamjams_net_61173
+      - vmess_us06_xiaohouzi_club_10082
+      - vmess_120_232_208_195_19094
+      - vmess_v2-r03_xiaohouzi_club_10083
+      - vmess_67_207_92_252_55239
+      - vmess_0320hk857_fans8_xyz_443
+      - vmess_154_84_1_239_443
+      - vmess_43_129_189_128_443
+      - vmess_147_135_164_113_44423
+      - ss_134_195_196_51_7306
+      - vmess_sxqxj_cn_2164
+      - vmess_tw03_linkzones_xyz_51984
+      - vmess_152_70_106_35_39033
+      - vmess_104_208_101_112_34554
+      - vmess_120_232_208_195_19084
+      - vmess_awsxjp_moonfree_top_443
+      - vmess_34_106_38_4_25698
+      - vmess_v2ray_788644_xyz_443
+      - vmess_104_16_162_16_2053
+      - ss_169_197_142_99_8091
+      - vmess_cf_rutracker-cn_com_443
+      - vmess_120_232_182_190_19085
+      - vmess_192_18_134_27_50134
+      - ss_134_195_196_214_5004
+      - vmess_in-v1_sdgdn_com_50207
+      - ss_134_195_198_95_7306
+      - vmess_116_162_14_228_20785
+      - vmess_120_232_182_190_19079
+      - vmess_150_230_43_65_14564
+      - vmess_13_75_44_200_40903
+      - vmess_120_232_214_210_19083
+      - ss_46_29_218_6_2376
+      - vmess_149_248_18_17_3626
+      - vmess_159_203_73_153_4396
+      - vmess_152_70_80_195_31703
+      - vmess_165_154_225_231_443
+      - vmess_0320hk567_fans8_xyz_443
+      - vmess_jp04-vm0_entry_ikuuu_casa_444
+      - vmess_103_164_81_46_443
+      - vmess_104_19_62_119_443
+      - vmess_vv01_xiaohouzi_club_10083
+      - vmess_43_128_1_112_443
+      - vmess_0320jp_fans8_xyz_443
+      - vmess_sg02_linkzones_xyz_31983
+      - ss_51_255_66_185_7306
+      - vmess_112_14_22_104_19057
+      - vmess_tw2501_cloudmatrix_xyz_2501
+      - vmess_hk01_linkzones_xyz_31911
+      - ss_14_29_124_168_25270
+      - vmess_183_232_30_53_15006
+      - vmess_138_197_236_77_443
+      - vmess_165_154_224_243_443
+      - vmess_ce_rutracker-cn_com_443
+      - ss_23_19_10_134_12345
+      - vmess_45_116_163_157_443
+      - vmess_66_90_74_4_2005
+      - vmess_104_18_90_4_443
+      - vmess_104_19_3_23_443
+      - vmess_120_232_208_195_19057
+      - vmess_jp03_linkzones_xyz_31991
+      - vmess_jp01_xiaocloud_icu_20124
+      - vmess_95_179_198_22_233
+      - vmess_fri_ncugo_cf_443
+      - vmess_183_232_56_161_1704
+      - vmess_bgp_xiaohouzi_club_28523
+      - vmess_jp01-vm0_entry_ikuuu_casa_448
+      - vmess_94_wowogg_cyou_52294
+      - ss_134_195_196_71_2375
+      - vmess_104_18_96_85_2053
+      - vmess_45_35_84_162_443
+      - ss_118_107_244_110_5003
+      - vmess_150_109_147_14_443
+      - vmess_120_232_182_190_19084
+      - vmess_120_232_214_210_19085
+      - vmess_104_wowogg_cyou_11222
+      - ss_169_197_142_99_6697
+      - vmess_183_232_56_161_5019
+      - vmess_v2ray_ifuckgfw_ga_8443
+      - vmess_112_14_22_104_19094
+      - ss_134_195_196_154_7307
+      - vmess_172_67_68_58_443
+      - vmess_0316ro_fans8_xyz_443
+      - vmess_91_wowogg_cyou_52291
+      - vmess_ddns-kr02_ayanami_best_80
+      - vmess_jp2803_cloudmatrix_xyz_2803
+      - vmess_jp04-vm0_entry_ikuuu_casa_447
+      - vmess_88_wowogg_cyou_52288
+      - vmess_84_wowogg_cyou_52284
+      - vmess_azhk098_xiaohouzi_club_10090
+      - vmess_us02_linkzones_xyz_31964
+      - vmess_jp02-vm0_entry_ikuuu_casa_447
+      - vmess_192_9_248_151_23326
+      - vmess_120_232_182_190_19048
+      - vmess_v1_369855_xyz_11443
+      - vmess_china-gzyd-1_forwardserver_xyz_52024
+      - vmess_103_138_75_235_443
+      - vmess_116_wowogg_cyou_52216
+      - ss_134_195_198_252_443
+      - vmess_jp02-vm0_entry_ikuuu_casa_444
+      - vmess_43_129_253_120_443
+      - vmess_112_14_22_104_19085
+      - vmess_120_232_208_195_19085
+      - vmess_165_154_225_176_443
+      - vmess_146_56_105_192_52660
+      - vmess_jp01_linkzones_xyz_31961
+      - vmess_212_103_62_37_443
+      - vmess_cn-cu-2_sgdns_club_11190
+      - vmess_azhk097_xiaohouzi_club_443
+      - vmess_81_wowogg_cyou_52281
+      - vmess_129_226_178_235_443
+      - vmess_hk5_fdns_unino_tech_80
+      - vmess_101_32_10_238_443
+      - vmess_in02_dns2333_xyz_64088
+      - vmess_112_14_22_104_19038
+      - vmess_aws-hk02_xiaohouzi_club_10081
+      - vmess_52_175_12_141_24396
+      - vmess_104_21_100_200_2087
+      - vmess_104_251_233_106_13723
+      - vmess_114_wowogg_cyou_52214
+      - vmess_112_14_22_104_19048
+      - vmess_nazhk03_xiaohouzi_club_10030
+      - vmess_117_wowogg_cyou_52217
+      - vmess_120_232_208_195_19083
+      - vmess_120_232_182_190_19038
+      - vmess_154_23_190_162_443
+      - ss_169_197_142_99_8090
+      - vmess_183_232_56_161_1301
+      - vmess_v2-r02_xiaohouzi_club_10082
+      - vmess_104_208_79_9_57209
+      - vmess_104_17_103_125_80
+      - vmess_152_70_49_174_55988
+      - vmess_105_wowogg_cyou_52205
+      - vmess_61_222_202_140_33792
+      - vmess_us1_31vpn_com_80
+      - vmess_120_232_214_210_19038
+      - vmess_jp01-tls-vm0_entry_ikuuu_casa_892
+      - vmess_119_wowogg_cyou_52219
+      - vmess_120_232_214_210_19057
+      - vmess_eu_licom_ga_62011
+      - vmess_ingress-i1_onebox6_org_38501
+      - vmess_49_234_158_14_10909
+      - vmess_azhk099_xiaohouzi_club_10089
+      - vmess_cloudflare_a-yu_xyz_443
+      - vmess_ddns-kr01_ayanami_best_80
+      - vmess_183_232_56_161_1101
+      - ss_209_209_115_192_22233
+      - vmess_104_208_84_177_33578
+      - vmess_45_137_10_174_39043
+      - vmess_183_232_56_161_1951
+      - vmess_198_41_212_18_443
+      - ss_134_195_196_193_8090
+      - vmess_ca02_linkzones_xyz_31976
+      - vmess_in03_dns2333_xyz_64071
+      - vmess_ingress-i1_onebox6_org_38701
+      - vmess_112_14_22_104_19079
+      - vmess_aws-hk03_xiaohouzi_club_10050
+      - vmess_azhk01_xiaohouzi_club_10050
+      - ss_14_29_124_168_25266
+      - vmess_13_67_113_86_80
+      - vmess_172_64_143_70_443
+      - vmess_on999_herokuapp_com_443
+      - vmess_122_wowogg_cyou_52222
+      - vmess_使用前记得更新订阅_0
+      - vmess_120_232_208_195_19079
+      - vmess_in01_dns2333_xyz_64071
+      - vmess_198_13_61_192_10110
+      - vmess_61_222_202_140_15789
+      - ss_198_57_27_218_2376
+      - vmess_jp01-vm0_entry_ikuuu_casa_447
+      - vmess_120_232_182_190_19094
+      - ss_169_197_142_99_443
+      - vmess_198_144_166_45_153
+      - vmess_aws-hk06_xiaohouzi_club_443
+      - vmess_90_wowogg_cyou_52290
+      - vmess_102_wowogg_cyou_11221
+      - vmess_us04_xiaohouzi_club_10083
+      - vmess_123_6_78_227_809
+      - vmess_sg1_31vpn_com_80
+      - vmess_128_199_131_91_41976
+      - vmess_207_246_94_28_42383
+      - vmess_cd_rutracker-cn_com_443
+      - vmess_test_0dc_cn_443
+      - vmess_43_154_87_207_24821
+      - vmess_104_21_84_81_443
+      - vmess_in04_dns2333_xyz_64071
+      - vmess_oz_moonfree_top_443
+      - vmess_127_wowogg_cyou_52227
+      - vmess_jp03-vm0_entry_ikuuu_casa_447
+      - vmess_jp01-tls-vm0_entry_ikuuu_casa_893
+      - vmess_120_232_208_195_19048
+      - vmess_140_82_21_142_34762
+      - vmess_43_128_9_149_443
+      - vmess_43_132_162_119_443
+      - vmess_198_41_221_169_443
+      - vmess_sgpcu_dfnode_top_15736
+      - vmess_65_52_171_156_15031
+      - vmess_124_156_137_34_443
+      - vmess_csct_ayanami_best_832
+      - vmess_nyyd_zerohost_live_53000
+      - ss_134_195_198_252_2376
+      - vmess_relay1_sgdns_club_11070
+      - vmess_ingress-i1_onebox6_org_38201
+      - ss_145_239_1_137_2375
+      - vmess_120_232_182_190_19057
+      - vmess_120_232_208_195_19038
+      - vmess_jp01-tls-vm0_entry_ikuuu_casa_889
+      - vmess_120_232_214_210_19048
+      - vmess_132_145_92_147_29660
+      - vmess_www_kernels_bid_80
+      - ss_134_195_198_178_7307
+      - vmess_azhk003_xiaohouzi_club_10051
+      - vmess_azhk02_xiaohouzi_club_443
+      - vmess_jp06-vm0_entry_ikuuu_casa_444
+      - vmess_89_wowogg_cyou_52289
+      - vmess_jp03-vm0_entry_ikuuu_casa_448
+      - vmess_hk02_linkzones_xyz_31913
+      - vmess_in-v1_sdgdn_com_50206
+      - vmess_jp02_linkzones_xyz_31972
+      - vmess_120_232_182_190_19083
+      - vmess_120_232_214_210_19079
+      - vmess_183_232_56_161_1212
+      - vmess_65_52_171_156_8080
+      - vmess_198_41_212_2_443
+      - vmess_112_14_22_104_19083
+      - vmess_03071t_moonfree_top_443
+      - ss_14_29_124_168_25210
+      - vmess_www_kernels_bid_443
+      - ss_134_195_198_252_2375
  
   # direct to another infacename
   - name: en1
