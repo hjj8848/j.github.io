@@ -359,6 +359,7 @@ rules:
     - DOMAIN-KEYWORD,google,Proxy
     - DOMAIN,google.com,Proxy
     - DOMAIN-SUFFIX,ad.com,REJECT
+    - GEOIP,LAN,DIRECT
     - GEOIP,CN,DIRECT
     - MATCH,Proxy
 
